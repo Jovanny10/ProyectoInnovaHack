@@ -1,0 +1,77 @@
+.collapse ul li
+{
+    padding: 15px;
+}
+nav.navbar{
+	border-bottom: 5px solid #1293d4;
+}
+
+nav.navbar div.form-group div.row a img{
+	
+}
+nav.navbar div.collapse{
+	float: right;
+}
+nav.navbar a.navbar-brand{
+	color: #1293d4;
+	font-weight: bold;
+}
+.collapse ul.navbar-nav li.nav-item a.nav-link{
+	color: #fff;
+}
+div.contenedor{
+	 width: 100%;
+	 position: relative;
+}
+
+div.contenedor #DatosImagen{
+	min-height: 400px;
+}
+
+div.contenedor #DatosImagen h1.left{
+	position: absolute;
+	color: #fff;
+	top: 60px;
+	font-weight: bold;
+	font-size: 200%;
+	left: 100px;
+}
+
+div.contenedor #DatosImagen h2.left{
+	position: absolute;
+	color: #fff;
+	top: 120px;
+	font-weight: bold;
+	font-size: 200%;
+	left: 100px;
+}
+
+a.nav-link:hover{
+	color: #ccc;
+	font-weight: bold;
+ 
+}
+
+
+@media(max-width: 768px) {
+	div.contenedor #DatosImagen h1.left{
+		font-size: 25px;
+		left: 10px;
+		top: 15px;
+	}
+	div.contenedor #DatosImagen h2.left{
+		font-size: 20px;
+		left: 10px;
+		top: 40px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
