@@ -12,7 +12,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       	  <div class="form-group">
           <div class="row col-md-12">
-            <a class="navbar-brand" href="index.html" class="img-responsive"><img src="imagenes/isaac.png" class="img-responsive"></a>
+            <a class="navbar-brand" href="index.html" class="img-responsive"><img src="imagenes/isaac.png" class="img-responsive" width="30%"></a>
           </div>
         </div>
           <a class="navbar-brand" href="index.html">INICIO</a>
