@@ -30,10 +30,39 @@ div.contenedor{
 	border: 1px solid transparent;
 	border-bottom: 2px solid red;
 	text-align: center;
-	
-	
-	
 }
+
+div.invitacion{
+	width: 100%;
+	background-color: #F93838;
+	font-size: 120%;
+	color: #fff;
+	padding: 30px;
+}
+
+div.cajaboton div.boton{
+	text-align: center;
+	background-color: #fff;
+	width: 170px;
+	height: 50px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.cajaboton div.boton a{
+	padding: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 200px;
+}
+
+div.cajaboton div.boton:hover{
+    	border: 2px solid #fff;
+    	background-color:#F93838; 
+}
+
 
 div.contenido{
 
@@ -51,6 +80,7 @@ div.contenido{
 
 div.contenido div.imagen{
 	float: left;
+
 }
  
 
