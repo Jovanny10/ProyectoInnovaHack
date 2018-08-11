@@ -26,8 +26,8 @@ nav.navbar a.navbar-brand{
 div.contenedor{
 	 width: 100%;
 	 position: relative;
+	 
 }
-
 div.contenedor #DatosImagen{
 	min-height: 400px;
 }
