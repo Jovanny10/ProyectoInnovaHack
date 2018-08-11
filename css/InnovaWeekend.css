@@ -82,7 +82,34 @@ div.contenido div.imagen{
 	float: left;
 
 }
- 
+
+div.datosempresa{
+	width: 100%;
+	background-color: #302A30;
+	color: #fff;
+	padding: 40px;
+	text-align: justify;
+}
+
+/*DATOS DE LA EMPRESA*/
+div.datosempresa div.col-lg-2 div.form-group ul li{
+   list-style: none;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
+	color: red;
+}
+div.datosempresa div.col-lg-4 div.imagen1 img.imagen{
+  width: 100px;
+  float: left;
+  display: flex;
+}
+
 
 div.titulo{
 	width: 100%;
