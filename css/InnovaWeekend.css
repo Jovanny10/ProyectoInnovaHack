@@ -90,7 +90,6 @@ div.datosempresa{
 	padding: 40px;
 	text-align: justify;
 }
-
 /*DATOS DE LA EMPRESA*/
 div.datosempresa div.col-lg-2 div.form-group ul li{
    list-style: none;
@@ -139,6 +138,8 @@ div.titulo h2{
 	color: #1293d4;
 	font-weight: bold;
 }
+
+
 
 @media only screen and (max-width: 600px) {
 	div.titulo{

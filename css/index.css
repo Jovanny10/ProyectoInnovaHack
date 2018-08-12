@@ -56,7 +56,110 @@ a.nav-link:hover{
  
 }
 
+/*TEXTO EN UNA IMAGEN*/
+div.textoImagen
+{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
 
+div.textoImagen{
+	-webkit-animation: swing 1s ease;
+animation: swing 1s ease;
+-webkit-animation-iteration-count: 1;
+animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing
+{
+15%
+{
+-webkit-transform: translateX(5px);
+transform: translateX(5px);
+}
+30%
+{
+-webkit-transform: translateX(-5px);
+transform: translateX(-5px);
+}
+50%
+{
+-webkit-transform: translateX(3px);
+transform: translateX(3px);
+}
+65%
+{
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+80%
+{
+-webkit-transform: translateX(2px);
+transform: translateX(2px);
+}
+100%
+{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+}
+@keyframes swing
+{
+15%
+{
+-webkit-transform: translateX(5px);
+transform: translateX(5px);
+}
+30%
+{
+-webkit-transform: translateX(-5px);
+transform: translateX(-5px);
+}
+50%
+{
+-webkit-transform: translateX(3px);
+transform: translateX(3px);
+}
+65%
+{
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+80%
+{
+-webkit-transform: translateX(2px);
+transform: translateX(2px);
+}
+100%
+{
+-webkit-transform: translateX(0);
+transform: translateX(0);
+}
+}
+div.textoImagen h1.textoencima1{
+	position: absolute;
+	top: 15%;
+	color: #fff;
+	left: 7%;
+}
+
+div.textoImagen h3.textoencima2{
+	position: absolute;
+	top: 25%;
+	color: #fff;
+	left: 7%;
+
+}
+
+div.textoImagen h3.textoencima2 a{
+	text-decoration: none;
+	color: #1293d4;
+}
+
+div.textoImagen h3.textoencima2 a:hover{
+	font-size: 25px;
+}
 
 @media(max-width: 768px) {
 	div.contenedor #DatosImagen h1.left{
