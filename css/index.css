@@ -284,6 +284,97 @@ div.InfoJueces div.row div.Informacion{
 }
 
 /*---------FIN DE JUECES------------*/
+
+/*Invitacion de la empresa*/
+div.invitacionIndice{
+	width: 100%;
+	background-color: #F93838;
+	font-size: 120%;
+	color: #fff;
+	padding: 30px;
+}
+
+div.cajabotonRegistrame div.boton2{
+	text-align: center;
+	background-color: #fff;
+	width: 170px;
+	height: 50px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.cajabotonRegistrame div.boton2:hover{
+    	border: 2px solid #fff;
+    	background-color:#F93838; 
+}
+
+/*Fin de invitacion de verticales*/
+
+div.cajabotonRegistrame div.boton2 a{
+	padding: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 200px;
+}
+
+
+
+
+/*--------FIN----------------*/
+/*FRASES*/
+section article div.Frases{
+	width: 100%;
+	background-color: #fff;
+	color: black;
+	height: 500%;
+	margin-bottom: 15PX;
+	margin-top: 18	px;
+}
+
+section article div.Frases div.titulofrase{
+	margin-bottom: 12px;
+	font-weight: bold;
+}
+
+section article div.Frases div.ventanas{
+	margin-top: 8%;
+	text-align: justify;
+	width: 80%;
+	margin: auto;
+
+}
+
+section article div.Frases div.ventanas p i{
+	font-size: 55px;
+}
+/*FIN FRASES*/
+
+/*Datos de la empresa*/
+div.datosempresa{
+	width: 100%;
+	background-color: #302A30;
+	color: #fff;
+	padding: 40px;
+	text-align: justify;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li{
+   list-style: none;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
+	color: red;
+}
+
+
+/*Fin de la empresa*/
 @media(max-width: 768px) {
 	div.verticales div.textoImagen img{
 		height: 200px;
