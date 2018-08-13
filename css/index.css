@@ -24,9 +24,19 @@ nav.navbar a.navbar-brand{
 	color: #fff;
 }
 div.contenedor{
-	 width: 100%;
+	 width: 80%;
 	 position: relative;
+	 margin:auto;
+	 margin-bottom: 12px;
+	 padding: 2px;
 	 
+}
+
+div.contenedor:hover{
+	background-color: orange;
+	color: #fff;
+	border: 3px solid black;
+	 border: 5px solid green;
 }
 div.contenedor #DatosImagen{
 	min-height: 400px;
@@ -210,9 +220,22 @@ div.verticales div.form-group div.col-lg-5 div.contenedor{
 
 div.verticales div.form-group div.col-lg-5 div.contenedor span i{
 	font-size: 40px;
+    margin:40px auto;
+    display: block;
 }
 
 /*----------FIN CATEGORIAS--------------*/
+
+/*Inicio de Información de Jueces*/
+div.InfoJueces{
+	width: 100%;
+	background-color: black;
+	color: #fff;
+}
+
+div.InfoJueces div.row div.col-lg-5 div.Imagen{
+
+}
 @media(max-width: 768px) {
 	div.contenedor #DatosImagen h1.left{
 		font-size: 25px;
