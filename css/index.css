@@ -229,14 +229,65 @@ div.verticales div.form-group div.col-lg-5 div.contenedor span i{
 /*Inicio de Información de Jueces*/
 div.InfoJueces{
 	width: 100%;
-	background-color: black;
 	color: #fff;
+	background-color: black;
 }
 
-div.InfoJueces div.row div.col-lg-5 div.Imagen{
+div.InfoJueces div.row div.Imagen{
+  background-color: black;
+  color: #fff;
+}
+
+div.InfoJueces div.texto{
+	margin-top: 35px;
+}
+div.InfoJueces div.texto h5.titulo{
+	border-left: 5px solid red;
+	padding-left: 21px;
+} 
+
+div.InfoJueces div.texto p{
+	padding-left: 14px;
+}
+
+div.InfoJueces div.texto div.cajaboton{
+	background-color: #F93838;
+	width: 45%;
+	font-size: 11px;
+	padding: 12px;
+	margin-left: 14px;
+}
+
+div.InfoJueces div.texto div.cajaboton:hover{
+		background-color: #FA5858;
+		border:1px solid #fff;
 
 }
+
+div.InfoJueces div.texto div.cajaboton div.boton{
+		text-align: center;
+
+}
+
+div.InfoJueces div.texto div.cajaboton div.boton a{
+	padding: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+
+}
+
+div.InfoJueces div.row div.Informacion{
+	background-color: #000000;
+	padding: 50px;
+}
+
+/*---------FIN DE JUECES------------*/
 @media(max-width: 768px) {
+	div.verticales div.textoImagen img{
+		height: 200px;
+1
+	}
 	div.contenedor #DatosImagen h1.left{
 		font-size: 25px;
 		left: 10px;
@@ -277,6 +328,25 @@ div.InfoJueces div.row div.col-lg-5 div.Imagen{
 		font-size: 25px;
 		padding-top: 10px;
 	}
+
+	/*Informacion de Jueces*/
+
+	div.InfoJueces div.row div.Imagen{
+		width: 80%;
+		margin: auto;
+		background-color: black;
+		border-top: 12px;
+	}
+
+	div.InfoJueces div.texto div.cajaboton{
+		font-size: 70%;
+		width: 150px;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+
+
+
 }
 
 
