@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Líderes</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=si, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/Agenda.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, user-scalable=si, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
 
@@ -44,8 +45,12 @@
                </ul>
           </div>
        </nav>
-	
-	
+       <div class="container col-lg-8">
+         <div class="embed-responsive embed-responsive-21by9">   
+               <img src="imagenes/Principal.png" class=" embed-responsive-item" alt="50%">
+         </div>
+       </div>
+
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
