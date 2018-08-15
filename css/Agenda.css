@@ -24,3 +24,90 @@ a.nav-link:hover{
 	font-weight: bold;
  
 }
+
+/*INICIO AGENDA*/
+ div.ventana div.ventana1 img{
+ 	height: 1500%;
+ 	max-height: 700px;
+ }
+/*FIN AGENDA*/
+
+/*iNVITACION PARA REGISTRARSE*/
+div.invitacion{
+	width: 100%;
+	background-color: #F93838;
+	font-size: 120%;
+	color: #fff;
+	padding: 30px;
+}
+
+div.cajaboton div.boton{
+	text-align: center;
+	background-color: #fff;
+	width: 170px;
+	height: 50px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+div.cajaboton div.boton a{
+	padding: 20px;
+	font-size: 20px;
+	text-decoration: none;
+	line-height: 200px;
+}
+
+div.cajaboton div.boton:hover{
+    	border: 2px solid #fff;
+    	background-color:#F93838; 
+}
+
+/*DATOS EMPRESA*/
+div.datosempresa{
+	width: 100%;
+	background-color: #302A30;
+	color: #fff;
+	padding: 20px;
+	text-align: justify;
+}
+div.datosempresa div.col-lg-2 div.form-group ul li{
+   list-style: none;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
+	color: red;
+}
+div.datosempresa div.col-lg-4 div.imagen1 img.imagen{
+  width: 100px;
+  float: left;
+  display: flex;
+}
+/*FIN*/
+
+@media only screen and (max-width: 600px) {
+	div.invitacion{
+		height: 500px;
+	    max-height: 400px;
+		text-align: center;
+	}
+
+	
+
+	div.cajaboton div.boton{
+		float: right;
+		margin-top: 4%;
+		
+	}
+
+
+}
+
+

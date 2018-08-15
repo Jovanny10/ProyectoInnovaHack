@@ -45,9 +45,79 @@
                </ul>
           </div>
        </nav>
-       <div class="container col-lg-8">
-         <div class="embed-responsive embed-responsive-21by9">   
-               <img src="imagenes/Principal.png" class=" embed-responsive-item" alt="50%">
+       <div class="row ventana container-fluid col-lg-12">
+         <div class="embed-responsive embed-responsive-21by9">
+              <div class="col-xs-12">
+                <img src="imagenes/hora2.jpg" class=" embed-responsive-item" alt="" width="">
+              </div>   
+               
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-lg-12">
+           <div class="invitacion">
+            <div class="form-group">
+           <div class="row">
+            <div class="col-lg-1">
+              
+            </div>
+            <div class="col-lg-8">
+              <p>¿Tienes una idea que aborde alguna de las verticales? ¿Cuentas con un equipo de trabajo? ¿Quieres ser parte de este gran evento? Registrate, no te quedes con las ganas y acompañanos en esta gran oportunidad.</p>
+            </div>
+
+            <div class="col-lg-3 cajaboton">
+              <div class="boton"><a href="#">!REGISTRAME!</a></div>
+            </div>
+             
+           </div>
+         </div>
+          </div>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-lg-12">
+           <div class="datosempresa">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-lg-1"> 
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                     <h2>InnovaHack</h2>
+
+                     <div class="form-group">
+                       <span>No te quedes fuera de este gran evento, asiste con tu equipo y se parte de la innovación</span>
+                     </div>
+                </div>
+                <div class="col-lg-2">
+                  <h2>Quick Links</h2>
+                  <div class="form-group">
+                    <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#">Agenda</a></li>
+                      <li><a href="#">Invitados</a></li>
+                      <li><a href="#">Taller de emprendimiento</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <h2>Contáctanos</h2>
+                  <span><i class="fas fa-map-marker-alt"></i> Avenida de la Juventud #504,col.Barros Sierra, C.P.98090 Zacatecas,Zac.</span>
+                  <div class="form-group">
+                    <span><a href="#"><i class="fas fa-phone-volume"></i> (492)921 28 16</a> y 921 30 18 etx 1516</span>
+                  </div>
+                  <div class="form-group">
+                    <span><i class="far fa-envelope"></i> labsol@cozcyt.gob.mx</span>
+                  </div>
+                  
+                </div>
+                <div class="col-lg-1 col-hidden-xs">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
          </div>
        </div>
 
