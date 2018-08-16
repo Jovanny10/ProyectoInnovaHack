@@ -226,6 +226,27 @@ div.verticales div.form-group div.col-lg-5 div.contenedor span i{
 }
 
 /*----------FIN CATEGORIAS--------------*/
+/*CONTENIDO DE ALIADOS ESTRATEGICOS*/
+section div.container-aliados{
+    width: 100%;
+    height: 500px;
+    max-height: 1000px;
+}
+section div.container-aliados div.container-cuadro{
+	background-color: blue;
+}
+
+div.container-aliados div.container-cuadro div.row img{
+	width: 200px;
+	height: 200px;
+}
+
+div.container-aliados div.container-cuadro div.row img.imagen2{
+	margin: 0 auto;
+}
+
+
+/**/
 
 /*Inicio de Información de Jueces*/
 div.InfoJueces{

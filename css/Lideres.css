@@ -24,3 +24,45 @@ a.nav-link:hover{
 	font-weight: bold;
  
 }
+
+/*PANTALLA DE LIDERES*/
+div.container-lideres{
+	width: 100%;
+	max-height: 4000px;
+	background-image: url(../imagenes/fondo.jpg);
+	background-size: 200%;
+	animation: movimiento 10s infinite;
+}
+div.container-lideres div.row{
+	margin-bottom: 15px;
+	padding-top: 25px;
+}
+
+div.container-lideres div.container-cuadro div.row img{
+	width: 200px;
+	height: 200px;
+	background-size: 100%;
+	animation: movimiento 10s infinite;
+}
+
+@keyframes movimiento{
+	from{
+		backgroun-position:bottom left;
+
+		}to{
+
+			background-position: top right;
+
+		}
+}
+
+/*FIN DE LIDERES*/
+
+
+@media(max-width: 768px) {
+	div.container-lideres{
+		height: 4650px;
+		max-height: 7000px;
+
+	}	
+}
