@@ -36,21 +36,27 @@
                      <a class="nav-link" href="Lideres.html"><i class="fas fa-user-lock"></i> LÍDERES</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="registro.php"><i class="fas fa-user-plus"></i> REGISTRO</a>
+                     <a class="nav-link" href="registro.php"><i class="fas fa-user-plus"></i> MI PERFIL</a>
                   </li>
        
                </ul>
           </div>
        </nav>
-       <div class="row ventana container-fluid col-lg-12">
-         <div class="embed-responsive embed-responsive-21by9">
-              <div class="col-xs-12">
-                <img src="imagenes/hora2.jpg" class=" embed-responsive-item" alt="" width="">
-              </div>   
-               
-         </div>
+
+       <div class="container-portada bg-dark">
+
+        <div class="row align-items-center">
+          <div class="col-lg-3 text-center">
+            <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
+          </div>
+          <div class="img-portada col-xs-12 col-lg-8">
+            <img src="imagenes/labsol.png" alt="">
+          </div>
+        </div>
        </div>
 
+
+       
        <div class="row">
          <div class="col-lg-12">
            <div class="invitacion">

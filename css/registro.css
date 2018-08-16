@@ -25,6 +25,39 @@ a.nav-link:hover{
  
 }
 
+/*CONTENEDOR DE LOGIN*/
+div.container-portada{
+	width: 100%;
+	height:600px;
+	max-height: 2000px;
+}
+
+
+div.container-portada div.row div.img-portada{
+	width: 80%;
+	height: 550px;
+	margin:auto;
+    margin-top: 15px;
+    background-color: white;
+}
+
+div.container-portada div.row div.img-portada img{
+	width: 70%;
+	height: 220px;
+	max-height: 220px;
+}
+
+div.container-portada div.row div.container-login{
+	width: 100%;
+	height: 400px;
+	background-color: white;
+	margin-left: 12%;
+	border-radius: 12px;
+}
+
+
+/*FIN DE CONTENEDOR DE LOGIN*/
+
 @media(max-width: 768px) {
 	nav.navbar button.boton{
 		background-color: red;
@@ -37,5 +70,11 @@ a.nav-link:hover{
       color: white;
       text-align: left;
       padding-left: 15px;
+	}
+
+	div.container-portada div.row div.container-login{
+		width: 100%;
+		margin-left: 0px;
+		border-radius: 0px;
 	}
 }
