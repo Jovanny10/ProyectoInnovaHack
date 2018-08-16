@@ -93,6 +93,18 @@ div.datosempresa div.col-lg-4 div.imagen1 img.imagen{
 /*FIN*/
 
 @media only screen and (max-width: 600px) {
+	nav.navbar button.boton{
+		background-color: red;
+		color: white;
+	}
+	div.collapse ul.navbar-nav li.nav-item a.nav-link{
+      font-size: 14px;
+      margin: 0px;
+      background-color: #1293d4;
+      color: white;
+      text-align: left;
+      padding-left: 15px;
+	}
 	div.invitacion{
 		height: 500px;
 	    max-height: 400px;

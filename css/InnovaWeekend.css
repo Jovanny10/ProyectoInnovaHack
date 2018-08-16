@@ -142,6 +142,18 @@ div.titulo h2{
 
 
 @media only screen and (max-width: 600px) {
+	nav.navbar button.boton{
+		background-color: red;
+		color: white;
+	}
+	div.collapse ul.navbar-nav li.nav-item a.nav-link{
+      font-size: 14px;
+      margin: 0px;
+      background-color: #1293d4;
+      color: white;
+      text-align: left;
+      padding-left: 15px;
+	}
 	div.titulo{
 		font-size: 50px;
 	}

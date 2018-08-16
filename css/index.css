@@ -6,13 +6,11 @@
 {
     padding: 7px;
 }
+/*Menu desplegable*/
 nav.navbar{
 	border-bottom: 4px solid #1293d4;
 }
 
-nav.navbar div.form-group div.row a img{
-	
-}
 nav.navbar div.collapse{
 	float: right;
 }
@@ -397,6 +395,21 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 
 /*Fin de la empresa*/
 @media(max-width: 768px) {
+	nav.navbar button.boton{
+		background-color: red;
+		color: white;
+	}
+	div.collapse ul.navbar-nav li.nav-item a.nav-link{
+      font-size: 14px;
+      margin: 0px;
+      background-color: #1293d4;
+      color: white;
+      text-align: left;
+      padding-left: 15px;
+	}
+
+
+	
 	div.verticales div.textoImagen img{
 		height: 200px;
 1
