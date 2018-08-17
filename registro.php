@@ -43,40 +43,55 @@
 
        <div class="container-portada bg-dark">
 
-        <div class="row row align-items-center">
-          <div class="col-lg-4">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
             <div class="container container-login">
               <div class="row">
                 <div class="col-lg-12">
-                  <h1>Login</h1>
+                  <h1 class="text-center">Inicio de Sesión</h1>
                 </div>
               </div>
-              <form class="">
+              <form class="formulario">
                  <div class="form-group">
-                    <label for="exampleInputEmail1">Usuario.*</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <label for="exampleInputEmail1" class="texto">Usuario.*</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar Usuario">
                   </div>
                   <div class="form-group  ">
-                    <label for="exampleInputPassword1">Contraseña.*</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1" class="texto">Contraseña.*</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar contraseña">
                   </div>
 
-                  <div class="row">
+                  <div class="row botones">
                     <div class="col-lg-12">
                      <button type="submit" class="btn btn-danger">ACEPTAR</button>
-                     <button type="submit" class="btn btn-danger">CANCELAR</button> 
+                     <button type="submit" class="btn btn-danger">REGISTRARSE</button> 
                     </div>
+                  </div>
+
+                  <div class="form-group text-center">
+                    <span><a href="#">Olvidate tu contraseña?</a></span>
                   </div>
 
                   
               </form>
             </div>
-             
-
-
           </div>
-          <div class="img-portada col-xs-12 col-lg-5">
-            <img src="imagenes/Principal.png" alt="" class="img-responsive">
+
+
+          <div class="row img-portada col-xs-12 col-lg-5 align-items-center">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                   <div class="carousel-item active">
+                        <img class="" src="imagenes/labsol.png" alt="First slide">
+                   </div>
+                   <div class="carousel-item">
+                        <img class="" src="imagenes/Principal.png" alt="Second slide">
+                   </div>
+                   <div class="carousel-item">
+                        <img class="" src="imagenes/fondo.jpg" alt="Third slide">
+                   </div>
+               </div>
+           </div>
           </div>
         </div>
        </div>
