@@ -29,6 +29,10 @@ body{
 	border-bottom: 2px solid #EBEBDA;
 	font-family: Roboto;
 }
+
+.container button{
+	margin: 12px 2px;
+}
 div.fondo{
 	width: 100%;
 }

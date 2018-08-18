@@ -30,13 +30,26 @@
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Email :</label>
-                   <input type="email" class="form-control" id="" placeholder="Labsol@gmail.com">
+                   <input type="email" class="form-control" id="" placeholder="Labsol@gmail.com /Usuario registro">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Cel :</label>
                    <input type="number" class="form-control" id="" placeholder="953-155-01-93">
                 </div>
            </div>
+
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Contraseña :</label>
+                   <input type="password" class="form-control" id="" placeholder="********">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="#">Confirmar contraseña :</label>
+                   <input type="password" class="form-control" id="" placeholder="********">
+                </div>
+           </div>
+         
+
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Facebook :</label>
