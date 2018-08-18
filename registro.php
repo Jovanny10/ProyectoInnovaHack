@@ -11,6 +11,9 @@
   <div class="Erro-registro">
       
   </div>
+  <div class="boton text-right">
+    <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
+  </div>
 	<form>
     
 		<div class="container">
@@ -100,7 +103,8 @@
                 </div>
            </div>
 
-  <button type="submit" class="btn btn-danger">Registrar</button></div>
+  <button type="submit" class="btn btn-danger">Registrar</button>
+</div>
 </form>
 
 	

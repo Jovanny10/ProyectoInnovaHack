@@ -33,6 +33,9 @@ body{
 .container button{
 	margin: 12px 2px;
 }
+.container button.miperfil{
+	width: 4px;
+}
 div.fondo{
 	width: 100%;
 }
