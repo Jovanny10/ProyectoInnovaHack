@@ -9,6 +9,17 @@ body{
 	background-attachment: fixed;
 }
 
+.boton{
+	position: fixed;
+	z-index: 100;
+	float: right;
+	margin-top: 4px;
+}
+
+.container{
+   padding-top:50px; 
+}
+
 .container .form-row .form-group label{
 	color: #fff;
 	font-weight: normal;
