@@ -6,50 +6,83 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/registro.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-
 </head>
 <body>
-	<div class="ventana container-fluid bg-dark">
-		<div class="row">
-			<div class="d-flex flex-row bd-highlight mb-3">
-              <div class="p-2 bd-highlight">
-      	           <img src="imagenes/isaac.png" class="img-fluid img-responsive" width="300px;" height="50px;">
-             </div>
-             <div class="p-2 bd-highlight">
-      	           <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">MI PERFIL</a>
-             </div>
-             <div class="p-2 bd-highlight">
-      	           <a href="registro.php" class="btn btn-danger" role="button" value="registrar">REGISTRARSE</a>
-            </div>
-          </div>
-			
-	     </div>
-	</div>
+	<form>
+		<div class="container">
+			<div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Nombre :</label>
+                   <input type="text" class="form-control" id="" placeholder="Ingresar el Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="inputPassword4">Apellidos :</label>
+                   <input type="text" class="form-control" id="inputPassword4" placeholder="Ingresar Apellidos">
+                </div>
+           </div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Email :</label>
+                   <input type="email" class="form-control" id="" placeholder="Labsol@gmail.com">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="#">Cel :</label>
+                   <input type="number" class="form-control" id="" placeholder="953-155-01-93">
+                </div>
+           </div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Facebook :</label>
+                   <input type="text" class="form-control" id="" placeholder="Ingresar cuenta">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Institución :</label>
+                   <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Seleccionar Institución</option>
+                        <option>Tecnológico Nacional de Mexico</option>
+                        <option>Universidad politecnica de zacatecas</option>
+                        <option>Instituto Miguel Agustin Pro</option>
+                        <option>Otro..</option>
+                   </select>
+                </div>
+           </div>
 
+           <div class="form-row">
+           	 <div class="form-group col-md-6	">
+           		<label for="#">Twitter :</label>
+                <input type="text" class="form-control" id="" placeholder="Ingresar cuenta">
+           	 </div>	
+           </div>
 
-	<div class="jumbotron">
-		<form action="" method="post" name="registro">
-			<div class="form-group">
-				<label for="#">Nombre</label>
-			    <input type="text" name="nombre" placeholder="Ingresar Nombre" class="form-control">
-			</div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Fecha de Nacimiento :</label>
+                   <input type="date" class="form-control" id="">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Sexo :</label>
+                   <select class="form-control" id="exampleFormControlSelect1">
+                   	    <option>Seleccionar</option>
+                        <option>Hombre</option>
+                        <option>Mujer</option>
+                   </select>
+                </div>
+           </div>
 
-			<div class="form-group">
-				<label for="#">Contraseña</label>
-			    <input type="text" name="contra" placeholder="Ingresar contraseña" class="form-control">
-			</div>
-			
-				
-		</form>
-	</div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Talla :</label>
+                   <input type="number" class="form-control" id="" placeholder="Ingresar talla de la playera">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Habilidades :</label>
+                   <input type="text" class="form-control" id="" placeholder="Ingresar habilidad">   
+                </div>
+           </div>
 
+  <button type="submit" class="btn btn-primary">Registrar</button></div>
+</form>
 
-
-
-	
-	
-
-	
 	
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

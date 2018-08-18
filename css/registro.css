@@ -1,16 +1,9 @@
 *{
+	margin: 0px;
+	padding: 0px;
 }
 
-div.ventana{
-	border-bottom: 8px solid #1293d4;
-	float: right;
-	height: 80px;	
+div.fondo{
+	width: 100%;
 }
-
-div.caja-registro{
-	margin-top: 20px;
-	width: 800px;
-}
-
-
 
