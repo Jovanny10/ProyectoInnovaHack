@@ -3,6 +3,32 @@
 	padding: 0px;
 }
 
+body{
+	background-image: url(../imagenes/fondoregistro2.png);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.container .form-row .form-group label{
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+	padding: 8px 0;
+}
+
+.container .form-row .form-group input,select.form-control,option{
+	background:rgba(0,0,0,.6);
+	color: #fff;
+	margin: auto;
+	padding: 5px 35px;
+	border-radius: 3px;
+}
+.container .form-row .form-group input,select.form-control{
+	backgroun:rgba(0,0,0,.7);
+	border-bottom: none;
+	border-bottom: 2px solid #EBEBDA;
+	font-family: Roboto;
+}
 div.fondo{
 	width: 100%;
 }

@@ -8,8 +8,15 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+  <div class="Erro-registro">
+      
+  </div>
 	<form>
+    
 		<div class="container">
+      <div class="form-group">
+        <h1 class="text-white">Datos personales</h1>
+      </div>
 			<div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Nombre :</label>
@@ -80,7 +87,7 @@
                 </div>
            </div>
 
-  <button type="submit" class="btn btn-primary">Registrar</button></div>
+  <button type="submit" class="btn btn-danger">Registrar</button></div>
 </form>
 
 	
