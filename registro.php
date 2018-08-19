@@ -9,14 +9,11 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/registro.js"></script>
 </head>
-<body>
-  <div class="Erro-registro">
-      
-  </div>
+<body>  
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
   </div>
-	<form class="formulario" method="get">
+	<form class="formulario" name="formulario" method="get">
     
 		<div class="container">
       <div class="form-group">
