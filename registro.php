@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/registro.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/registro.js"></script>
 </head>
 <body>
   <div class="Erro-registro">
@@ -14,7 +16,7 @@
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
   </div>
-	<form>
+	<form class="formulario" method="get">
     
 		<div class="container">
       <div class="form-group">
@@ -23,92 +25,108 @@
 			<div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Nombre :</label>
-                   <input type="text" class="form-control" id="" placeholder="Ingresar el Nombre">
+                   <input type="text" class="form-control" id="nombre" placeholder="Ingresar el Nombre">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="inputPassword4">Apellidos :</label>
-                   <input type="text" class="form-control" id="inputPassword4" placeholder="Ingresar Apellidos">
+                   <input type="text" class="form-control" id="apellidos" placeholder="Ingresar Apellidos">
                 </div>
            </div>
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Email :</label>
-                   <input type="email" class="form-control" id="" placeholder="Labsol@gmail.com /Usuario registro">
+                   <input type="email" class="form-control" id="email" placeholder="Labsol@gmail.com /Usuario registro">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Cel :</label>
-                   <input type="number" class="form-control" id="" placeholder="953-155-01-93">
+                   <input type="tel" class="form-control" id="cel" placeholder="953-155-01-93">
                 </div>
            </div>
-
-           <div class="form-row">
-                <div class="form-group col-md-6">
-                   <label for="#">Contraseña :</label>
-                   <input type="password" class="form-control" id="" placeholder="********">
-                </div>
-                <div class="form-group col-md-6">
-                   <label for="#">Confirmar contraseña :</label>
-                   <input type="password" class="form-control" id="" placeholder="********">
-                </div>
-           </div>
-         
 
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Facebook :</label>
-                   <input type="text" class="form-control" id="" placeholder="Ingresar cuenta">
+                   <input type="text" class="form-control" id="facebook" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :</label>
-                   <select class="form-control" id="exampleFormControlSelect1">
+                   <select class="form-control" id="select" name="select">
                         <option>Seleccionar Institución</option>
-                        <option>Tecnológico Nacional de Mexico</option>
-                        <option>Universidad politecnica de zacatecas</option>
-                        <option>Instituto Miguel Agustin Pro</option>
-                        <option>Otro..</option>
+                        <option value="div1">Tecnológico Nacional de Mexico</option>
+                        <option value="div2">Universidad politecnica de zacatecas</option>
+                        <option value="div3">Instituto Miguel Agustin Pro</option>
+                        <option value = "div4">Otro..</option>
                    </select>
                 </div>
            </div>
 
-           <div class="form-row">
-           	 <div class="form-group col-md-6	">
-           		<label for="#">Twitter :</label>
-                <input type="text" class="form-control" id="" placeholder="Ingresar cuenta">
-           	 </div>	
+           <div class="form-row" >
+                <div class="form-group col-md-6">
+                   <label for="#">Carrera :</label>
+                   <input type="text" class="form-control" id="carrera" placeholder="Ingresar Carrera">
+                </div>
+                <div class="form-group col-md-6" id="pai">
+                    <label for="#">Otro :</label>
+                   <input type="text" class="form-control" placeholder="Universidad politécnica del centro">
+                </div>
            </div>
 
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Fecha de Nacimiento :</label>
-                   <input type="date" class="form-control" id="">
+                   <label for="#">Twitter :</label>
+                   <input type="text" class="form-control" id="twitter" placeholder="Ingresar cuenta">
                 </div>
+                <div class="form-group col-md-6">
+                   <label for="#">Fecha de Nacimiento :</label>
+                   <input type="date" class="form-control" id="fecha" placeholder="00/ 00 / 00">
+                </div>
+                
+           </div>
+
+           <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Sexo :</label>
                    <select class="form-control" id="exampleFormControlSelect1">
-                   	    <option>Seleccionar</option>
+                        <option>Seleccionar</option>
                         <option>Hombre</option>
                         <option>Mujer</option>
                    </select>
                 </div>
-           </div>
-
-           <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Talla :</label>
                    <input type="number" class="form-control" id="" placeholder="Ingresar talla de la playera">
                 </div>
+                
+           </div>
+
+           <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Habilidades :</label>
-                   <input type="text" class="form-control" id="" placeholder="Ingresar habilidad">   
+                   <input type="text" class="form-control" id="habilidades" placeholder="Ingresar habilidad">   
+                </div>
+
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Hobbies :</label>
+                   <input type="text" class="form-control" id="hobbies" placeholder="Ingresar Hobbies">   
                 </div>
            </div>
 
-  <button type="submit" class="btn btn-danger">Registrar</button>
+           <div class="form-row">
+                 <div class="form-group col-md-6">
+                   <label for="#">Contraseña :</label>
+                   <input type="password" class="form-control" id="contraseña" placeholder="********">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="#">Confirmar contraseña :</label>
+                   <input type="password" class="form-control" id="contraseña" placeholder="********">
+                </div>
+                
+           </div>
+
+  <button type="submit" id="btn" class="btn btn-danger">Registrar</button>
 </div>
 </form>
 
-	
-	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
