@@ -42,13 +42,8 @@
                    <input type="tel" class="form-control" id="cel" placeholder="953-155-01-93">
                 </div>
            </div>
-
            <div class="form-row">
-                <div class="form-group col-md-6">
-                   <label for="#">Facebook :</label>
-                   <input type="text" class="form-control" id="facebook" placeholder="Ingresar cuenta">
-                </div>
-                <div class="form-group col-md-6">
+            <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :</label>
                    <select class="form-control" id="select" name="select">
                         <option>Seleccionar Institución</option>
@@ -57,18 +52,27 @@
                         <option value="div3">Instituto Miguel Agustin Pro</option>
                         <option value = "div4">Otro..</option>
                    </select>
+           </div>
+                 
+           </div>
+
+           <div class="form-row">
+                <div class="form-group col-md-6" id="pai">
+                    <label for="#">Otro :</label>
+                   <input type="text" class="form-control" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
 
            <div class="form-row" >
                 <div class="form-group col-md-6">
+                   <label for="#">Facebook :</label>
+                   <input type="text" class="form-control" id="facebook" placeholder="Ingresar cuenta">
+                </div>
+                <div class="form-group col-md-6">
                    <label for="#">Carrera :</label>
                    <input type="text" class="form-control" id="carrera" placeholder="Ingresar Carrera">
                 </div>
-                <div class="form-group col-md-6" id="pai">
-                    <label for="#">Otro :</label>
-                   <input type="text" class="form-control" placeholder="Universidad politécnica del centro">
-                </div>
+                
            </div>
 
            <div class="form-row">
