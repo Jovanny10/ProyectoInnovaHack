@@ -9,6 +9,12 @@ body{
 	background-attachment: fixed;
 }
 
+.error{
+	position: fixed;
+	z-index: 100;
+
+}
+
 .boton{
 	position: fixed;
 	z-index: 100;
@@ -29,14 +35,15 @@ body{
 
 .container .form-row .form-group input,select.form-control,option{
 	background:rgba(0,0,0,.6);
-	color: #fff;
 	margin: auto;
+
 	padding: 5px  12px;
 	border-radius: 3px;
 }
 .container .form-row .form-group input,select.form-control{
 	backgroun:rgba(0,0,0,.7);
 	border-bottom: none;
+	color: #fff;
 	border-bottom: 2px solid #EBEBDA;
 	font-family: Roboto;
 }
