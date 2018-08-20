@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Esqueleto</title>
+	<title>Registro</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/registro.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -138,7 +138,6 @@
   <button type="submit" id="btn" class="btn btn-danger">Registrar</button>
 </div>
 </form>
-
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

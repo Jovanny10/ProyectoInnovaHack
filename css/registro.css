@@ -26,23 +26,23 @@ body{
    padding-top:50px; 
 }
 
-.container .form-row .form-group label{
+.container .form-row .form-group label,input{
 	color: #fff;
 	font-weight: normal;
-	text-align: center;
+	text-align: left;
 	padding: 8px 0;
 }
 
-.container .form-row .form-group input,select.form-control,option{
+.container .form-row .form-group input,select.form-control,option,input{
 	background:rgba(0,0,0,.6);
 	margin: auto;
-
+    color: #fff;
 	padding: 5px  12px;
 	border-radius: 3px;
+	text-transform: capitalize;
 }
 .container .form-row .form-group input,select.form-control{
 	backgroun:rgba(0,0,0,.7);
-	border-bottom: none;
 	color: #fff;
 	border-bottom: 2px solid #EBEBDA;
 	font-family: Roboto;
@@ -59,4 +59,5 @@ body{
 div.fondo{
 	width: 100%;
 }
+
 
