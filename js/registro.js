@@ -70,10 +70,15 @@ $(function() {
         var nuevoCSS = {
             "border": '2px solid #66ff33'
         };
+
+        var error = {
+            "border": '2px solid red'
+        };
         var capturado = document.getElementById('nombre').value;
         if (capturado.length > 2) {
             $(this).css(nuevoCSS);
         } else {
+          $(this).css(error);
         }
     });
 });
