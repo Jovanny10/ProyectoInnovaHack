@@ -10,19 +10,6 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/registro.js"></script>
   <script type="text/javascript">
-    function valida(f){
-  var ok = true;
-  var msg = "Debes escribir algo en el campo";
-
-  if(f.elements[0].value == ""){
-    msg = msg+" Nombre\n";
-    ok = false;
-  }
-
-  if(ok == false)
-     $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i><?php echo 'hola';?> *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-  return ok;
-}
   </script>
 </head>
 <body>
@@ -38,11 +25,11 @@
 			     <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Nombre *:</label>
-                   <input type="text" class="input form-control" class="nombre" id="nombre" placeholder="Ingresar el Nombre">
+                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="letras" id="nombre" placeholder="Ingresar el Nombre">
                 </div>
                 <div class="form-group col-md-6" id="nombre">
                    <label for="inputPassword4">Apellidos *:</label>
-                   <input type="text" class="form-control" id="apellidos" class="nombre"  placeholder="Ingresar Apellidos">
+                   <input type="text" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos">
                 </div>
            </div>
            <div class="form-row">
@@ -53,7 +40,7 @@
                 <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6">
                    <label for="#">Cel *:</label>
-                   <input type="tel" class="form-control" id="cel"  placeholder="953-155-01-93">
+                   <input type="tel" class="form-control" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93">
                 </div>
            </div>
            <div class="form-row">
@@ -73,18 +60,18 @@
            <div class="form-row">
                 <div class="form-group col-md-6" id="pai">
                     <label for="#">Otro :</label>
-                   <input type="text" class="form-control" id="otro" placeholder="Universidad politécnica del centro">
+                   <input type="text" class="form-control" id="otro" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
 
            <div class="form-row" >
                 <div class="form-group col-md-6">
                    <label for="#">Facebook *:</label>
-                   <input type="text" class="form-control"  id="facebook" placeholder="Ingresar cuenta">
+                   <input type="text" class="form-control" id="facebook" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Carrera :</label>
-                   <input type="text" class="form-control"  id="carrera" placeholder="Ingresar Carrera">
+                   <input type="text" class="form-control" onkeypress="return sololetras(event)"  id="carrera" placeholder="Ingresar Carrera">
                 </div>
                 
            </div>
@@ -111,16 +98,24 @@
                    </select>
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="#">Talla :</label>
-                   <input type="number" class="form-control" id="talla" placeholder="Ingresar talla de la playera">
-                </div>
+                   <label for="exampleFormControlSelect1">Tallas :</label>
+                   <select class="form-control" id="seleccionar" name="seleccionar">
+                        <option>Seleccionar talla</option>
+                        <option value="div1">XCH</option>
+                        <option value="div2">CH</option>
+                        <option value="div3">M</option>
+                        <option value = "div4">G</option>
+                        <option value="div5">XG</option>
+                        <option value="div6">XXG</option>
+                   </select>
+           </div>
                 
            </div>
 
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Habilidades :</label>
-                   <input type="text" class="form-control" id="habilidades" placeholder="Ingresar habilidad">   
+                   <input type="text" class="form-control" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
                 </div>
 
                 <div class="form-group col-md-6">

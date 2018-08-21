@@ -1,50 +1,31 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Validación un formulario</title>
-<script type="text/javascript">
-function valida(f) {
-  var ok = true;
-  var msg = "Debes escribir algo en los campos:\n";
-  if(f.elements[0].value == "")
-  {
-    msg += "- Jugador 1\n";
-    ok = false;
-  }
+	<meta charset="UTF-8">
+	<title>Esqueleto</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		var numero1 = 2;
+		var numero2 = 3;
+		var suma = numero1 + numero2;
+		var nombre = " Jovanny";
+		var variableJS = "Contenido de la variable Javascript";
+		variableJS  = variableJS + suma + " No sea así con Isaac";
+	</script>
 
-  if(f.elements["jugador2"].value == "")
-  {
-    msg += "- Jugador 2\n";
-    ok = false;
-  }
+	<?php
+	$variablephp = "<script>document.write(variableJS)</script>";
+	echo "Variable de php = ".$variablephp."<br>"; 
+	echo "No lo puedo creer".$variablephp;
 
-  if(f.jugador3.value == "")
-  {
-    msg += "- Jugador 3\n";
-    ok = false;
-  }
-
-  if(ok == false)
-    alert(msg);
-  return ok;
-}
-</script>
+	 ?>
 </head>
 <body>
-<form id="miForm" action="" method="get" onsubmit="return valida(this)">
-<p>
-Jugador 1: <input type="text" id="jugador1" />
-<br />
-Jugador 2: <input type="text" id="jugador2" />
-<br />
-Jugador 3: <input type="text" id="jugador3" />
-<br />
-<input type="submit" value="Enviar" />
-<input type="reset" value="Borrar" />
-</p>
-</form>
+	
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

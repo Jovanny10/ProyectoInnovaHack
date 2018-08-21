@@ -1,43 +1,113 @@
-function valida(f){
-  var ok = true;
-  var msg = "Debes escribir algo en el campo";
-
-  if(f.elements[0].value == ""){
-    msg = msg+" Nombre\n";
-    ok = false;
-  }
-
-  if(ok == false)
-     $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i><?php echo 'hoal';?> *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-  return ok;
-}
-
-
 
 /*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
-/*$(document).ready(function() {
+
+
+      function solonumeros(e){
+      key = e.keyCode || e.which;
+      teclado = String.fromCharCode(key);
+
+      numero = "012345789";
+      especiales = "8-37-38-46-27";
+
+      teclado_especial = false;
+
+      for(var i in especiales){
+        if(key==especiales[i]){
+          teclado_especial = true;
+        }
+
+      } 
+      if(numero.indexOf(teclado)==-1 && !teclado_especial){
+        return false;
+      }
+    }
+
+      function sololetras(e){
+        key = e.keyCode || e.which;
+
+        teclado  = String.fromCharCode(key).toLowerCase();
+
+        letras = "abcdefghijklmnñopqrstuvwxyz ";
+        if(letras.indexOf(teclado)==-1){
+          return false;
+        }
+      }
+
+      
+$(document).ready(function() {
     var formulario = document.getElementsByName('formulario')[0],
         elementos = formulario.elements,
         boton = document.getElementById('btn');
     var validarNombre = function(e) {
-        if (formulario.nombre.value == 0 || formulario.nombre.value == null || /^\s+$/.test(nombre)) {
+        if (formulario.nombre.value.length <=2 || formulario.nombre.value == null || /^\s+$/.test(nombre)) {
             $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo nombre *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
             e.preventDefault();
         }
     }
     var apellidos = function(e) {
-        if (formulario.apellidos.value == 0 || formulario.apellidos.value == null || /^\s+$/.test(apellidos) || formulario.apellidos.value !='/[0-9-.]/;') {
+        if (formulario.apellidos.value.length <= 2 || formulario.apellidos.value == null || /^\s+$/.test(apellidos)) {
             $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo apellidos *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
             e.preventDefault();
         }
     }
-    var validar =
-     function(e) {
+
+    var facebook = function(e){
+      if(formulario.facebook.value.length <=2 || formulario.facebook.value == null || /^\s+$/.test(facebook)){
+        $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo facebook *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+      }
+    }
+
+    var cel = function(e){
+      if(formulario.cel.value.length != 10 || formulario.cel.value == null){
+        $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo cel *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+      }
+    }
+
+    var carrera = function(e){
+      if(formulario.carrera.value.length <=2 || formulario.carrera.value == null || /^\s+$/.test(carrera)){
+        $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo carrera *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+      }
+    }
+
+    var twitter = function(e){
+      if(formulario.twitter.value.length <=2 || formulario.twitter.value == null || /^\s+$/.test(twitter)){
+        $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo twitter *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+      }
+    }
+
+    var habilidades = function(e){
+      if(formulario.habilidades.value.length <=2 || formulario.habilidades.value == null || /^\s+$/.test(habilidades)){
+        $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo habilidades *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+      }
+    }
+
+    var hobbies = function(e){
+      if(formulario.hobbies.value.length <=2 || formulario.hobbies.value == null || /^\s+$/.test(hobbies)){
+        $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo hobbies *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+      }
+    }
+
+    
+
+
+     function validar(e) {
         validarNombre(e);
         apellidos(e);
+        cel(e);
+        facebook(e);
+        carrera(e);
+        twitter(e);
+        habilidades(e);
+        hobbies(e);
     };
     formulario.addEventListener("submit", validar);
-});*/
+});
 /*------------------FIN DE VALIDACION DE CAMPOS DEL FORMULARIO ------------------*/
 /*--------------INICIO VALIDACION DE CONTRASENA-------------- */
 $(document).ready(function() {
@@ -158,7 +228,7 @@ $(function() {
             "border": '2px solid red'
         };
         var cel = document.getElementById('cel').value;
-        if (cel.length > 0) {
+        if (cel.length == 10) {
             $(this).css(nuevoCSS);
         } else {
           $(this).css(error);
