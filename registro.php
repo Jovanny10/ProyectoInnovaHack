@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <script src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/registro.js"></script>
+  <script type="text/javascript" src="js/registroajax.js"></script>
   <script type="text/javascript">
   </script>
 </head>
@@ -16,7 +17,7 @@
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
   </div>
-	<form class="formulario" name="formulario" id="formulario" method="get" action="prueba.php" onsubmit="return valida(this)">
+	<form class="formulario" name="formulario" id="formulario" method="post" action="#" onsubmit="return valida(this)">
     
 		<div class="container">
       <div class="form-group">
@@ -25,33 +26,33 @@
 			     <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Nombre *:</label>
-                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="letras" id="nombre" placeholder="Ingresar el Nombre">
+                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="usuario" id="nombre" placeholder="Ingresar el Nombre">
                 </div>
                 <div class="form-group col-md-6" id="nombre">
                    <label for="inputPassword4">Apellidos *:</label>
-                   <input type="text" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos">
+                   <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos">
                 </div>
            </div>
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Email *:</label>
-                   <input type="email" class="form-control" required="" id="email" placeholder="Labsol@gmail.com /Usuario registro">
+                   <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro">
                 </div>
                 <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6">
                    <label for="#">Cel *:</label>
-                   <input type="tel" class="form-control" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93">
+                   <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93">
                 </div>
            </div>
            <div class="form-row">
             <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :</label>
-                   <select class="form-control" id="select" name="select">
+                   <select class="form-control" id="select" name="institucion">
                         <option>Seleccionar Institución</option>
-                        <option value="div1">Tecnológico Nacional de Mexico</option>
-                        <option value="div2">Universidad politecnica de zacatecas</option>
-                        <option value="div3">Instituto Miguel Agustin Pro</option>
-                        <option value = "div4">Otro..</option>
+                        <option>Tecnológico Nacional de Mexico</option>
+                        <option>Universidad politecnica de zacatecas</option>
+                        <option>Instituto Miguel Agustin Pro</option>
+                        <option id="div4">Otro..</option>
                    </select>
            </div>
                  
@@ -67,11 +68,11 @@
            <div class="form-row" >
                 <div class="form-group col-md-6">
                    <label for="#">Facebook *:</label>
-                   <input type="text" class="form-control" id="facebook" placeholder="Ingresar cuenta">
+                   <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Carrera :</label>
-                   <input type="text" class="form-control" onkeypress="return sololetras(event)"  id="carrera" placeholder="Ingresar Carrera">
+                   <input type="text" class="form-control" name="carrera" onkeypress="return sololetras(event)"  id="carrera" placeholder="Ingresar Carrera">
                 </div>
                 
            </div>
@@ -79,11 +80,11 @@
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Twitter :</label>
-                   <input type="text" class="form-control"  id="twitter" placeholder="Ingresar cuenta">
+                   <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Fecha de Nacimiento *:</label>
-                   <input type="date" class="form-control"  id="fecha" placeholder="00/ 00 / 00">
+                   <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00">
                 </div>
                 
            </div>
@@ -91,7 +92,7 @@
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Sexo *:</label>
-                   <select class="form-control" id="exampleFormControlSelect1" required>
+                   <select class="form-control" name="sexo" id="exampleFormControlSelect1" required>
                         <option>Seleccionar</option>
                         <option>Hombre</option>
                         <option>Mujer</option>
@@ -99,14 +100,14 @@
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Tallas :</label>
-                   <select class="form-control" id="seleccionar" name="seleccionar">
+                   <select class="form-control" name="talla" id="seleccionar" name="seleccionar">
                         <option>Seleccionar talla</option>
-                        <option value="div1">XCH</option>
-                        <option value="div2">CH</option>
-                        <option value="div3">M</option>
-                        <option value = "div4">G</option>
-                        <option value="div5">XG</option>
-                        <option value="div6">XXG</option>
+                        <option>XCH</option>
+                        <option>CH</option>
+                        <option>M</option>
+                        <option>G</option>
+                        <option>XG</option>
+                        <option>XXG</option>
                    </select>
            </div>
                 
@@ -115,23 +116,23 @@
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Habilidades :</label>
-                   <input type="text" class="form-control" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
+                   <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
                 </div>
 
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Hobbies :</label>
-                   <input type="text" class="form-control" id="hobbies" placeholder="Ingresar Hobbies">   
+                   <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies">   
                 </div>
            </div>
 
            <div class="form-row">
                  <div class="form-group col-md-6">
                    <label for="#">Contraseña *:</label>
-                   <input type="password" class="form-control"  id="password" placeholder="********" >
+                   <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" >
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Confirmar contraseña *:</label>
-                   <input type="password" class="form-control" id="rpassword" id="contraseña" placeholder="********">
+                   <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********">
 
                 </div> 
            </div>

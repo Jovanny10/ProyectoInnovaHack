@@ -34,9 +34,8 @@ body {
     border-radius: 3px;
     text-transform: capitalize;
 }
-
-.container .form-row .form-group input#email,input#facebook,input#twitter{
-	text-transform: lowercase;
+.container .form-row .form-group input#email, input#facebook, input#twitter {
+    text-transform: lowercase;
 }
 .container .form-row .form-group input, select.form-control {
     backgroun: rgba(0, 0, 0, .7);
