@@ -23,6 +23,7 @@
 	    	echo "Mi nombre es :".$this->apellidos."<br>";
 	    	echo "Mi nombre es :".$this->correo."<br>";
 	    	echo "Mi nombre es :".$this->cel."<br>";
+	    	echo "Institucion :".$this->institucion."<br>";
 	    }
 	}
 
