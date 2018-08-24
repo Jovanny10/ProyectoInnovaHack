@@ -17,7 +17,7 @@
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
   </div>
-	<form class="formulario" name="formulario" id="formulario" method="post" action="#" onsubmit="return valida(this)">
+	<form class="formulario" name="formulario" id="formulario" method="post" action="principal.php" onsubmit="return valida(this)">
     
 		<div class="container">
       <div class="form-group">
