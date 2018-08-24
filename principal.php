@@ -5,7 +5,14 @@
 	       $this->apellidos = ucwords( $_POST['apellidos']);
 	       $this->correo = $_POST['correo'];
 	       $this->cel = $_POST['cel'];
+
+	       $var= $_POST['institucion'];
+	       if($var == "div4"){
+	       	$this->institucion = ucwords( $_POST['otro']);
+	       }else{
 	       $this->institucion = ucwords( $_POST['institucion']);
+	       } 
+
 	       $this->facebook = $_POST['facebook'];
 	       $this->carrera = ucwords( $_POST['carrera']);
 	       $this->twitter = $_POST['twitter'];

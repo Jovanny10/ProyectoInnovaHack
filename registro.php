@@ -46,11 +46,11 @@
             <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :</label>
                    <select class="form-control" id="select" name="institucion">
-                        <option>Seleccionar Institución</option>
+                        <option selected="">Seleccionar una Institución</option>
                         <option>Tecnológico Nacional de Mexico</option>
                         <option>Universidad politecnica de zacatecas</option>
                         <option>Instituto Miguel Agustin Pro</option>
-                        <option value="div4" id="div4">Otro..</option>
+                        <option value="div4">Otro..</option>
                    </select>
            </div>
                  
@@ -58,8 +58,8 @@
 
            <div class="form-row">
                 <div class="form-group col-md-6" id="pai">
-                    <label for="#">Otro :</label>
-                   <input type="text" class="form-control" name="institucion" id="otro" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
+                    <label for="#">Ingresar otra institucion :</label>
+                   <input type="text" class="form-control" name="otro" id="prg1" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
 
@@ -265,6 +265,7 @@ $(document).ready(function() {
     $('#pai').hide();
     $('#select').on('change', function() {
         var selectValor = '#' + $(this).val();
+        alert(selectValor);
         if (selectValor == '#div4') {
             $('#pai').show();
         } else {
