@@ -58,7 +58,7 @@
 
            <div class="form-row">
                 <div class="form-group col-md-6" id="pai">
-                    <label for="#">Ingresar otra institucion :</label>
+                    <label for="#">Ingresar otra institucion rama:</label>
                    <input type="text" class="form-control" name="otro" id="prg1" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
