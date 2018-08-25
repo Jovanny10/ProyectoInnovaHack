@@ -58,8 +58,8 @@
 
            <div class="form-row">
                 <div class="form-group col-md-6" id="pai">
-                    <label for="#">Otro :</label>
-                   <input type="text" class="form-control" name="institucion" id="" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
+                    <label for="#">Otra institucion :</label>
+                   <input type="text" class="form-control" name="otro" id="" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
 
