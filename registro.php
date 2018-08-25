@@ -63,6 +63,20 @@
                 </div>
            </div>
 
+           <script type="text/javascript">
+             $(document).ready(function() {
+               $('#pai').hide();
+               $('#select').on('change', function() {
+               var selectValor = '#' + $(this).val();
+               if (selectValor == '#div4') {
+                $('#pai').show();
+                  } else {
+                 $('#pai').hide();
+                }
+             });
+           });
+           </script>
+
            <div class="form-row" >
                 <div class="form-group col-md-6">
                    <label for="#">Facebook *:</label>
@@ -132,7 +146,47 @@
                    <label for="#">Confirmar contraseña *:</label>
                    <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********">
 
-                </div> 
+                </div>
+
+                <script type="text/javascript">
+                  /*--------------INICIO VALIDACION DE CONTRASENA-------------- */
+
+                $(document).ready(function() {
+                  $("#rpassword").keyup(checkPasswordMatch);
+                });
+                $(document).ready(function() {
+                  $("#password").keyup(checkPasswordMatch2);
+                });
+
+                function checkPasswordMatch2() {
+    var repeatPass = document.getElementById('rpassword').value;
+    var repeatclave = repeatPass.length;
+    if (repeatclave > 0) {
+        var password = $("#password").val();
+        var confirmarPassword = $("#rpassword").val();
+        if (password != confirmarPassword) {
+            $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
+        } else {
+            $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
+        }
+    }
+                }
+
+                function checkPasswordMatch() {
+    var repeatPass = document.getElementById('password').value;
+    var repeatclave = repeatPass.length;
+    if (repeatclave > 0) {
+        var password = $("#password").val();
+        var confirmarPassword = $("#rpassword").val();
+        if (password != confirmarPassword) {
+            $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
+        } else {
+            $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
+        }
+    }
+                }
+/* ------------FIN DE VALIDACION DE CONTRASENA---------------------*/
+                </script>
            </div>
            <div class="form-row">
                  <div class="form-group col-md-6" id="error">
@@ -260,54 +314,7 @@ $(document).ready(function() {
     formulario.addEventListener("submit", validar);
 });
 /*------------------FIN DE VALIDACION DE CAMPOS DEL FORMULARIO ------------------*/
-/*--------------INICIO VALIDACION DE CONTRASENA-------------- */
-$(document).ready(function() {
-    $('#pai').hide();
-    $('#select').on('change', function() {
-        var selectValor = '#' + $(this).val();
-        alert(selectValor);
-        if (selectValor == '#div4') {
-            $('#pai').show();
-        } else {
-            $('#pai').hide();
-        }
-    });
-});
-$(document).ready(function() {
-    $("#rpassword").keyup(checkPasswordMatch);
-});
-$(document).ready(function() {
-    $("#password").keyup(checkPasswordMatch2);
-});
 
-function checkPasswordMatch2() {
-    var repeatPass = document.getElementById('rpassword').value;
-    var repeatclave = repeatPass.length;
-    if (repeatclave > 0) {
-        var password = $("#password").val();
-        var confirmarPassword = $("#rpassword").val();
-        if (password != confirmarPassword) {
-            $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
-        } else {
-            $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
-        }
-    }
-}
-
-function checkPasswordMatch() {
-    var repeatPass = document.getElementById('password').value;
-    var repeatclave = repeatPass.length;
-    if (repeatclave > 0) {
-        var password = $("#password").val();
-        var confirmarPassword = $("#rpassword").val();
-        if (password != confirmarPassword) {
-            $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
-        } else {
-            $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
-        }
-    }
-}
-/* ------------FIN DE VALIDACION DE CONTRASENA---------------------*/
 /*------------INICIO DE CAMPOS CORRECTOS CON COLOR VERDE -------------*/
 $(function() {
     $("#nombre").keyup(function() {

@@ -1,4 +1,4 @@
-<?php 
+KB<?php 
 class conexion{
 
 	private $bd;
