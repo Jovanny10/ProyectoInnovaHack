@@ -7,7 +7,7 @@
 	       $this->cel = $_POST['cel'];
 
 	       $var= $_POST['institucion'];
-	       if($var =
+	       if($var == "div4"){
 	       	$this->institucion = ucwords( $_POST['otro']);
 	       }else{
 	       $this->institucion = ucwords( $_POST['institucion']);
