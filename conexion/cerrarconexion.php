@@ -1,4 +1,6 @@
 <?php 
-   mysqli_close($conexion);
+   include 'abrirconexion.php';
+   $con = new Conexion();
+   mysqli_close($con);
 
 ?>

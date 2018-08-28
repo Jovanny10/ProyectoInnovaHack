@@ -1,3 +1,7 @@
+<?php 
+include 'conexion/abrirconexion.php';
+$con = new Conexion();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,7 @@
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
   </div>
-	<form class="formulario" name="formulario" id="formulario" method="post" action="principal.php" onsubmit="return valida(this)">
+	<form class="formulario" name="formulario" id="formulario" method="post" action="principal.php" onsubmit="return validar(this)">
     
 		<div class="container">
       <div class="form-group">
@@ -24,7 +28,7 @@
 			     <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Nombre *:</label>
-                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="usuario" id="nombre" placeholder="Ingresar el Nombre">
+                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre">
                 </div>
                 <div class="form-group col-md-6" id="nombre">
                    <label for="inputPassword4">Apellidos *:</label>
@@ -46,11 +50,18 @@
             <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :</label>
                    <select class="form-control" id="select" name="institucion">
-                        <option SELECTED>Seleccionar Institución</option>
-                        <option >Tecnológico Nacional de Mexico</option>
-                        <option >Universidad politecnica de zacatecas</option>
-                        <option >Instituto Miguel Agustin Pro</option>
-                        <option value="div4" id="div4">Otro..</option>
+                    <option selected="">Seleccionar Institucion</option>
+                    <?php 
+                            $periodo="SELECT `id`, `Institucion` FROM `institucion` ORDER BY `Institucion`.`id` ASC ";
+                            $periodoResp = $con->query($periodo);
+                            if ($periodoResp->num_rows>0) {
+                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
+                                   ?>
+                                   <option value="<?php echo $filaPeriodo['id']; ?>"><?php echo $filaPeriodo['Institucion'] ; ?></option>
+                                   <?php 
+                                }
+                            }
+                         ?>
                    </select>
            </div>
                  
@@ -83,10 +94,22 @@
                    <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="#">Carrera :</label>
-                   <input type="text" class="form-control" name="carrera" onkeypress="return sololetras(event)"  id="carrera" placeholder="Ingresar Carrera">
+                   <label for="exampleFormControlSelect1">Carrera :</label>
+                   <select class="form-control" id="carrera" name="carrera">
+                        <option selected="">Seleccionar carrera</option>
+                        <?php 
+                            $carrera=" SELECT * FROM `carrera` ORDER BY `carrera`.`id` ASC";
+                            $periodoResp = $con->query($carrera);
+                            if ($periodoResp->num_rows>0) {
+                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
+                                   ?>
+                                   <option value="<?php echo $filaPeriodo['id']; ?>"><?php echo $filaPeriodo['Carrera'] ; ?></option>
+                                   <?php 
+                                }
+                            }
+                         ?>
+                   </select>
                 </div>
-                
            </div>
 
            <div class="form-row">
@@ -105,23 +128,37 @@
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Sexo *:</label>
                    <select class="form-control" name="sexo" id="exampleFormControlSelect1" required>
-                        <option>Seleccionar</option>
-                        <option>Hombre</option>
-                        <option>Mujer</option>
+                    <option selected="">Seleccionar Sexo</option>
+                     <?php 
+                            $sexo=" SELECT * FROM `genero` ORDER BY `genero`.`idSexo` ASC ";
+                            $periodoResp = $con->query($sexo);
+                            if ($periodoResp->num_rows>0) {
+                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
+                                   ?>
+                                   <option value="<?php echo $filaPeriodo['idSexo']; ?>"><?php echo $filaPeriodo['Sexo'] ; ?></option>
+                                   <?php 
+                                }
+                            }
+                         ?>
                    </select>
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Tallas :</label>
                    <select class="form-control" name="talla" id="seleccionar" name="seleccionar">
-                        <option>Seleccionar talla</option>
-                        <option>XCH</option>
-                        <option>CH</option>
-                        <option>M</option>
-                        <option>G</option>
-                        <option>XG</option>
-                        <option>XXG</option>
+                    <option selected="">Seleccionar Talla</option>
+                        <?php 
+                            $tallas=" SELECT * FROM `talla_playera` ORDER BY `talla_playera`.`idTalla_Playera` ASC ";
+                            $periodoResp = $con->query($tallas);
+                            if ($periodoResp->num_rows>0) {
+                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
+                                   ?>
+                                   <option value="<?php echo $filaPeriodo['idTalla_Playera']; ?>"><?php echo $filaPeriodo['Talla_Playeracol'] ; ?></option>
+                                   <?php 
+                                }
+                            }
+                         ?>
                    </select>
-           </div>
+               </div>
                 
            </div>
 
@@ -136,6 +173,25 @@
                    <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies">   
                 </div>
            </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+              <label for="#">Rol</label>
+              <select class="form-control" name="rol" id="rol">
+                        <?php 
+                            $rol=" SELECT * FROM `rol` ORDER BY `rol`.`idRol` ASC";
+                            $periodoResp = $con->query($rol);
+                            if ($periodoResp->num_rows>0) {
+                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
+                                   ?>
+                                   <option value="<?php echo $filaPeriodo['idRol']; ?>"><?php echo $filaPeriodo['Rol'] ; ?></option>
+                                   <?php 
+                                }
+                            }
+                         ?>
+                   </select>
+               
+             </div>
+           </div>
 
            <div class="form-row">
                  <div class="form-group col-md-6">
@@ -147,6 +203,7 @@
                    <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********">
 
                 </div>
+          </div>
 
                 <script type="text/javascript">
                   /*--------------INICIO VALIDACION DE CONTRASENA-------------- */
@@ -159,11 +216,11 @@
                 });
 
                 function checkPasswordMatch2() {
-    var repeatPass = document.getElementById('rpassword').value;
-    var repeatclave = repeatPass.length;
-    if (repeatclave > 0) {
-        var password = $("#password").val();
-        var confirmarPassword = $("#rpassword").val();
+                var repeatPass = document.getElementById('rpassword').value;
+                var repeatclave = repeatPass.length;
+                if (repeatclave > 0) {
+                var password = $("#password").val();
+                var confirmarPassword = $("#rpassword").val();
         if (password != confirmarPassword) {
             $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
         } else {
@@ -173,12 +230,12 @@
                 }
 
                 function checkPasswordMatch() {
-    var repeatPass = document.getElementById('password').value;
-    var repeatclave = repeatPass.length;
-    if (repeatclave > 0) {
-        var password = $("#password").val();
-        var confirmarPassword = $("#rpassword").val();
-        if (password != confirmarPassword) {
+                var repeatPass = document.getElementById('password').value;
+                var repeatclave = repeatPass.length;
+                if (repeatclave > 0) {
+                var password = $("#password").val();
+                var confirmarPassword = $("#rpassword").val();
+                if (password != confirmarPassword) {
             $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
         } else {
             $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
@@ -187,22 +244,24 @@
                 }
 /* ------------FIN DE VALIDACION DE CONTRASENA---------------------*/
                 </script>
-           </div>
+          
            <div class="form-row">
-                 <div class="form-group col-md-6" id="error">
-                   
+                <div class="form-group col-md-6" id="error">
+                    
                 </div>
+                <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6" id="divchearsisoniguales">
                    
                 </div>
-                 
            </div>
-
-  <button type="submit" id="btn" class="btn btn-danger">Registrar</button>
-</div>
+           <div class="form-group">
+             <button type="submit" id="btn" class="btn btn-danger" value = "registrar">Registrar</button>
+           </div>
 </form>
+ </div>
   <script type="text/javascript">
-    $(document).ready(function() {
+  /*  $(document).ready(function(e) {
+      e.preventDefault();
     $('form').submit(function() {
         $.ajax({
             type: 'post',
@@ -213,7 +272,7 @@
     });
 });
 
-
+*/
 
 /*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
 function solonumeros(e) {
@@ -276,12 +335,7 @@ $(document).ready(function() {
             e.preventDefault();
         }
     }
-    var carrera = function(e) {
-        if (formulario.carrera.value.length <= 2 || formulario.carrera.value == null || /^\s+$/.test(carrera)) {
-            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo carrera *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-            e.preventDefault();
-        }
-    }
+    
     var twitter = function(e) {
         if (formulario.twitter.value.length <= 2 || formulario.twitter.value == null || /^\s+$/.test(twitter)) {
             $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo twitter *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
@@ -306,7 +360,6 @@ $(document).ready(function() {
         apellidos(e);
         cel(e);
         facebook(e);
-        carrera(e);
         twitter(e);
         habilidades(e);
         hobbies(e);
