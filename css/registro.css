@@ -3,6 +3,7 @@
     padding: 0px;
 }
 body {
+    background-image: url(../imagenes/fondoregistro2.png);
     background-size: cover;
     background-attachment: fixed;
 }

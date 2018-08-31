@@ -172,7 +172,7 @@ $con = new Conexion();
 
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Hobbies :</label>
-                   <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies">   
+                   <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)">   
                 </div>
            </div>
            <div class="form-row">
