@@ -5,9 +5,9 @@ class Registro{
 		$con = new Conexion();
 		$resultado = mysqli_query($con,$create);
 	    if($resultado){
-	    		echo 1;
+	    		echo "usuario registrado";
 	    	}else{
-	    		echo 0;
+	    		echo "Usuario no registrado :".$create;
 	    	}
 	}
 }

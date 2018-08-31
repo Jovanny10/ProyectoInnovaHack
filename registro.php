@@ -32,27 +32,27 @@ $con = new Conexion();
                 </div>
                 <div class="form-group col-md-6" id="nombre">
                    <label for="inputPassword4">Apellidos <small>(Required)</small>:</label>
-                   <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos">
+                   <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos" required="">
                 </div>
            </div>
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Email (Required)</label>
-                   <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro">
+                   <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro" required="">
                    <div id="infoemail">
                    </div>
                 </div>
                 <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6">
                    <label for="#">Cel <small>(Required)</small></label>
-                   <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93">
+                   <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93" required="">
                 </div>
            </div>
            <div class="form-row">
             <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución <small>(Required)</small></label>
-                   <select class="form-control" id="institucion" name="institucion">
-                    <option value = "0">Seleccionar Institucion</option>
+                   <select class="form-control" required="" id="institucion" name="institucion">
+                    <option value = "">Seleccionar Institucion</option>
                     <?php 
                             $periodo="SELECT `id`, `Institucion` FROM `institucion` ORDER BY `Institucion`.`id` ASC ";
                             $periodoResp = $con->query($periodo);
@@ -93,12 +93,12 @@ $con = new Conexion();
            <div class="form-row" >
                 <div class="form-group col-md-6">
                    <label for="#">Facebook <small>(Requered)</small></label>
-                   <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
+                   <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" required="">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Carrera <small>(Required)</small></label>
-                   <select class="form-control" id="carrera" name="carrera">
-                        <option value = "0">Seleccionar carrera</option>
+                   <select class="form-control" id="carrera" name="carrera" required="">
+                        <option value = "">Seleccionar carrera</option>
                         <?php 
                             $carrera=" SELECT * FROM `carrera` ORDER BY `carrera`.`id` ASC";
                             $periodoResp = $con->query($carrera);
@@ -117,11 +117,11 @@ $con = new Conexion();
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Twitter <span>(Required)</span></label>
-                   <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
+                   <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" required="">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Fecha de Nacimiento <small>(Required)</small></label>
-                   <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00">
+                   <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00" required="">
                 </div>
                 
            </div>
@@ -129,8 +129,8 @@ $con = new Conexion();
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Sexo <small>(Required)</small></label>
-                   <select class="form-control" name="sexo" id="exampleFormControlSelect1" required>
-                    <option value = "0">Seleccionar Sexo</option>
+                   <select class="form-control" name="sexo" id="exampleFormControlSelect1" required="">
+                    <option value = "">Seleccionar Sexo</option>
                      <?php 
                             $sexo=" SELECT * FROM `genero` ORDER BY `genero`.`idSexo` ASC ";
                             $periodoResp = $con->query($sexo);
@@ -146,8 +146,8 @@ $con = new Conexion();
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Tallas <small>(Required)</small></label>
-                   <select class="form-control" name="talla" id="talla" name="seleccionar">
-                    <option value = "0">Seleccionar Talla</option>
+                   <select class="form-control" name="talla" id="talla" name="seleccionar" required="">
+                    <option value = "">Seleccionar Talla</option>
                         <?php 
                             $tallas=" SELECT * FROM `talla_playera` ORDER BY `talla_playera`.`idTalla_Playera` ASC ";
                             $periodoResp = $con->query($tallas);
@@ -178,8 +178,8 @@ $con = new Conexion();
            <div class="form-row">
              <div class="form-group col-md-6">
               <label for="#">Rol <small>(Required)</small></label>
-              <select class="form-control" name="rol" id="rol">
-                <option value = "0">Seleccionar un rol</option>
+              <select class="form-control" name="rol" id="rol" required="">
+                <option value = "">Seleccionar un rol</option>
                         <?php 
                             $rol=" SELECT * FROM `rol` ORDER BY `rol`.`idRol` ASC";
                             $periodoResp = $con->query($rol);
@@ -199,11 +199,11 @@ $con = new Conexion();
            <div class="form-row">
                  <div class="form-group col-md-6">
                    <label for="#">Contraseña <small>(Required)</small></label>
-                   <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" >
+                   <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" required="">
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Confirmar contraseña <small>(Required)</small></label>
-                   <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********">
+                   <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********" required="">
 
                 </div>
           </div>
@@ -263,22 +263,18 @@ $con = new Conexion();
 </form>
  </div>
   <script type="text/javascript">
-    $('form').submit(function(){
+    $('form').submit(function(e){
       var datos = $('#formulario').serialize();
       alert(datos);
       e.preventDefault();
-      $.ajax({
-        type:'post',
-        url:datos,
-        success:function(respuesta){
-          if(respuesta == 1){
-            alet("Usuario registrado");
-          }else if(respuesta == 0){
-            alert("No se puede registrar el usuario");
-          }
-        }
-
-      });
+       $.ajax({
+            type: 'post',
+            url: 'Backend/Create_registro.php',
+            data: datos,
+            success: function(respuesta) {
+               alert(respuesta);
+            }
+        })
 
     });
    

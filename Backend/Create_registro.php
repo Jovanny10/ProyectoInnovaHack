@@ -43,10 +43,8 @@ class Create_registro{
 	    	include '../Backend/esqueleto_registro.php';
 	    	$registro = new Registro();
 	    	$sql = "INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`) VALUES (NULL, '$this->nombre', '$this->apellidos', '$this->correo', '$this->contraseña', '$this->cel', '$this->talla', '$this->carrera', '$this->institucion', '$this->facebook', '$this->twitter', '$this->fecha', '$this->habilidades', '$this->hobbies', '$this->rol', '$this->sexo')";
-	    	if(isset($_POST['nombre']) && isset($_POST['apellidos']) && isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['contraseña']) && isset($_POST['cel']) && isset($_POST['talla']) && isset($_POST['carrera']) && isset($_POST['institucion']) && isset($_POST['facebook']) && isset($_POST['twitter']) && isset($_POST['fecha']) && isset($_POST['rol']) && isset($_POST['sexo']) ){
-	    		
-	    		echo  Registro::get_create($sql);
-	    	}
+	    	 
+	    			echo  Registro::get_create($sql);
 	    	 
 	    }
 
