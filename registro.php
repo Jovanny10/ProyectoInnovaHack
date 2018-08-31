@@ -311,7 +311,277 @@ function sololetras(e) {
         return false;
     }
 }
- 
+
+/*FIN DE VALIDACION DE CAMPO*/
+/*-------INICIO DE CAMBIAR COLOR A LOS IMPUT*/
+$(function() {
+    $("#nombre").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('nombre').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#apellidos").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('apellidos').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+
+$(function() {
+    $("#email").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('email').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#cel").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('cel').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#facebook").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('facebook').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#twitter").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('twitter').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#habilidades").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('habilidades').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#hobbies").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('hobbies').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#password").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('password').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#rpassword").keyup(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('rpassword').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#institucion").click(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('institucion').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#carrera").click(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('carrera').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#exampleFormControlSelect1").click(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('exampleFormControlSelect1').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#talla").click(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('talla').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#rol").click(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('rol').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#fecha").click(function() {
+        var nuevoCSS = {
+            "border": '2px solid #66ff33'
+        };
+        var error = {
+            "border": '2px solid red'
+        };
+        var capturado = document.getElementById('fecha').value;
+            $(this).css(nuevoCSS);
+    });
+}); 
 
   </script>
 	<script src="js/bootstrap.min.js"></script>
