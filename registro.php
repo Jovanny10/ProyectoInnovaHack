@@ -19,7 +19,7 @@ $con = new Conexion();
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
   </div>
-	<form class="formulario" name="formulario" id="formulario" method="post" action="principal.php" onsubmit="return validar(this)">
+	<form class="formulario" name="formulario" id="formulario" method="post" onsubmit="return validar(this)">
     
 		<div class="container">
       <div class="form-group">
@@ -27,37 +27,39 @@ $con = new Conexion();
       </div>
 			     <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Nombre *:</label>
+                   <label for="#">Nombre <small>(Required)</small></label>
                    <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre">
                 </div>
                 <div class="form-group col-md-6" id="nombre">
-                   <label for="inputPassword4">Apellidos *:</label>
+                   <label for="inputPassword4">Apellidos <small>(Required)</small>:</label>
                    <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos">
                 </div>
            </div>
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Email *:</label>
+                   <label for="#">Email (Required)</label>
                    <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro">
+                   <div id="infoemail">
+                   </div>
                 </div>
                 <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6">
-                   <label for="#">Cel *:</label>
+                   <label for="#">Cel <small>(Required)</small></label>
                    <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93">
                 </div>
            </div>
            <div class="form-row">
             <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Institución :</label>
-                   <select class="form-control" id="select" name="institucion">
-                    <option selected="">Seleccionar Institucion</option>
+                   <label for="exampleFormControlSelect1">Institución <small>(Required)</small></label>
+                   <select class="form-control" id="institucion" name="institucion">
+                    <option value = "0">Seleccionar Institucion</option>
                     <?php 
                             $periodo="SELECT `id`, `Institucion` FROM `institucion` ORDER BY `Institucion`.`id` ASC ";
                             $periodoResp = $con->query($periodo);
                             if ($periodoResp->num_rows>0) {
                                 while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
                                    ?>
-                                   <option value="<?php echo $filaPeriodo['id']; ?>"><?php echo $filaPeriodo['Institucion'] ; ?></option>
+                                   <option value="<?php print ($filaPeriodo['id']); ?>"><?php echo $filaPeriodo['Institucion'] ; ?></option>
                                    <?php 
                                 }
                             }
@@ -69,7 +71,7 @@ $con = new Conexion();
 
            <div class="form-row">
                 <div class="form-group col-md-6" id="pai">
-                    <label for="#">Otra institucion :</label>
+                    <label for="#">Otra institucion <small>(Required)</small></label>
                    <input type="text" class="form-control" name="otro" id="" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
@@ -90,13 +92,13 @@ $con = new Conexion();
 
            <div class="form-row" >
                 <div class="form-group col-md-6">
-                   <label for="#">Facebook *:</label>
+                   <label for="#">Facebook <small>(Requered)</small></label>
                    <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Carrera :</label>
+                   <label for="exampleFormControlSelect1">Carrera <small>(Required)</small></label>
                    <select class="form-control" id="carrera" name="carrera">
-                        <option selected="">Seleccionar carrera</option>
+                        <option value = "0">Seleccionar carrera</option>
                         <?php 
                             $carrera=" SELECT * FROM `carrera` ORDER BY `carrera`.`id` ASC";
                             $periodoResp = $con->query($carrera);
@@ -114,11 +116,11 @@ $con = new Conexion();
 
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Twitter :</label>
+                   <label for="#">Twitter <span>(Required)</span></label>
                    <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="#">Fecha de Nacimiento *:</label>
+                   <label for="#">Fecha de Nacimiento <small>(Required)</small></label>
                    <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00">
                 </div>
                 
@@ -126,9 +128,9 @@ $con = new Conexion();
 
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Sexo *:</label>
+                   <label for="exampleFormControlSelect1">Sexo <small>(Required)</small></label>
                    <select class="form-control" name="sexo" id="exampleFormControlSelect1" required>
-                    <option selected="">Seleccionar Sexo</option>
+                    <option value = "0">Seleccionar Sexo</option>
                      <?php 
                             $sexo=" SELECT * FROM `genero` ORDER BY `genero`.`idSexo` ASC ";
                             $periodoResp = $con->query($sexo);
@@ -143,9 +145,9 @@ $con = new Conexion();
                    </select>
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Tallas :</label>
-                   <select class="form-control" name="talla" id="seleccionar" name="seleccionar">
-                    <option selected="">Seleccionar Talla</option>
+                   <label for="exampleFormControlSelect1">Tallas <small>(Required)</small></label>
+                   <select class="form-control" name="talla" id="talla" name="seleccionar">
+                    <option value = "0">Seleccionar Talla</option>
                         <?php 
                             $tallas=" SELECT * FROM `talla_playera` ORDER BY `talla_playera`.`idTalla_Playera` ASC ";
                             $periodoResp = $con->query($tallas);
@@ -175,15 +177,16 @@ $con = new Conexion();
            </div>
            <div class="form-row">
              <div class="form-group col-md-6">
-              <label for="#">Rol</label>
+              <label for="#">Rol <small>(Required)</small></label>
               <select class="form-control" name="rol" id="rol">
+                <option value = "0">Seleccionar un rol</option>
                         <?php 
                             $rol=" SELECT * FROM `rol` ORDER BY `rol`.`idRol` ASC";
                             $periodoResp = $con->query($rol);
                             if ($periodoResp->num_rows>0) {
                                 while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
                                    ?>
-                                   <option value="<?php echo $filaPeriodo['idRol']; ?>"><?php echo $filaPeriodo['Rol'] ; ?></option>
+                                   <option value="<?php print($filaPeriodo['idRol']); ?>"><?php echo $filaPeriodo['Rol'] ; ?></option>
                                    <?php 
                                 }
                             }
@@ -195,11 +198,11 @@ $con = new Conexion();
 
            <div class="form-row">
                  <div class="form-group col-md-6">
-                   <label for="#">Contraseña *:</label>
+                   <label for="#">Contraseña <small>(Required)</small></label>
                    <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" >
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="#">Confirmar contraseña *:</label>
+                   <label for="#">Confirmar contraseña <small>(Required)</small></label>
                    <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********">
 
                 </div>
@@ -260,20 +263,7 @@ $con = new Conexion();
 </form>
  </div>
   <script type="text/javascript">
-  /*  $(document).ready(function(e) {
-      e.preventDefault();
-    $('form').submit(function() {
-        $.ajax({
-            type: 'post',
-            url: 'principal.php',
-            data: $("#formulario").serialize(),
-            success: function(data) {}
-        })
-    });
-});
-
-*/
-
+   
 /*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
 function solonumeros(e) {
     key = e.keyCode || e.which;
@@ -311,6 +301,7 @@ $(document).ready(function() {
     var formulario = document.getElementsByName('formulario')[0],
         elementos = formulario.elements,
         boton = document.getElementById('btn');
+
     var validarNombre = function(e) {
         if (formulario.nombre.value.length <= 2 || formulario.nombre.value == null || /^\s+$/.test(nombre)) {
             $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo nombre *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
@@ -335,34 +326,82 @@ $(document).ready(function() {
             e.preventDefault();
         }
     }
-    
-    var twitter = function(e) {
-        if (formulario.twitter.value.length <= 2 || formulario.twitter.value == null || /^\s+$/.test(twitter)) {
-            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo twitter *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-            e.preventDefault();
-        }
-    }
-    var habilidades = function(e) {
-        if (formulario.habilidades.value.length <= 2 || formulario.habilidades.value == null || /^\s+$/.test(habilidades)) {
-            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo habilidades *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-            e.preventDefault();
-        }
-    }
-    var hobbies = function(e) {
-        if (formulario.hobbies.value.length <= 2 || formulario.hobbies.value == null || /^\s+$/.test(hobbies)) {
-            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo hobbies *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+
+    var institucion = function(e) {
+        if ($("#institucion option:selected").val()==0) {
+            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo institucion *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
             e.preventDefault();
         }
     }
 
+    var carrera = function(e) {
+        if ($("#carrera option:selected").val()==0) {
+            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo Carrera *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+        }
+    }
+    var twitter = function(e) {
+        if (formulario.twitter.value.length <= 2 || formulario.twitter.value == null || /^\s+$/.test(twitter)) {
+            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo Twitter *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+        }
+    }
+
+    var sexo = function(e) {
+        if ($("#sexo option:selected").val()==0) {
+            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo Sexo *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+        }
+    }
+
+    var talla = function(e) {
+        if ($("#talla option:selected").val()==0) {
+            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo  Talla*!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+        }
+    }
+
+    var rol = function(e) {
+        if ($("#rol option:selected").val()==0) {
+            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo  Rol*!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
+            e.preventDefault();
+        }
+    } 
     function validar(e) {
         validarNombre(e);
         apellidos(e);
         cel(e);
+        institucion(e);
         facebook(e);
+        carrera(e);
         twitter(e);
-        habilidades(e);
-        hobbies(e);
+        sexo(e);
+        talla(e);
+        rol(e);
+        if(validarNombre(e)&& apellidos(e)&&cel(e)&&institucion(e)&&facebook(e)&&carrera(e)&&twitter(e)&&sexo(e)&&talla(e)&&rol(e)){
+          $(document).ready(function() {
+    $('form').submit(function(e) {
+      var datos = $('#formulario').serialize();
+      e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: 'Backend/Create_registro.php',
+            data: datos,
+            success: function(respuesta) {
+              if(respuesta == 1){
+                $("#divchearsisoniguales").hide();
+                $("#error").html("<div class='alert alert-success'><i class='fa fa-check'></i>Usuario registrado...<input type='hidden'  value='1' name='passwordchecker'></div>");
+              }else{
+                alert("No se puede registrar el usuario,email, o cel ya existen");
+                $("#error").html("<div class='alert alert-danger'><i class='fa fa-check'></i> No se puede registrar el usuario..email o cel ya existen..<input type='hidden'  value='1' name='passwordchecker'></div>");
+              }
+
+            }
+        })
+    });
+});
+
+        }
     };
     formulario.addEventListener("submit", validar);
 });
@@ -490,7 +529,7 @@ $(function() {
             "border": '2px solid red'
         };
         var cel = document.getElementById('twitter').value;
-        if (cel.length > 0) {
+        if (cel.length ==0 || cel.length >0) {
             $(this).css(nuevoCSS);
         } else {
             $(this).css(error);
