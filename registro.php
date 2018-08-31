@@ -263,7 +263,24 @@ $con = new Conexion();
 </form>
  </div>
   <script type="text/javascript">
-    
+    $('form').submit(function(){
+      var datos = $('#formulario').serialize();
+      alert(datos);
+      e.preventDefault();
+      $.ajax({
+        type:'post',
+        url:datos,
+        success:function(respuesta){
+          if(respuesta == 1){
+            alet("Usuario registrado");
+          }else if(respuesta == 0){
+            alert("No se puede registrar el usuario");
+          }
+        }
+
+      });
+
+    });
    
 /*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
 function solonumeros(e) {
