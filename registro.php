@@ -17,40 +17,40 @@ $con = new Conexion();
 </head>
 <body>
   <div class="boton text-right">
-    <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Ir a Mi perfil</a>
+    <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
   </div>
 	<form class="formulario" name="formulario" id="formulario" method="post">
     
 		<div class="container">
       <div class="form-group">
-        <h1 class="text-white">Datos personales</h1>
+        <h1 class="text-white"><i class="far fa-address-card"></i> Datos personales</h1>
       </div>
 			     <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Nombre <small>(Required)</small></label>
+                   <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
                    <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre">
                 </div>
                 <div class="form-group col-md-6" id="nombre">
-                   <label for="inputPassword4">Apellidos <small>(Required)</small>:</label>
+                   <label for="inputPassword4">Apellidos :<small class="text-danger"> (Required)</small>:</label>
                    <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos" required="">
                 </div>
            </div>
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Email (Required)</label>
+                   <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
                    <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro" required="">
                    <div id="infoemail">
                    </div>
                 </div>
                 <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6">
-                   <label for="#">Cel <small>(Required)</small></label>
+                   <label for="#">Cel :<small class="text-danger"> (Required)</small></label>
                    <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93" required="">
                 </div>
            </div>
            <div class="form-row">
             <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Institución <small>(Required)</small></label>
+                   <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
                    <select class="form-control" required="" id="institucion" name="institucion">
                     <option value = "">Seleccionar Institucion</option>
                     <?php 
@@ -71,7 +71,7 @@ $con = new Conexion();
 
            <div class="form-row">
                 <div class="form-group col-md-6" id="pai">
-                    <label for="#">Otra institucion <small>(Required)</small></label>
+                    <label for="#">Otra institucion :<small class="text-danger"> (Required)</small></label>
                    <input type="text" class="form-control" name="otro" id="" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
@@ -92,11 +92,11 @@ $con = new Conexion();
 
            <div class="form-row" >
                 <div class="form-group col-md-6">
-                   <label for="#">Facebook <small>(Requered)</small></label>
+                   <label for="#">Facebook :<small class="text-danger"> (Requered)</small></label>
                    <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" required="">
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Carrera <small>(Required)</small></label>
+                   <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
                    <select class="form-control" id="carrera" name="carrera" required="">
                         <option value = "">Seleccionar carrera</option>
                         <?php 
@@ -116,11 +116,11 @@ $con = new Conexion();
 
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="#">Twitter <span>(Required)</span></label>
+                   <label for="#">Twitter :<small class="text-danger"> (Required)</small> </label>
                    <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" required="">
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="#">Fecha de Nacimiento <small>(Required)</small></label>
+                   <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
                    <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00" required="">
                 </div>
                 
@@ -128,7 +128,7 @@ $con = new Conexion();
 
            <div class="form-row">
                 <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Sexo <small>(Required)</small></label>
+                   <label for="exampleFormControlSelect1">Sexo :<small class="text-danger"> (Required)</small></label>
                    <select class="form-control" name="sexo" id="exampleFormControlSelect1" required="">
                     <option value = "">Seleccionar Sexo</option>
                      <?php 
@@ -145,7 +145,7 @@ $con = new Conexion();
                    </select>
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Tallas <small>(Required)</small></label>
+                   <label for="exampleFormControlSelect1">Tallas :<small class="text-danger"> (Required)</small></label>
                    <select class="form-control" name="talla" id="talla" name="seleccionar" required="">
                     <option value = "">Seleccionar Talla</option>
                         <?php 
@@ -177,7 +177,7 @@ $con = new Conexion();
            </div>
            <div class="form-row">
              <div class="form-group col-md-6">
-              <label for="#">Rol <small>(Required)</small></label>
+              <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
               <select class="form-control" name="rol" id="rol" required="">
                 <option value = "">Seleccionar un rol</option>
                         <?php 
@@ -198,11 +198,11 @@ $con = new Conexion();
 
            <div class="form-row">
                  <div class="form-group col-md-6">
-                   <label for="#">Contraseña <small>(Required)</small></label>
+                   <label for="#">Contraseña :<small class="text-danger"> (Required)</small></label>
                    <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" required="">
                 </div>
                 <div class="form-group col-md-6">
-                   <label for="#">Confirmar contraseña <small>(Required)</small></label>
+                   <label for="#">Confirmar contraseña :<small class="text-danger"> (Required)</small></label>
                    <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********" required="">
 
                 </div>
@@ -258,7 +258,7 @@ $con = new Conexion();
                 </div>
            </div>
            <div class="form-group">
-             <button type="submit" id="btn" class="btn btn-danger" value = "registrar">Registrar</button>
+             <button type="submit" id="btn" class="btn btn-danger" value = "registrar"><i class="fas fa-user-check"></i> Registrar</button>
            </div>
 </form>
  </div>
@@ -317,10 +317,10 @@ function sololetras(e) {
 $(function() {
     $("#nombre").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('nombre').value;
         if (capturado.length > 2) {
@@ -334,10 +334,10 @@ $(function() {
 $(function() {
     $("#apellidos").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('apellidos').value;
         if (capturado.length > 2) {
@@ -352,10 +352,10 @@ $(function() {
 $(function() {
     $("#email").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('email').value;
         if (capturado.length > 2) {
@@ -369,10 +369,10 @@ $(function() {
 $(function() {
     $("#cel").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('cel').value;
         if (capturado.length > 2) {
@@ -386,10 +386,10 @@ $(function() {
 $(function() {
     $("#facebook").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('facebook').value;
         if (capturado.length > 2) {
@@ -403,10 +403,10 @@ $(function() {
 $(function() {
     $("#twitter").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('twitter').value;
         if (capturado.length > 2) {
@@ -420,10 +420,10 @@ $(function() {
 $(function() {
     $("#habilidades").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('habilidades').value;
         if (capturado.length > 2) {
@@ -437,10 +437,10 @@ $(function() {
 $(function() {
     $("#hobbies").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('hobbies').value;
         if (capturado.length > 2) {
@@ -454,10 +454,10 @@ $(function() {
 $(function() {
     $("#password").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('password').value;
         if (capturado.length > 2) {
@@ -471,10 +471,10 @@ $(function() {
 $(function() {
     $("#rpassword").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('rpassword').value;
         if (capturado.length > 2) {
@@ -488,10 +488,10 @@ $(function() {
 $(function() {
     $("#institucion").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('institucion').value;
         if (capturado>0) {
@@ -505,10 +505,10 @@ $(function() {
 $(function() {
     $("#carrera").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('carrera').value;
         if (capturado>0) {
@@ -522,10 +522,10 @@ $(function() {
 $(function() {
     $("#exampleFormControlSelect1").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('exampleFormControlSelect1').value;
         if (capturado>0) {
@@ -539,10 +539,10 @@ $(function() {
 $(function() {
     $("#talla").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('talla').value;
         if (capturado>0) {
@@ -556,10 +556,10 @@ $(function() {
 $(function() {
     $("#rol").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('rol').value;
         if (capturado>0) {
@@ -573,10 +573,10 @@ $(function() {
 $(function() {
     $("#fecha").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('fecha').value;
             $(this).css(nuevoCSS);

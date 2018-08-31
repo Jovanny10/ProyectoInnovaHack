@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/miperfil.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -63,8 +63,8 @@
 
                   <div class="row botones">
                     <div class="col-lg-12">
-                     <button type="submit" class="btn btn-danger">ACEPTAR</button>
-                     <a href="registro.php" class="btn btn-danger" role="button" value="registrar">REGISTRARSE</a>
+                     <button type="submit" class="btn btn-danger"><i class="fas fa-user-check"></i> ACEPTAR</button>
+                     <a href="registro.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
                      
                     </div>
                   </div>
