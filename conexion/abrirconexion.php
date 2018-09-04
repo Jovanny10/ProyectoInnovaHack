@@ -9,11 +9,7 @@ class Conexion extends mysqli
 
     public function __construct()
     {
-
         parent::__construct($this->HOST, $this->USER, $this->PASS, $this->BASE);
-
-        $this->set_charset('utf-8');
-
         $this->connect_errno ? die("Error en la conexion" . mysqli_errno()) : $m = 'Conectado';
     }
 

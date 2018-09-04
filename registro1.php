@@ -1,319 +1,225 @@
-<?php 
+ <?php 
 include 'conexion/abrirconexion.php';
 $con = new Conexion();
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <!-- 
-    <link rel="stylesheet" href="css/registro.css">
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/registro.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-
-  -->
- <script src="js/jquery-3.3.1.min.js"></script>
-  
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Registro</title>
-
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-
-	<!--     Fonts and icons     -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-
-	<!-- CSS Files -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="assets/css/gsdk-bootstrap-wizard.css" rel="stylesheet" />
-
-	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link href="assets/css/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
+  <script src="js/jquery-3.33.1.min.js"></script>
+  <script type="text/javascript" src="Backend/institucion.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  
 </head>
-
 <body>
-<div class="image-container set-full-height" style="background-image: url('assets/img/wizard-city.jpg')">
-	<!--  Made With Get Shit Done Kit  -->
-
-    <!--   Big container   -->
-    <div class="container">
-        <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-
-            <!--      Wizard container        -->
-            <div class="wizard-container">
-
-                <div class="card wizard-card" data-color="orange" id="wizardProfile">
-                    <form class="formulario" name="formulario" id="formulario" method="post">
-
-                    	<div class="wizard-header">
-                        	<h3>
-                        	   <b>Registros</b><br>
-                        	</h3>
-                    	</div>
-
-						          <div class="wizard-navigation">
-							         <ul>
-	                            <li><a href="#about" data-toggle="tab">Datos personales</a></li>
-	                            <li><a href="#account" data-toggle="tab">Datos Escolares</a></li>
-	                            <li><a href="#address" data-toggle="tab">Redes sociales</a></li>
-	                     </ul>
-
-						          </div>
-
-                        <div class="tab-content">
-                            <div class="tab-pane" id="about">
-                              <div class="row">
-                                  <h4 class="info-text"> Informacion confidencial</h4>
-                                 <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Nombre <small>(Required)</small></label>
-                                      <input type="text" class="form-control" placeholder="" onkeypress="return sololetras(event)" name="nombre" id="nombre">
-                                    </div>
-                                  </div>
-
-                                  <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Apellidos <small>(Required)</small></label>
-                                      <input type="text" class="form-control" placeholder="" onkeypress="return sololetras(event)" id="apellidos" name="apellidos"> 
-                                    </div>
-                                  </div>
-                                  <div class="col-sm-10 col-sm-offset-1">
-                                      <div class="form-group">
-                                          <label>Email <small>(required)</small></label>
-                                          <input name="correo" type="email" class="form-control" placeholder="labsol@gmail.com" id="email">
-                                      </div>
-                                  </div>
-                                  <div class="col-sm-10 col-sm-offset-1">
-                                      <div class="form-group">
-                                          <label>Contrasena <small>(required)</small></label>
-                                          <input name="contraseña" type="password" id="contrasena" class="form-control" placeholder="4 caracteres maximo">
-                                      </div>
-                                  </div>
-
-                                  <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Fecha de Nacimiento <small>(Required)</small></label>
-                                      <input type="date" name="fecha" class="form-control" placeholder="12/05/2018">
-                                    </div>
-                                  </div>
-
-                                  <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Sexo <small>(Required)</small></label>
-                                      <select name="sexo" class="form-control" name="sexo">
-                                        <option>Seleccionar Sexo</option>
-                                               <?php 
-                                     $sexo=" SELECT * FROM `genero` ORDER BY `genero`.`idSexo` ASC ";
-                                     $periodoResp = $con->query($sexo);
-                                     if ($periodoResp->num_rows>0) {
-                                        while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
-                                        ?>
-                                      <option value="<?php echo $filaPeriodo['idSexo']; ?>"><?php echo $filaPeriodo['Sexo'] ; ?></option>
-                                      <?php 
-                                        }
-                                     }
-                                      ?>      
-                                     </select>  
-                                    </div>
-                                  </div>
-
-                                  <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Rol <small>(Required)</small></label>
-                                      <select name="rol" class="form-control" name="rol">
-                                       <option>Seleccionar Rol</option> 
-                                          <?php 
-                            $rol=" SELECT * FROM `rol` ORDER BY `rol`.`idRol` ASC";
-                            $periodoResp = $con->query($rol);
-                            if ($periodoResp->num_rows>0) {
-                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
-                                   ?>
-                                   <option value="<?php echo $filaPeriodo['idRol']; ?>"><?php echo $filaPeriodo['Rol'] ; ?></option>
-                                   <?php 
-                                    }
-                                }
-                             ?>
-                                      </select>
-                                    </div>
-                                  </div>
-
-                                  <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Cel <small>(Required)</small></label>
-                                      <input type="number" placeholder="999999999" name="cel" class="form-control" id="cel">
-                                    </div>
-                                  </div>
-
-                                  <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Habilidades</label>
-                                      <input type="text" class="form-control" onkeypress="return sololetras(event)" name="habilidades" id="habilidades">
-                                    </div>
-                                  </div>
-                                  <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Hobbies</label>
-
-                                      <input type="text" class="form-control" name="hobbies" id="hobbies" onkeypress="return sololetras(event)">
-                                    </div>
-                                    
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="tab-pane" id="account">
-                                <div class="row">
-                                  <div class="col-sm-5 col-sm-offset-1">
-                                    <label>Institucion <small>(Required)</small></label>
-                                    <select class="form-control" name="institucion">
-                                      <option>Ingresar Institucion</option>
-                                      <?php 
-                            $periodo="SELECT `id`, `Institucion` FROM `institucion` ORDER BY `Institucion`.`id` ASC ";
-                            $periodoResp = $con->query($periodo);
-                            if ($periodoResp->num_rows>0) {
-                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
-                                   ?>
-                                   <option value="<?php echo $filaPeriodo['id']; ?>"><?php echo $filaPeriodo['Institucion'] ; ?></option>
-                                   <?php 
-                                    }
-                                }
-                             ?>
-                                    </select>
-                                  </div>
-
-                                  <div class="col-sm-4 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Carrera <small>(Required)</small></label>
-                                     <select class="form-control" name="carrera">
-                                      <option>Ingresar Carrera</option>
-                                      <?php 
-                            $carrera=" SELECT * FROM `carrera` ORDER BY `carrera`.`id` ASC";
-                            $periodoResp = $con->query($carrera);
-                            if ($periodoResp->num_rows>0) {
-                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
-                                   ?>
-                                   <option value="<?php echo $filaPeriodo['id']; ?>"><?php echo $filaPeriodo['Carrera'] ; ?></option>
-                                   <?php 
-                                   }
-                               }
-                            ?>
-                                     </select>
-                                    </div>
-                                    
-                                  </div>
-
-                                  <div class="col-sm-5 col-sm-offset-1">
-                                    <div class="form-group">
-                                      <label>Talla <small>(Playera)</small></label>
-                                     <select class="form-control" name="talla">
-                                      <option>Ingresar Talla</option>
-                                      <?php 
-                            $tallas=" SELECT * FROM `talla_playera` ORDER BY `talla_playera`.`idTalla_Playera` ASC ";
-                            $periodoResp = $con->query($tallas);
-                            if ($periodoResp->num_rows>0) {
-                                while ($filaPeriodo = $periodoResp->fetch_assoc()) { 
-                                   ?>
-                                   <option value="<?php echo $filaPeriodo['idTalla_Playera']; ?>"><?php echo $filaPeriodo['Talla_Playeracol'] ; ?></option>
-                                   <?php 
-                                    }
-                                }
-                             ?>
-                                      </select>
-                                    </div>
-                                    
-                                  </div>
-
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="address">
-                                <div class="row">
-                                     <div class="col-sm-5 col-sm-offset-1">
-                                       <div class="form-group">
-                                         <label>Facebook</label>
-                                         <input type="text" class="form-control" onkeypress="return sololetras(event)" name="facebook" id="facebook">
-                                       </div>
-                                     </div>
-
-                                     <div class="col-sm-4 col-sm-offset-1">
-                                       <div class="form-group">
-                                         <label>Twitter</label>
-                                         <input type="text" class="form-control" onkeypress="return sololetras(event)" name="twitter" id="twitter">
-                                       </div>
-                                     </div>
-                            </div>
-
-                        </div>
-
-                        <div class="wizard-footer height-wizard">
-                            <div class="pull-right">
-
-                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
-                                <button type="submit" id="btn" class="btn btn-finish btn-fill btn-warning btn-wd btn-sm" value = "registrar">Finalizar</button>
-                            </div>
-                            <div class="pull-left">
-                              <div class="form-group">
-                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Anterior' />
-                              </div>
-                                
-                            </div>
-                            <div class="clearfix"></div>
-
-                            <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar">Mi perfil</a>
-                        </div>
-                        <div class="btn btn-finish btn-fill btn-wd btn-sm" id="alerta">
-                          
-                        </div>
-                        <div class="btn btn-finish btn-fill btn-wd btn-sm" id="error">
-                          
-                        </div>
-                    </form>
-                </div>
-            </div> <!-- wizard container -->
-        </div>
-        </div><!-- end row -->
-    </div> <!--  big container -->
-
-</div>
-<script type="text/javascript">
-  $(document).ready(function(){
-  $('form').submit(function(e) {
-    var datos = $('#formulario').serialize();
-    e.preventDefault();
+  <div class="boton text-right">
+    <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
+  </div>
+  <form class="formulario" name="formulario" id="formulario" method="post">
     
-    $.ajax({
-      url:'Backend/Create_registro.php',
-      type:'post',
-      data: datos,
-      beforeSend:function(){
-        $('#alerta').html('<div class="alert alert-success"><button type = "button" class = "close" data-dismiss="alert">&times;</button><strong>Procesando... espere porfavor...</strong>.</div>');
-      }
-      
-    })
-    .done(function(){
-      $('#alerta').html('<div class="alert alert-success"><button type = "button" class = "close" data-dismiss="alert">&times;</button><strong>Usuario registrado..Iniciar Sesion en mi perfil</strong>!.</div>');
-    })
-    .fail(function(){
-      $('#alerta').html("Error");
-    })
+    <div class="container">
+      <div class="form-group">
+        <h1 class="text-white"><i class="far fa-address-card"></i> Datos personales</h1>
+      </div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
+                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre">
+                </div>
+                <div class="form-group col-md-6" id="nombre">
+                   <label for="inputPassword4">Apellidos :<small class="text-danger"> (Required)</small>:</label>
+                   <input type="text" name="apellidos" class="form-control" id="apellidos" onkeypress="return sololetras(event)"  placeholder="Ingresar Apellidos" required="">
+                </div>
+           </div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Email :<small class="text-danger"> (Required)</small> </label>
+                   <input type="email" class="form-control" required="" id="email" name="correo" placeholder="Labsol@gmail.com /Usuario registro" required="">
+                   <div id="infoemail">
+                   </div>
+                </div>
+                <div class="" id="checkemailresponse"></div>
+                <div class="form-group col-md-6">
+                   <label for="#">Cel :<small class="text-danger"> (Required)</small></label>
+                   <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93" required="">
+                </div>
+           </div>
+           <div class="form-row">
+               <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
+                  
+                    <div class="insti"></div>
+              </div>
+                 
+           </div>
 
+           <div class="form-row">
+                <div class="form-group col-md-6" id="pai">
+                    <label for="#">Otra institucion :<small class="text-danger"> (Required)</small></label>
+                   <input type="text" class="form-control" name="otro" id="" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
+                </div>
+           </div>
 
-    .always(function(){
-      $('#alerta').html("hola");
-    })
+           <script type="text/javascript">
+             $(document).ready(function() {
+               $('#pai').hide();
+               $('#select').on('change', function() {
+               var selectValor = '#' + $(this).val();
+               if (selectValor == '#div4') {
+                $('#pai').show();
+                  } else {
+                 $('#pai').hide();
+                }
+             });
+           });
+           </script>
+        <div class="form-row" >
+                <div class="form-group col-md-6">
+                   <label for="#">Facebook :<small class="text-danger"> (Requered)</small></label>
+                   <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" required="">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
+                   <div class="carrera">
+                     
+                   </div>
+                </div>
+           </div>
 
-  });
-  });
-/*
-success:function(data){
-        $('#alerta').html('<div class="alert alert-success"><button type = "button" class = "close" data-dismiss="alert">&times;</button><strong>Usuario registrado..Iniciar Sesion en mi perfil</strong>!.</div>');
-        alert(data);
-      }
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="#">Twitter :<small class="text-danger"> (Required)</small> </label>
+                   <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" required="">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
+                   <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00" required="">
+                </div>
+                
+           </div>
 
-*/
-  function solonumeros(e) {
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Sexo :<small class="text-danger"> (Required)</small></label>
+                   <div class="sexo">
+                     
+                   </div>
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Tallas :<small class="text-danger"> (Required)</small></label>
+                    <div class="talla"></div>
+               </div>
+                
+           </div>
+
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Habilidades :</label>
+                   <input type="text" class="form-control" name="habilidades" id="habilidades" onkeypress="return sololetras(event)" placeholder="Ingresar habilidad">   
+                </div>
+
+                <div class="form-group col-md-6">
+                   <label for="exampleFormControlSelect1">Hobbies :</label>
+                   <input type="text" class="form-control" name="hobbies" id="hobbies" placeholder="Ingresar Hobbies" onkeypress="return sololetras(event)">   
+                </div>
+           </div>
+           <div class="form-row">
+             <div class="form-group col-md-6">
+              <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
+              <div class="rol"></div>
+             </div>
+           </div>
+
+           <div class="form-row">
+                 <div class="form-group col-md-6">
+                   <label for="#">Contraseña :<small class="text-danger"> (Required)</small></label>
+                   <input type="password" class="form-control" name="contraseña"  id="password" placeholder="********" required="">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="#">Confirmar contraseña :<small class="text-danger"> (Required)</small></label>
+                   <input type="password" class="form-control" name="contraseña" id="rpassword" id="contraseña" placeholder="********" required="">
+
+                </div>
+          </div>
+
+                <script type="text/javascript">
+                  /*--------------INICIO VALIDACION DE CONTRASENA-------------- */
+
+                $(document).ready(function() {
+                  $("#rpassword").keyup(checkPasswordMatch);
+                });
+                $(document).ready(function() {
+                  $("#password").keyup(checkPasswordMatch2);
+                });
+
+                function checkPasswordMatch2() {
+                var repeatPass = document.getElementById('rpassword').value;
+                var repeatclave = repeatPass.length;
+                if (repeatclave > 0) {
+                var password = $("#password").val();
+                var confirmarPassword = $("#rpassword").val();
+        if (password != confirmarPassword) {
+            $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
+        } else {
+            $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
+        }
+    }
+                }
+
+                function checkPasswordMatch() {
+                var repeatPass = document.getElementById('password').value;
+                var repeatclave = repeatPass.length;
+                if (repeatclave > 0) {
+                var password = $("#password").val();
+                var confirmarPassword = $("#rpassword").val();
+                if (password != confirmarPassword) {
+            $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
+        } else {
+            $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
+        }
+    }
+                }
+/* ------------FIN DE VALIDACION DE CONTRASENA---------------------*/
+                </script>
+          
+           <div class="form-row">
+                <div class="form-group col-md-6" id="error">
+                    
+                </div>
+                <div class="" id="checkemailresponse"></div>
+                <div class="form-group col-md-6" id="divchearsisoniguales">
+                   
+                </div>
+           </div>
+           <div class="form-group">
+             <button type="submit" id="btn" class="btn btn-danger" value = "registrar"><i class="fas fa-user-check"></i> Registrar</button>
+           </div>
+</form>
+ </div>
+  <script type="text/javascript">
+    $('form').submit(function(e){
+      var datos = $('#formulario').serialize();
+      alert(datos);
+      e.preventDefault();
+       $.ajax({
+            type: 'post',
+            url: 'Backend/Create_registro.php',
+            data: datos,
+            success: function(respuesta) {
+               alert(respuesta);
+            }
+        })
+
+    });
+   
+/*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
+function solonumeros(e) {
     key = e.keyCode || e.which;
     teclado = String.fromCharCode(key);
     numero = "012345789";
@@ -345,47 +251,155 @@ function sololetras(e) {
         return false;
     }
 }
-/*VALIDACION DE CAMPOS*/
-$(document).ready(function(){
-  var formulario = document.getElementsByName('formulario')[0],
-        elementos = formulario.elements,
-        boton = document.getElementById('btn');
 
-        var validarNombre = function(e) {
-        if (formulario.nombre.value.length <= 2 || formulario.nombre.value == null || /^\s+$/.test(nombre)) {
-            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo nombre *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-            e.preventDefault();
-        }
-    }
-
-    var apellidos = function(e) {
-        if (formulario.apellidos.value.length <= 2 || formulario.apellidos.value == null || /^\s+$/.test(apellidos)) {
-            $("#error").html("<div class='alert alert-danger'><i class='fa fa-close'></i>Favor de verificar el campo apellidos *!<button type = 'button' class = 'close' data-dismiss='alert' arial-label='Close'><span aria-hidden='true'>&times;</span></div>");
-            e.preventDefault();
-        }
-    }
-
-        function validar(e){
-          validarNombre(e);
-          apellidos(e);
-        }
-
-
-        formulario.addEventListener("submit", validar);
-
-});
-/*FIN VALIDACION CAMPOS*/
-
-/*------------INICIO DE CAMPOS CORRECTOS CON COLOR VERDE -------------*/
+/*FIN DE VALIDACION DE CAMPO*/
+/*-------INICIO DE CAMBIAR COLOR A LOS IMPUT*/
 $(function() {
     $("#nombre").keyup(function() {
         var nuevoCSS = {
             "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
         var capturado = document.getElementById('nombre').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#apellidos").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('apellidos').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+
+$(function() {
+    $("#email").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('email').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#cel").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('cel').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#facebook").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('facebook').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#twitter").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('twitter').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#habilidades").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('habilidades').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#hobbies").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('hobbies').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+
+$(function() {
+    $("#password").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('password').value;
         if (capturado.length > 0) {
             $(this).css(nuevoCSS);
         } else {
@@ -393,176 +407,17 @@ $(function() {
         }
     });
 });
+
 $(function() {
-    $("#apellidos").keyup(function() {
+    $("#rpassword").keyup(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
-        var a = document.getElementById('apellidos').value;
-        if (a.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#email").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var email = document.getElementById('email').value;
-        if (email.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#cel").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('cel').value;
-        if (cel.length == 10) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#otro").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('otro').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#facebook").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('facebook').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#carrera").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('carrera').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#twitter").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('twitter').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#fecha").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('fecha').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#talla").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('talla').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#habilidades").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('habilidades').value;
-        if (cel.length > 0) {
-            $(this).css(nuevoCSS);
-        } else {
-            $(this).css(error);
-        }
-    });
-});
-$(function() {
-    $("#hobbies").keyup(function() {
-        var nuevoCSS = {
-            "border": '2px solid #66ff33'
-        };
-        var error = {
-            "border": '2px solid red'
-        };
-        var cel = document.getElementById('hobbies').value;
-        if (cel.length > 0) {
+        var capturado = document.getElementById('rpassword').value;
+        if (capturado.length > 0) {
             $(this).css(nuevoCSS);
         } else {
             $(this).css(error);
@@ -571,33 +426,106 @@ $(function() {
 });
 
 $(function() {
-    $("#contrasena").keyup(function() {
+    $("#institucion").click(function() {
         var nuevoCSS = {
-            "border": '2px solid #66ff33'
+            "border": '1px solid #66ff33'
         };
         var error = {
-            "border": '2px solid red'
+            "border": '1px solid red'
         };
-        var cel = document.getElementById('contrasena').value;
-        if (cel.length > 3) {
+        var capturado = document.getElementById('institucion').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#carrera").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('carrera').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#exampleFormControlSelect1").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('exampleFormControlSelect1').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#talla").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('talla').value;
+        if (capturado>0) {
             $(this).css(nuevoCSS);
         } else {
             $(this).css(error);
         }
     });
 });
-</script>
-</body>
+
+$(function() {
+    $("#rol").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('rol').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+$(function() {
+    $("#fecha").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('fecha').value;
+            $(this).css(nuevoCSS);
+    });
+}); 
+
  
-	<!--   Core JS Files   -->
-	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
 
-	<!--  Plugin for the Wizard -->
-	<script src="assets/js/gsdk-bootstrap-wizard.js"></script>
-
-	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
-	<script src="assets/js/jquery.validate.min.js"></script>
-
+  </script>
+</body>
 </html>
+
