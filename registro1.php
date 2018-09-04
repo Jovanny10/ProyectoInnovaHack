@@ -53,8 +53,8 @@ $con = new Conexion();
            <div class="form-row">
                <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
-                  
-                    <div class="insti"></div>
+                    <div class="insti" id="select">         
+                    </div>
               </div>
                  
            </div>
@@ -197,22 +197,31 @@ $con = new Conexion();
                    
                 </div>
            </div>
+           <div class="form-row">
+             <div class="form-group col-md-12 center-block" id="insertado">
+               
+             </div>
+           </div>
+             
+           
            <div class="form-group">
              <button type="submit" id="btn" class="btn btn-danger" value = "registrar"><i class="fas fa-user-check"></i> Registrar</button>
            </div>
+         </div>
 </form>
  </div>
   <script type="text/javascript">
     $('form').submit(function(e){
       var datos = $('#formulario').serialize();
-      alert(datos);
       e.preventDefault();
        $.ajax({
             type: 'post',
             url: 'Backend/Create_registro.php',
             data: datos,
             success: function(respuesta) {
-               alert(respuesta);
+              $("#error").hide();
+              $("#divchearsisoniguales").hide();
+               $("#insertado").html(respuesta);
             }
         })
 

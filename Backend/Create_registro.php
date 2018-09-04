@@ -40,11 +40,30 @@ class Create_registro{
 	    }
 
 	    public function Create_registro(){
-	    	include '../Backend/esqueleto_registro.php';
-	    	$registro = new Registro();
+	    	include 'esqueleto-crud.php';
+	    	$registro = new esqueleto();
 	    	$sql = "INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`) VALUES (NULL, '$this->nombre', '$this->apellidos', '$this->correo', '$this->contraseña', '$this->cel', '$this->talla', '$this->carrera', '$this->institucion', '$this->facebook', '$this->twitter', '$this->fecha', '$this->habilidades', '$this->hobbies', '$this->rol', '$this->sexo')";
 	    	 
-	    			echo  Registro::get_create($sql);
+	    			$resultado =   esqueleto::setRead($sql);
+	    			if($resultado){?>
+	    				<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="far fa-grin">
+                             <strong>Usuario registrado!</strong>
+                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                             </button>
+                        </div>
+	    				<?php
+	    			}else {
+	    				?>
+	    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="far fa-grin">
+                             <strong> Error en los campos!</strong>
+                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                             </button>
+                        </div>
+	    				<?php
+	    				
+	    			}
 	    	 
 	    }
 

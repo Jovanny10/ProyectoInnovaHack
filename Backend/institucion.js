@@ -18,7 +18,6 @@ function selectInstitucion(){
 		},
 		success:function(data){
 			$(".insti").html(data).fadeIn('slow');
-			
 		}
 	})
 		
