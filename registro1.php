@@ -92,7 +92,7 @@ $con = new Conexion();
                 </div>
            </div>
 
-          
+                     
         <div class="form-row" >
                 <div class="form-group col-md-6">
                    <label for="#">Facebook :<small class="text-danger"> (Requered)</small></label>

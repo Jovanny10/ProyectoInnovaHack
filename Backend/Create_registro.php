@@ -69,6 +69,7 @@ class Create_registro{
 	    }
 
 
+
 }
 $Create = new Create_registro();
 $Create->Create_registro();
