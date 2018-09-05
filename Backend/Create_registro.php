@@ -32,7 +32,8 @@ class Create_registro{
 	       } 
 	       $this->facebook = $_POST['facebook'];
 	       $this->twitter = $_POST['twitter'];
-	       $this->fecha  = $_POST['fecha'];
+
+	       $this->fecha  = $_POST['ano'].'/'.$_POST['mes'].'/'.$_POST['dia'];
 	       $this->habilidades =ucfirst( $_POST['habilidades']);
 	       $this->hobbies  =  ucfirst( $_POST['hobbies']);
 	       $this->rol  =  ucfirst( $_POST['rol']);
@@ -56,7 +57,7 @@ class Create_registro{
 	    			}else {
 	    				?>
 	    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="far fa-grin">
-                             <strong> Error en los campos!</strong>
+                             <strong> Favor de verificar los campos requeridos !</strong>
                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                              <span aria-hidden="true">&times;</span>
                              </button>

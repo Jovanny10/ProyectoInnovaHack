@@ -53,8 +53,21 @@ $con = new Conexion();
            <div class="form-row">
                <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
-                    <div class="insti" id="select">         
-                    </div>
+                   <select class="institucion" name="institucion">
+                    <?php 
+                    require_once 'conexion/abrirconexion.php';
+                    $con = new Conexion();
+                    $sql = "SELECT * FROM `institucion`";
+                    $resultado = $con->query($sql);
+
+                    while($row = mysqli_fetch_array($resultado)){
+                      ?>
+                      <option value="<?php echo $row['id'] ?>"><?php echo $row['Institucion'] ?></option>
+                      <?php
+
+                       }
+                    ?>
+                    </select>
               </div>
                  
            </div>
@@ -99,7 +112,52 @@ $con = new Conexion();
                 </div>
                 <div class="form-group col-md-6">
                    <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
-                   <input type="date" class="form-control" name="fecha"  id="fecha" placeholder="00/ 00 / 00" required="">
+                   <div class="row">
+                     <div class="col-xs-4 col-md-4">
+                      <label> Dia</label>
+                      <select name="dia" class="form-control">
+        <?php
+        for ($i=1; $i<=31; $i++) {
+            if ($i == date('j'))
+                echo '<option value="'.$i.'" selected>'.$i.'</option>';
+            else
+                echo '<option value="'.$i.'">'.$i.'</option>';
+        }
+        ?>
+</select>
+                     </div>
+                     <div class="col-xs-4 col-md-4">
+                      <label>Mes</label>
+                      <select name="mes" class="form-control">
+                         <option value="1">Ene</option>
+                         <option value="2">Feb</option>
+                         <option value="3">Marz</option>
+                         <option value="4">Abril</option>
+                         <option value="5">May</option>
+                         <option value="6">Jun</option>
+                         <option value="7">Jul</option>
+                         <option value="8">Ago</option>
+                         <option value="9">Sep</option>
+                         <option value="10">Oct</option>
+                         <option value="11">Nov</option>
+                         <option value="12">Dic</option>
+                      </select>
+                        
+                     </div>
+                     <div class="col-xs-4 col-md-4">
+                      <label>Año</label>
+                         <select name="ano" class="form-control">
+        <?php
+        for($i=date('o'); $i>=1910; $i--){
+            if ($i == date('o'))
+                echo '<option value="'.$i.'" selected>'.$i.'</option>';
+            else
+                echo '<option value="'.$i.'">'.$i.'</option>';
+        }
+        ?>
+</select>
+                     </div>
+                   </div>
                 </div>
                 
            </div>

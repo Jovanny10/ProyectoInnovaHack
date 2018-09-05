@@ -1,27 +1,10 @@
 $(document).ready(function(){
-	selectInstitucion();
 	selectCarrera();
 	selectGenero();
 	selectTalla();
 	selectRol();
 });
 
-function selectInstitucion(){
-	//Parametros de se
-	var parametros = {"action":"ajax"};
-	$("#mensaje").fadeIn('slow');
-	$.ajax({
-		url:'Backend/institu.php',
-		data: parametros,
-		beforeSend: function(objeto){
-			$("#mensaje").html("Mensaje: Procesando...");
-		},
-		success:function(data){
-			$(".insti").html(data).fadeIn('slow');
-		}
-	})
-		
-}
 
 function selectCarrera(){
 	$.ajax({
