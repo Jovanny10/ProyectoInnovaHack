@@ -52,8 +52,9 @@ $con = new Conexion();
            </div>
            <div class="form-row">
                <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
-                   <select class="institucion" name="institucion">
+                   <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label> 
+                     <select id="institucion" name="institucion" class="form-control">
+                      <option selected="">Seleccionar institucion</option>
                     <?php 
                     require_once 'conexion/abrirconexion.php';
                     $con = new Conexion();
@@ -64,12 +65,11 @@ $con = new Conexion();
                       ?>
                       <option value="<?php echo $row['id'] ?>"><?php echo $row['Institucion'] ?></option>
                       <?php
-
                        }
                     ?>
-                    </select>
+                    <option id="div4" value="div4">Otro...</option>
+                    </select> 
               </div>
-                 
            </div>
 
            <div class="form-row">
@@ -82,7 +82,7 @@ $con = new Conexion();
            <script type="text/javascript">
              $(document).ready(function() {
                $('#pai').hide();
-               $('#select').on('change', function() {
+               $('#institucion').on('change', function() {
                var selectValor = '#' + $(this).val();
                if (selectValor == '#div4') {
                 $('#pai').show();
@@ -99,9 +99,20 @@ $con = new Conexion();
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
-                   <div class="carrera">
-                     
-                   </div>
+                   <select id="carrera" name="carrera" class="form-control">
+                    <option selected="">Seleccionar carrera</option>
+                   <?php
+                   require_once 'conexion/abrirconexion.php';
+                   $con = new Conexion();
+                   $sql = "SELECT * FROM `carrera`";
+                   $resultado = $con->query($sql);
+                   while($row = mysqli_fetch_array($resultado)){
+                    ?>
+                    <option value="<?php echo $row['id'] ?>"><?php echo $row['Carrera'] ?></option>
+                    <?php
+                   }
+                   ?>
+                   </select>
                 </div>
            </div>
 
@@ -165,13 +176,40 @@ $con = new Conexion();
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Sexo :<small class="text-danger"> (Required)</small></label>
-                   <div class="sexo">
-                     
-                   </div>
+                   <select id="sexo" class="form-control" name = "sexo">
+                    <option>Seleccionar sexo</option>
+                   <?php 
+                   include_once 'conexion/abrirconexion.php';
+                   $con = new Conexion();
+                   $sql = "SELECT * FROM `genero`";
+                   $resultado = $con->query($sql);
+                   while ($row = mysqli_fetch_array($resultado)) {
+                     ?>
+                     <option value="<?php echo $row['idSexo']?>"><?php echo $row['Sexo']?></option>
+                  <?php
+                   }
+                   ?>
+                   </select>
                 </div>
                 <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Tallas :<small class="text-danger"> (Required)</small></label>
-                    <div class="talla"></div>
+                   <select class="form-control" id="talla" name="talla">
+                     <option>Seleccionar talla</option>
+                   
+                    <?php 
+                    require_once 'conexion/abrirconexion.php';
+                    $con = new Conexion();
+                    $sql = "SELECT * FROM `talla_playera`";
+                    $resultado = $con->query($sql);
+                    while($row = mysqli_fetch_array($resultado)){
+                      ?>
+                      <option value="<?php echo $row['idTalla_Playera'] ?>"><?php echo $row['Talla_Playeracol'] ?></option>
+                      <?php
+                    }
+
+                    ?>
+                    </select>
+
                </div>
                 
            </div>
@@ -190,7 +228,20 @@ $con = new Conexion();
            <div class="form-row">
              <div class="form-group col-md-6">
               <label for="#">Rol :<small class="text-danger"> (Required)</small></label>
-              <div class="rol"></div>
+              <select class="form-control" id="rol" name="rol">
+                <option>Seleccionar Rol</option>
+              <?php 
+              require_once 'conexion/abrirconexion.php';
+              $con = new Conexion();
+              $sql = "SELECT * FROM `rol`";
+              $resultado = $con->query($sql);
+              while($row = mysqli_fetch_array($resultado)){
+                ?>
+                <option value="<?php echo $row['idRol']?>"><?php echo $row['Rol']?></option>
+                <?php
+              }
+              ?>
+              </select>
              </div>
            </div>
 
@@ -542,6 +593,23 @@ $(function() {
         }
     });
 }); 
+
+$(function() {
+    $("#sexo").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('sexo').value;
+        if (capturado>0) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
 
 $(function() {
     $("#talla").click(function() {
