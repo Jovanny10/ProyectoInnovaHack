@@ -13,7 +13,6 @@ $con = new Conexion();
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <script src="js/jquery-3.33.1.min.js"></script>
-  <script type="text/javascript" src="Backend/institucion.js"></script>
   <script src="js/bootstrap.min.js"></script>
   
 </head>
@@ -54,36 +53,29 @@ $con = new Conexion();
                <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label> 
                      <select id="institucion" name="institucion" class="form-control">
-                      <option selected="">Seleccionar institucion</option>
+                      <option>Seleccionar institucion</option>
                     <?php 
                     require_once 'conexion/abrirconexion.php';
-                    $con = new Conexion();
+                    $con = new Conexion() ;
                     $sql = "SELECT * FROM `institucion`";
-                    $resultado = $con->query($sql);
 
+                    $resultado = $con->query($sql);
                     while($row = mysqli_fetch_array($resultado)){
                       ?>
                       <option value="<?php echo $row['id'] ?>"><?php echo $row['Institucion'] ?></option>
                       <?php
                        }
                     ?>
-                    <option id="div4" value="div4">Otro...</option>
+                    <option id="div4" name = "div4"value="div4">Otro...</option>
                     </select> 
               </div>
            </div>
-
-           <div class="form-row">
-                <div class="form-group col-md-6" id="pai">
-                    <label for="#">Otra institucion :<small class="text-danger"> (Required)</small></label>
-                   <input type="text" class="form-control" name="otro" id="" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
-                </div>
-           </div>
-
-           <script type="text/javascript">
+            <script type="text/javascript">
              $(document).ready(function() {
                $('#pai').hide();
                $('#institucion').on('change', function() {
                var selectValor = '#' + $(this).val();
+               alert(selectValor);
                if (selectValor == '#div4') {
                 $('#pai').show();
                   } else {
@@ -92,6 +84,15 @@ $con = new Conexion();
              });
            });
            </script>
+
+           <div class="form-row">
+                <div class="form-group col-md-6" id="pai">
+                    <label for="#">Otra institucion :<small class="text-danger"> (Required)</small></label>
+                   <input type="text" required="" class="form-control" name="otro" id="otro" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
+                </div>
+           </div>
+
+          
         <div class="form-row" >
                 <div class="form-group col-md-6">
                    <label for="#">Facebook :<small class="text-danger"> (Requered)</small></label>
@@ -320,6 +321,7 @@ $con = new Conexion();
 </form>
  </div>
   <script type="text/javascript">
+ 
     $('form').submit(function(e){
       var datos = $('#formulario').serialize();
       e.preventDefault();
@@ -335,7 +337,6 @@ $con = new Conexion();
         })
 
     });
-   
 /*--------------VALIDACION DE CAMPOS DEL FORMULARIO ----------------------------*/
 function solonumeros(e) {
     key = e.keyCode || e.which;
@@ -542,7 +543,7 @@ $(function() {
         }
     });
 });
-
+/*
 $(function() {
     $("#institucion").click(function() {
         var nuevoCSS = {
@@ -559,6 +560,44 @@ $(function() {
         }
     });
 }); 
+*/
+/*
+$(function() {
+    $("#institucion").click(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('div4').value;
+        if (capturado == "div4") {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+}); 
+
+*/
+/*
+$(function() {
+    $("#otro").keyup(function() {
+        var nuevoCSS = {
+            "border": '1px solid #66ff33'
+        };
+        var error = {
+            "border": '1px solid red'
+        };
+        var capturado = document.getElementById('otro').value;
+        if (capturado.length > 2) {
+            $(this).css(nuevoCSS);
+        } else {
+            $(this).css(error);
+        }
+    });
+});
+*/
 
 $(function() {
     $("#carrera").click(function() {
