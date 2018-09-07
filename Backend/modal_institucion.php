@@ -38,8 +38,11 @@
             },
             success: function(respuesta) {
              $("#datos-registrado-ajax").html(respuesta);
+             visualizarInstitucion();
+
             }
         })
      });
+
    
 </script>

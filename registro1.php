@@ -14,6 +14,7 @@ $con = new Conexion();
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <script src="js/jquery-3.33.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="Backend/funciones.js"></script>
 </head>
 <body>
   <?php include("Backend/modal_institucion.php");?>
@@ -52,25 +53,11 @@ $con = new Conexion();
            </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                   <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label> 
-                     <div class="input-group">
-                    <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#miModal"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
-                    <select id="institucion" name="institucion" class="form-control">
-                    <option>Seleccionar institucion</option>
-                    <?php 
-                    require_once 'conexion/abrirconexion.php';
-                    $con = new Conexion() ;
-                    $sql = "SELECT * FROM `institucion`";
-
-                    $resultado = $con->query($sql);
-                    while($row = mysqli_fetch_array($resultado)){
-                      ?>
-                      <option value="<?php echo $row['id'] ?>"><?php echo $row['Institucion'] ?></option>
-                      <?php
-                       }
-                    ?>
-                    </select> 
-                   </div>
+                   <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
+                    <div id="institucion">
+                      
+                    </div>
+                    
                     
               </div>
            </div>
