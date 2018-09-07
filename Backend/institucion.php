@@ -14,7 +14,6 @@
 				      <?php
 				    }
 			        ?>
-			   <option>Otro...</option>
 		    </select>
 		<?php
      	}

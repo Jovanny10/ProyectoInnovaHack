@@ -14,9 +14,10 @@ $con = new Conexion();
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
   <script src="js/jquery-3.33.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  
 </head>
 <body>
+  <?php include("Backend/modal_institucion.php");?>
+  <?php /*include("Backend/modal_carrera.php");*/?>
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
   </div>
@@ -29,7 +30,7 @@ $con = new Conexion();
            <div class="form-row">
                 <div class="form-group col-md-6">
                    <label for="#">Nombre :<small class="text-danger"> (Required)</small></label>
-                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre">
+                   <input type="text" class="input form-control" onkeypress="return sololetras(event)" name="nombre" id="nombre" placeholder="Ingresar el Nombre" required="">
                 </div>
                 <div class="form-group col-md-6" id="nombre">
                    <label for="inputPassword4">Apellidos :<small class="text-danger"> (Required)</small>:</label>
@@ -49,11 +50,13 @@ $con = new Conexion();
                    <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93" required="">
                 </div>
            </div>
-           <div class="form-row">
-               <div class="form-group col-md-6">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label> 
-                     <select id="institucion" name="institucion" class="form-control">
-                      <option>Seleccionar institucion</option>
+                     <div class="input-group">
+                    <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#miModal"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
+                    <select id="institucion" name="institucion" class="form-control">
+                    <option>Seleccionar institucion</option>
                     <?php 
                     require_once 'conexion/abrirconexion.php';
                     $con = new Conexion() ;
@@ -66,10 +69,12 @@ $con = new Conexion();
                       <?php
                        }
                     ?>
-                    <option id="div4" name = "div4"value="div4">Otro...</option>
                     </select> 
+                   </div>
+                    
               </div>
            </div>
+           <!--
             <script type="text/javascript">
              $(document).ready(function() {
                $('#pai').hide();
@@ -91,7 +96,7 @@ $con = new Conexion();
                    <input type="text" required="" class="form-control" name="otro" id="otro" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
                 </div>
            </div>
-
+-->
                      
         <div class="form-row" >
                 <div class="form-group col-md-6">
@@ -99,7 +104,10 @@ $con = new Conexion();
                    <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" required="">
                 </div>
                 <div class="form-group col-md-6">
+
                    <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
+                   <div class="input-group">
+                   <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#carrera"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
                    <select id="carrera" name="carrera" class="form-control">
                     <option selected="">Seleccionar carrera</option>
                    <?php
@@ -115,6 +123,7 @@ $con = new Conexion();
                    ?>
                    </select>
                 </div>
+              </div>
            </div>
 
            <div class="form-row">
