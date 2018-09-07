@@ -93,23 +93,9 @@ $con = new Conexion();
                 <div class="form-group col-md-6">
 
                    <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
-                   <div class="input-group">
-                   <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="ca" data-target = "#ca"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
-                   <select id="carrera" name="carrera" class="form-control">
-                    <option selected="">Seleccionar carrera</option>
-                   <?php
-                   require_once 'conexion/abrirconexion.php';
-                   $con = new Conexion();
-                   $sql = "SELECT * FROM `carrera`";
-                   $resultado = $con->query($sql);
-                   while($row = mysqli_fetch_array($resultado)){
-                    ?>
-                    <option value="<?php echo $row['id'] ?>"><?php echo $row['Carrera'] ?></option>
-                    <?php
-                   }
-                   ?>
-                   </select>
-                </div>
+                  <div id="car">
+                    
+                  </div>
               </div>
            </div>
 

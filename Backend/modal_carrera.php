@@ -38,6 +38,7 @@
             },
             success: function(respuesta) {
              $("#datos-registrado-a").html(respuesta);
+             visualizarCarrera();
             }
         })
      });
