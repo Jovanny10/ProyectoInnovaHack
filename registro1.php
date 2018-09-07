@@ -17,7 +17,7 @@ $con = new Conexion();
 </head>
 <body>
   <?php include("Backend/modal_institucion.php");?>
-  <?php /*include("Backend/modal_carrera.php");*/?>
+  <?php include("Backend/modal_carrera.php");?>
   <div class="boton text-right">
     <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
   </div>
@@ -107,7 +107,7 @@ $con = new Conexion();
 
                    <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
                    <div class="input-group">
-                   <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="" data-target = "#carrera"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
+                   <span class="input-group-addon btn btn-danger" data-toggle = "modal" id="ca" data-target = "#ca"><i class="fas fa-external-link-alt fa-1x">Agregar</i></span>
                    <select id="carrera" name="carrera" class="form-control">
                     <option selected="">Seleccionar carrera</option>
                    <?php

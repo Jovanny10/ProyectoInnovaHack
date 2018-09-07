@@ -1,23 +1,23 @@
-<form id="guardarDatoscarrera" method="post" id="for">
-                      <div class="modal fade" id="carrera" tabindex="-1" role = "dialog" aria-LabelLedby = "myModalLabel" aria-hidden = "true">
+<form id="guardarDatoscarrera" method="post">
+                      <div class="modal fade" id="ca" tabindex="-1" role = "dialog" aria-LabelLedby = "myModalLabel1" aria-hidden = "true">
                         <div class="modal-dialog" role = "document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h4 class="modal-title" id="myModalLabel"><i class="fas fa-sign-out-alt"></i> Registrar Carrera</h4>
+                              <h4 class="modal-title" id="myModalLabel1"><i class="fas fa-sign-out-alt"></i> Registrar Carrera</h4>
                               <button type = "button" class="close" data-dismiss = "modal" arial-label = "Close"><span aria-hidden = "true">&times;</span></button>
                             </div>
 
                             <div class="modal-body">
                               <div class="form-group">
-                                <div id="datos-registrado-ajax"></div>
+                                <div id="datos-registrado-a"></div>
                                 <label class="control-label text-danger">Carrera</label>
-                                <input type="text" class="form-control text-dark" id="carrera" name="carrera" placeholder="Ingresar Institucion" name = "i">
+                                <input type="text" class="form-control text-dark" id="ca" name="ca" placeholder="Ingresar Carrera">
                               </div>
                             </div>
 
                             <div class="modal-footer">
                                 <button type = "button" class="btn btn-danger" data-dismiss = "modal"><i class="fas fa-times"> Cerrar</i> </button>
-                                <button type = "submit" id="b" class="btn btn-danger"><i class="fas fa-check"> Guardar datos</i> </button>
+                                <button type = "submit" id="ca" class="btn btn-danger"><i class="fas fa-check"> Guardar datos</i> </button>
                             </div>
                           </div>
                         </div>
@@ -29,16 +29,15 @@
  <script type="text/javascript">
    $('form').submit(function(){
       var datos = $('#guardarDatoscarrera').serialize();
-   
        $.ajax({
             type: 'post',
-            url: 'Backend/guardarInst.php',
+            url: 'Backend/guardarcarrera.php',
             data: datos,
             beforeSend:function(c){
-             $("#datos-registrado-ajax").html("Procesando....");
+             $("#datos-registrado-a").html("Procesando....");
             },
             success: function(respuesta) {
-             $("#datos-registrado-ajax").html(respuesta);
+             $("#datos-registrado-a").html(respuesta);
             }
         })
      });

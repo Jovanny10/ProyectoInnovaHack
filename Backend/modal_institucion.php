@@ -29,7 +29,6 @@
  <script type="text/javascript">
    $('form').submit(function(){
       var datos = $('#guardarDatos').serialize();
-   
        $.ajax({
             type: 'post',
             url: 'Backend/guardarInst.php',

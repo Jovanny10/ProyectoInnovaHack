@@ -1,8 +1,8 @@
 <?php 
 
-   class guardar{
+   class guardar1{
      function __construct() {
-       $this->carrera = $_POST["carrera"];
+       $this->carrera = $_POST["ca"];
      }
 
      public function guardarCarrera(){
@@ -21,7 +21,7 @@
                         <?php
         }else{
           ?>
-          <div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="far fa-grin">
+          <div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
                              <strong> Error al registrar la Carrera !</strong>
                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                              <span aria-hidden="true">&times;</span>
@@ -33,8 +33,8 @@
      }
    }
 
-$g = new guardar();
-$g->guardarCarrera();
+$car = new guardar1();
+$car->guardarCarrera();
 
 
 ?>
