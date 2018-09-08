@@ -54,7 +54,7 @@ $con = new Conexion();
                 <div class="form-row">
                   <div class="form-group col-md-6">
                    <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
-                    <div id="institucion">
+                    <div id="idInstitucion">
                       
                     </div>
                     
@@ -92,7 +92,7 @@ $con = new Conexion();
                 </div>
                 <div class="form-group col-md-6">
 
-                   <label for="exampleFormControlSelect1">Carrera :<small class="text-danger"> (Required)</small></label>
+                   <label for="exampleFormControlSelect1">Carrera/Licenciatura :<small class="text-danger"> (Required)</small></label>
                   <div id="car">
                     
                   </div>
@@ -284,7 +284,6 @@ $con = new Conexion();
                 <div class="form-group col-md-6" id="error">
                     
                 </div>
-                <div class="" id="checkemailresponse"></div>
                 <div class="form-group col-md-6" id="divchearsisoniguales">
                    
                 </div>
@@ -303,7 +302,7 @@ $con = new Conexion();
 </form>
  </div>
   <script type="text/javascript">
- 
+ /*----------------Guardar el registro del usuario--------------------*/
     $('form').submit(function(e){
       var datos = $('#formulario').serialize();
       e.preventDefault();
@@ -312,8 +311,6 @@ $con = new Conexion();
             url: 'Backend/Create_registro.php',
             data: datos,
             success: function(respuesta) {
-              $("#error").hide();
-              $("#divchearsisoniguales").hide();
                $("#insertado").html(respuesta);
             }
         })

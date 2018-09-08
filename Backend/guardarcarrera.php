@@ -1,3 +1,4 @@
+
 <?php 
 
    class guardar1{
@@ -6,7 +7,8 @@
      }
 
      public function guardarCarrera(){
-      require_once 'esqueleto-crud.php';
+      if(isset($this->carrera)){
+        require_once 'esqueleto-crud.php';
         $esqueleto = new esqueleto();
         $sql = "INSERT INTO `carrera`(`id`, `Carrera`) VALUES (null,'$this->carrera')";
         $resultado = $esqueleto->setRead($sql);
@@ -31,6 +33,8 @@
         }
 
      }
+      }
+      
    }
 
 $car = new guardar1();

@@ -1,4 +1,4 @@
-<form id="guardarDatos" method="post" id="for">
+<form id="guardarDatos" method="post">
                       <div class="modal fade" id="miModal" tabindex="-1" role = "dialog" aria-LabelLedby = "myModalLabel" aria-hidden = "true">
                         <div class="modal-dialog" role = "document">
                           <div class="modal-content">
@@ -27,7 +27,7 @@
 
 
  <script type="text/javascript">
-   $('form').submit(function(){
+   $('#b').click(function(){
       var datos = $('#guardarDatos').serialize();
        $.ajax({
             type: 'post',

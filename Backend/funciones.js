@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    /*Visualizar datos de la base de datos en el Fron-Ent*/
     visualizarInstitucion();
     visualizarCarrera();
 })
@@ -12,10 +13,10 @@ function visualizarInstitucion(){
             url: 'Backend/institucion.php',
             data: datos,
             beforeSend:function(c){
-             $("#institucion").html("Procesando....");
+             $("#idInstitucion").html("Procesando....");
             },
             success: function(respuesta) {
-             $("#institucion").html(respuesta);
+             $("#idInstitucion").html(respuesta);
 
             }
         })

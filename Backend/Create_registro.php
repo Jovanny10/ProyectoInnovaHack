@@ -47,7 +47,7 @@ class Create_registro{
 	    	 
 	    			$resultado =   esqueleto::setRead($sql);
 	    			if($resultado){?>
-	    				<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="far fa-grin">
+	    				<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-check"></i>
                              <strong>Usuario registrado! ir a mi perfil para iniciar sesion</strong>
                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                              <span aria-hidden="true">&times;</span>
@@ -56,7 +56,7 @@ class Create_registro{
 	    				<?php
 	    			}else {
 	    				?>
-	    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="far fa-grin">
+	    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
                              <strong> Favor de verificar los campos requeridos !</strong>
                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                              <span aria-hidden="true">&times;</span>
