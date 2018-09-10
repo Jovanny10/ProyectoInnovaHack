@@ -18,7 +18,7 @@ class guardar1
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                              <span aria-hidden="true">&times;</span>
                         </button>
-          </div>
+               </div>
             <?php
 } else {
                 require_once 'esqueleto-crud.php';

@@ -123,11 +123,14 @@
             url: 'Backend/iniciosesion/proceso.php',
             data: datos,
             beforeSend:function(c){
-             $("#info").html("Procesando....");
+             $("#info").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             },
             success: function(respuesta) {
-             $("#info").html(respuesta);
-
+             if(respuesta == 1){
+             location.href='Backend/principal/index.php';
+             }else{
+              $("#info").html(respuesta);
+             }
             }
         });
      }

@@ -9,7 +9,7 @@ nav.navbar div.collapse{
 	float: right;
 }
 nav.navbar a.navbar-brand{
-	color: #1293d4;
+	color: #1293d4;/*#1293d4*/
 	font-weight: bold;
 }
 .collapse ul.navbar-nav li.nav-item a.nav-link{
@@ -49,7 +49,7 @@ div.container-portada div.row div.img-portada div.carousel div.carousel-inner di
 
 div.container-portada div.row div.container-login{
 	width: 60%;
-	height: 400px;
+	height: 430px;
 	background-color: white;
 	margin-left: 12%;
 	border-radius: 12px;
