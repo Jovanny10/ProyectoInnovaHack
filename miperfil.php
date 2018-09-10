@@ -51,19 +51,37 @@
                   <h1 class="text-center">Inicio de Sesión</h1>
                 </div>
               </div>
-              <form class="formulario">
+              <div class="form-group">
+                <div class="info">
+                  
+                </div>
+              </div>
+              <form class="miperfil" id="miperfil">
                  <div class="form-group">
-                    <label for="exampleInputEmail1" class="texto">Usuario.*</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar Usuario">
+                    <label for="exampleInputEmail1" class="texto text-success">Usuario</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      </div>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="labsol@gmail.com">
+                    </div> 
+                    
                   </div>
                   <div class="form-group  ">
-                    <label for="exampleInputPassword1" class="texto">Contraseña.*</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar contraseña">
+                    <label for="exampleInputPassword1" class="texto text-success">Contraseña</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                      </div>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar contraseña">
+                    </div>
+
+                
                   </div>
 
                   <div class="row botones">
                     <div class="col-lg-12">
-                     <button type="submit" class="btn btn-danger"><i class="fas fa-user-check"></i> ACEPTAR</button>
+                     <button type="submit" class="btn btn-danger" onclick="aceptar();"><i class="fas fa-user-check"></i> ACEPTAR</button>
                      <a href="registro1.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-user-plus"></i> REGISTRARSE</a>
                      
                     </div>
@@ -96,6 +114,12 @@
           </div>
         </div>
        </div>
+
+       <script type="text/javascript">
+         function aceptar(){
+          alert("Hola");
+         }
+       </script>
  
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
