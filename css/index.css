@@ -8,19 +8,23 @@
 }
 /*Inicio verticales*/
 div.contenedor-vertical{
-	width: 70%;
+	width: 80%;
 	padding:5px;
 	margin: auto;
 	text-align: center;
 }
 div.contenedor-vertical div.caja-vertical{
+	width: 400px;
 	padding: 20px;
-	width: 35%;
 	background-color: #96e1f0;
 	border-style: solid;
 	margin-top: 5px;
 	margin: 2px;
 	display: inline-grid;
+	word-wrap: break-word;
+}
+div.contenedor-vertical div.caja-vertical p{
+	text-align: justify;
 }
 /*Fin verticales*/
 /*Menu desplegable*/
@@ -397,6 +401,21 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 
 /*Fin de la empresa*/
 @media(max-width: 768px) {
+	/*INFORMACION DE VERTICAL*/
+	div.contenedor-vertical{
+	width: 100%;
+	text-align: center;
+    }
+
+    div.contenedor-vertical div.caja-vertical{
+	padding: 20px;
+	width: 90%;
+	background-color: #96e1f0;
+	border-style: solid;
+	margin-top: 5px;
+	margin: 2px;
+    }
+	/*FIN DE VERTICAL*/
 	nav.navbar button.boton{
 		background-color: red;
 		color: white;

@@ -132,13 +132,26 @@
                                            </i>  
                                         </div>
                                         <h2 class="text-center">Vertical <?php echo $i; ?></h2>
-                                        <p><i class="fas fa-check"></i> <?php echo $row['Nombre'] ?></p>
-                                        <p><i class="fas fa-check"></i> <?php echo $row['InfAsesoria'] ?></p>
+                                        <p><i class="fas fa-check"> </i> <?php echo $row['Nombre'] ?></p>
+                                        <p><i class="fas fa-check"> </i> <?php echo $row['InfAsesoria'] ?></p>
 
                                     </div>
                                     <?php
                                     $i++;     
                                     }
+                                }else{
+                                    ?>
+                                <div class="contenedor-vertical" style="width: 100%">
+                                <div class="caja-vertical">
+                                        <div class="text-center">
+                                           <i class="far fa-address-book fa-3x">
+                                           </i>  
+                                        </div>
+                                        <h2 class="text-center">No hay vertical</h2>
+                                        <p class="text-danger text-center">Favor de contactar al Administrador</p>
+                                    </div> 
+                                </div> 
+                                <?php 
                                 }
                                 ?>
                                 </div>
