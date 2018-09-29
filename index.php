@@ -132,8 +132,8 @@
                                            </i>  
                                         </div>
                                         <h2 class="text-center">Vertical <?php echo $i; ?></h2>
-                                        <p><i class="fas fa-check"> </i> <?php echo $row['Nombre'] ?></p>
-                                        <p><i class="fas fa-check"> </i> <?php echo $row['InfAsesoria'] ?></p>
+                                        <p><i class="fas fa-check text-danger"> </i> <?php echo utf8_encode($row['Nombre']) ?></p>
+                                        <p><i class="fas fa-check text-danger"> </i> <?php echo utf8_encode($row['InfAsesoria']) ?></p>
 
                                     </div>
                                     <?php

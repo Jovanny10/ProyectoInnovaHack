@@ -11,6 +11,8 @@ class Conexion extends mysqli
     {
         parent::__construct($this->HOST, $this->USER, $this->PASS, $this->BASE);
         $this->connect_errno ? die("Error en la conexion" . mysqli_errno()) : $m = 'Conectado';
+
+        
     }
 
 }
