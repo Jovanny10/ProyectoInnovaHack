@@ -51,17 +51,17 @@
                      <input type="tel" class="form-control" name="cel" onkeypress="return solonumeros(event)" id="cel"  placeholder="953-155-01-93" required="">
                   </div>
              </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
+                   <div class="form-row">
+                     <div class="form-group col-md-6">
                      <label for="exampleFormControlSelect1">Institución :<small class="text-danger"> (Required)</small></label>
                       <div id="idInstitucion">
                         
-                      </div>
+                     </div>
                       
                       
-                </div>
-             </div>
-             <!--
+                     </div>
+                   </div>
+                    <!--
               <script type="text/javascript">
                $(document).ready(function() {
                  $('#pai').hide();
