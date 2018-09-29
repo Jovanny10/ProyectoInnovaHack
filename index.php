@@ -100,7 +100,7 @@
                     </h1>
                     <h3 class="textoencima2">
                         No te quedes fuera de este gran evento,
-                        <a href="#">
+                        <a href="registro1.php">
                             da clic aquí
                         </a>
                     </h3>
@@ -454,7 +454,7 @@
                     </div>
                     <div class="col-lg-3 cajabotonRegistrame">
                         <div class="boton2">
-                            <a href="#">
+                            <a href="registro1.php">
                                 !REGISTRAME!
                             </a>
                         </div>

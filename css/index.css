@@ -14,15 +14,23 @@ div.contenedor-vertical{
 	text-align: center;
 }
 div.contenedor-vertical div.caja-vertical{
-	width: 400px;
+	width: 550px;
 	padding: 20px;
-	background-color: #96e1f0;
+	background-color: white;/*#96e1f0*/
 	border-style: solid;
 	margin-top: 5px;
 	margin: 2px;
 	display: inline-grid;
 	word-wrap: break-word;
+	vertical-align: top;
 }
+
+div.contenedor-vertical div.caja-vertical:hover{
+    background-color: orange ;
+    color: white;
+    border:3px solid white;
+}
+
 div.contenedor-vertical div.caja-vertical p{
 	text-align: justify;
 }
