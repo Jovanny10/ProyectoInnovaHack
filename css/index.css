@@ -6,6 +6,23 @@
 {
     padding: 7px;
 }
+/*Inicio verticales*/
+div.contenedor-vertical{
+	width: 70%;
+	padding:5px;
+	margin: auto;
+	text-align: center;
+}
+div.contenedor-vertical div.caja-vertical{
+	padding: 20px;
+	width: 35%;
+	background-color: #96e1f0;
+	border-style: solid;
+	margin-top: 5px;
+	margin: 2px;
+	display: inline-grid;
+}
+/*Fin verticales*/
 /*Menu desplegable*/
 nav.navbar{
 	border-bottom: 4px solid #1293d4;
@@ -20,21 +37,6 @@ nav.navbar a.navbar-brand{
 }
 .collapse ul.navbar-nav li.nav-item a.nav-link{
 	color: #fff;
-}
-div.contenedor{
-	 width: 80%;
-	 position: relative;
-	 margin:auto;
-	 margin-bottom: 12px;
-	 padding: 2px;
-	 
-}
-
-div.contenedor:hover{
-	background-color: orange;
-	color: #fff;
-	border: 3px solid black;
-	 border: 5px solid green;
 }
 div.contenedor #DatosImagen{
 	min-height: 400px;

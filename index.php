@@ -26,7 +26,7 @@
                         </a>
                     </div>
                 </div>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <i class="fas fa-sign-in-alt">
                     </i>
                     INICIO
@@ -105,7 +105,8 @@
                         </a>
                     </h3>
                 </div>
-                <div class="form-group">
+            </div>
+            <div class="form-group">
                     <div class="row">
                         <div class="titulo col-lg-12 col-xs-12 text-center">
                             <h1>
@@ -113,105 +114,34 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="grupos">
-                        </div>
-                        <div class="col-lg-1">
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="contenedor">
-                                <span class="text-center">
-                                    <i class="fas fa-school">
-                                    </i>
-                                </span>
-                                <h5 class="text-center">
-                                    Vertical 1
-                                </h5>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Aplicación para comercialización y posicionamiento de productos zacatecanos(Agroneg).
-                                </p>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Información y asesoría: Subsecretaría de agronegocios de SECAMPO
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="contenedor">
-                                <span class="text-center">
-                                    <i class="fas fa-file-alt">
-                                    </i>
-                                </span>
-                                <h5 class="text-center">
-                                    Vertical 2
-                                </h5>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Herramienta de análisis y monitoreo producción agrícola(Agricultura)Vertical 2
-                                </p>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Información y asesoría: Subsecretaría de agronegocios de SECAMPO
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-ls-1">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-1">
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="contenedor">
-                                <span class="text-center">
-                                    <i class="far fa-handshake">
-                                    </i>
-                                </span>
-                                <h5 class="text-center">
-                                    Vertical 3
-                                </h5>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Impulso y posicionamiento Pecuario(Ganadería)
-                                </p>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Información y asesoría:Subsecretaria de Agricultura de SECAMPO
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="contenedor">
-                                <span class="text-center">
-                                    <i class="fas fa-medal">
-                                    </i>
-                                </span>
-                                <h5 class="text-center">
-                                    Vertical 4
-                                </h5>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Monitoreo de Proyectos Rurales(Desarrollo Rural)
-                                </p>
-                                <p class="text-center">
-                                    <i class="fas fa-check">
-                                    </i>
-                                    Información y Asesoría:Subsecretaría de Desarrollo Rural
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-ls-1">
-                        </div>
-                    </div>
-                </div>
+                            <?php 
+                                require_once "conexion/abrirconexion.php";
+                                $con = new Conexion();
+                                $sql = "SELECT id,Nombre,Descripcion,InfAsesoria FROM vertical";
+                                $resultado = $con->query($sql);
+                                $i = 1;
+                                ?>
+                                <div class="contenedor-vertical">
+                                <?php
+                                if($resultado->num_rows > 0){
+                                    while ($row = mysqli_fetch_array($resultado)) {?>
+                                
+                                        <div class="caja-vertical">
+                                        <div class="text-center">
+                                           <i class="far fa-address-book fa-3x">
+                                           </i>  
+                                        </div>
+                                        <h2 class="text-center">Vertical <?php echo $i; ?></h2>
+                                        <p><i class="fas fa-check"></i> <?php echo $row['Nombre'] ?></p>
+                                        <p><i class="fas fa-check"></i> <?php echo $row['InfAsesoria'] ?></p>
+
+                                    </div>
+                                    <?php
+                                    $i++;     
+                                    }
+                                }
+                                ?>
+                                </div>
             </div>
             <div class="container-aliados">
                 <div class="row">

@@ -14,10 +14,10 @@
   	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="form-group">
             <div class="row col-md-12">
-              <a class="navbar-brand" href="index.html" class="img-responsive"><img src="imagenes/isaac.png" class="img-responsive" width="30%"></a>
+              <a class="navbar-brand" href="index.php" class="img-responsive"><img src="imagenes/isaac.png" class="img-responsive" width="30%"></a>
             </div>
           </div>
-            <a class="navbar-brand" href="index.html"><i class="fas fa-sign-in-alt"></i> INICIO</a>
+            <a class="navbar-brand" href="index.php"><i class="fas fa-sign-in-alt"></i> INICIO</a>
             <button class="boton navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
