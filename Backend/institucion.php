@@ -12,7 +12,7 @@
 				     <?php 
 					while ($row = mysqli_fetch_array($resultado)) {
 						?>
-						     <option value="<?php echo($row['id']) ?>"><?php echo($row['Institucion']) ?></option>
+						     <option value="<?php echo($row['id']) ?>"><?php echo(utf8_encode( $row['Institucion'])) ?></option>
 					      <?php
 					    }
 				        ?>

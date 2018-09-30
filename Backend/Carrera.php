@@ -15,7 +15,7 @@
       			while($row = mysqli_fetch_array($resultado)){
       				?>
       				<option value="<?php echo ($row['id']) ?>">
-      					<?php echo $row['Carrera'] ?>
+      					<?php echo (utf8_encode($row['Carrera'] ))?>
       				</option>
       				<?php
       			}

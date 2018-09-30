@@ -60,35 +60,11 @@
                       
                       
                      </div>
-                   </div>
-                    <!--
-              <script type="text/javascript">
-               $(document).ready(function() {
-                 $('#pai').hide();
-                 $('#institucion').on('change', function() {
-                 var selectValor = '#' + $(this).val();
-                 alert(selectValor);
-                 if (selectValor == '#div4') {
-                  $('#pai').show();
-                    } else {
-                   $('#pai').hide();
-                  }
-               });
-             });
-             </script>
-
-             <div class="form-row">
-                  <div class="form-group col-md-6" id="pai">
-                      <label for="#">Otra institucion :<small class="text-danger"> (Required)</small></label>
-                     <input type="text" required="" class="form-control" name="otro" id="otro" onkeypress="return sololetras(event)" placeholder="Universidad politécnica del centro">
-                  </div>
-             </div>
-  -->
-                       
+                   </div>     
              <div class="form-row" >
                   <div class="form-group col-md-6">
-                     <label for="#">Facebook :<small class="text-danger"> (Requered)</small></label>
-                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta" required="">
+                     <label for="#">Facebook :</label>
+                     <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Ingresar cuenta">
                   </div>
                   <div class="form-group col-md-6">
 
@@ -101,8 +77,8 @@
 
              <div class="form-row">
                   <div class="form-group col-md-6">
-                     <label for="#">Twitter :<small class="text-danger"> (Required)</small> </label>
-                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta" required="">
+                     <label for="#">Twitter :</label>
+                     <input type="text" class="form-control" name="twitter"  id="twitter" placeholder="Ingresar cuenta">
                   </div>
                   <div class="form-group col-md-6">
                      <label for="#">Fecha de Nacimiento :<small class="text-danger"> (Required)</small></label>
@@ -110,15 +86,15 @@
                        <div class="col-xs-4 col-md-4">
                         <label> Dia</label>
                         <select name="dia" class="form-control">
-          <?php
-          for ($i=1; $i<=31; $i++) {
-              if ($i == date('j'))
-                  echo '<option value="'.$i.'" selected>'.$i.'</option>';
-              else
-                  echo '<option value="'.$i.'">'.$i.'</option>';
-          }
-          ?>
-  </select>
+                          <?php
+                          for ($i=1; $i<=31; $i++) {
+                              if ($i == date('j'))
+                                  echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                              else
+                                  echo '<option value="'.$i.'">'.$i.'</option>';
+                          }
+                          ?>
+                        </select>
                        </div>
                        <div class="col-xs-4 col-md-4">
                         <label>Mes</label>
@@ -141,15 +117,15 @@
                        <div class="col-xs-4 col-md-4">
                         <label>Año</label>
                            <select name="ano" class="form-control">
-          <?php
-          for($i=date('o'); $i>=1910; $i--){
-              if ($i == date('o'))
-                  echo '<option value="'.$i.'" selected>'.$i.'</option>';
-              else
-                  echo '<option value="'.$i.'">'.$i.'</option>';
-          }
-          ?>
-  </select>
+                            <?php
+                            for($i=date('o'); $i>=1910; $i--){
+                                if ($i == date('o'))
+                                    echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                                else
+                                    echo '<option value="'.$i.'">'.$i.'</option>';
+                            }
+                            ?>
+                           </select>
                        </div>
                      </div>
                   </div>
@@ -256,12 +232,12 @@
                   if (repeatclave > 0) {
                   var password = $("#password").val();
                   var confirmarPassword = $("#rpassword").val();
-          if (password != confirmarPassword) {
-              $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
-          } else {
-              $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
-          }
-      }
+                  if (password != confirmarPassword) {
+                      $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
+                  } else {
+                      $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
+                  }
+                }
                   }
 
                   function checkPasswordMatch() {
@@ -271,10 +247,10 @@
                   var password = $("#password").val();
                   var confirmarPassword = $("#rpassword").val();
                   if (password != confirmarPassword) {
-              $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
-          } else {
-              $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
-          }
+                  $("#divchearsisoniguales").html("<div class='alert alert-danger'><i class='fa fa-close'></i>  Las contraseñas NO coinciden!<input value='error' type='hidden' name='passwordchecker'></div>");
+                  } else {
+                      $("#divchearsisoniguales").html("<div class='alert alert-success'><i class='fa fa-check'></i> Las contraseñas coinciden.<input type='hidden'  value='1' name='passwordchecker'></div>");
+                  }
       }
                   }
   /* ------------FIN DE VALIDACION DE CONTRASENA---------------------*/
@@ -340,7 +316,7 @@
   function sololetras(e) {
       key = e.keyCode || e.which;
       teclado = String.fromCharCode(key).toLowerCase();
-      letras = "abcdefghijklmnñopqrstuvwxyz ";
+      letras = "abcdefghijklmnñopqrstuvwxyzáéíóú ";
       especiales = "8-9-32-37-38-46-164";
       teclado_especial = false;
       for (var i in especiales) {
@@ -424,41 +400,6 @@
           }
       });
   });
-
-  $(function() {
-      $("#facebook").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('facebook').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
-  $(function() {
-      $("#twitter").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('twitter').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-
   $(function() {
       $("#habilidades").keyup(function() {
           var nuevoCSS = {

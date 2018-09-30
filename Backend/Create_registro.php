@@ -17,25 +17,20 @@
 	        	private $sexo;
 
 		    public function __construct(){
-	           $this->nombre = ucwords( $_POST['nombre']);
-		       $this->apellidos = ucwords( $_POST['apellidos']);
+	           $this->nombre =utf8_decode(ucwords( $_POST['nombre']));
+		       $this->apellidos =utf8_decode(ucwords( $_POST['apellidos']));
 		       $this->correo = $_POST['correo'];
 		       $this->contraseña = $_POST['contraseña'];
 		       $this->cel = $_POST['cel'];
 		       $this->talla = $_POST['talla'];
-		       $this->carrera = ucwords( $_POST['carrera']);
-		        $var= $_POST['institucion'];
-		       if($var == "div4"){
-		       	$this->institucion = ucwords( $_POST['otro']);
-		       }else{
-		       $this->institucion = ucwords( $_POST['institucion']);
-		       } 
+		       $this->carrera =utf8_decode(ucwords( $_POST['carrera']));
+		       $this->institucion =utf8_decode(ucwords( $_POST['institucion']));
 		       $this->facebook = $_POST['facebook'];
 		       $this->twitter = $_POST['twitter'];
 
 		       $this->fecha  = $_POST['ano'].'/'.$_POST['mes'].'/'.$_POST['dia'];
-		       $this->habilidades =ucfirst( $_POST['habilidades']);
-		       $this->hobbies  =  ucfirst( $_POST['hobbies']);
+		       $this->habilidades =utf8_decode(ucfirst( $_POST['habilidades']));
+		       $this->hobbies  =utf8_decode(ucfirst( $_POST['hobbies']));
 		       $this->rol  =  ucfirst( $_POST['rol']);
 		       $this->sexo = $_POST['sexo'];
 		    }
