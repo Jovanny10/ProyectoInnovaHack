@@ -17,6 +17,7 @@
 	        	private $sexo;
 
 		    public function __construct(){
+		    	
 	           $this->nombre =utf8_decode(ucwords( $_POST['nombre']));
 		       $this->apellidos =utf8_decode(ucwords( $_POST['apellidos']));
 		       $this->correo = $_POST['correo'];
@@ -52,7 +53,7 @@
 		    			}else {
 		    				?>
 		    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
-	                             <strong> Favor de verificar los campos requeridos !</strong>
+	                             <strong> Favor de verificar los campos requeridos!</strong>
 	                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	                             <span aria-hidden="true">&times;</span>
 	                             </button>

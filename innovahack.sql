@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2018 a las 22:39:22
+-- Tiempo de generación: 30-09-2018 a las 17:17:46
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 5.6.37
 
@@ -30,16 +30,62 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `carrera` (
   `id` int(11) NOT NULL,
-  `Carrera` varchar(80) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Carrera` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `carrera`
 --
 
 INSERT INTO `carrera` (`id`, `Carrera`) VALUES
-(2, 'Ingeniería en Electromecánica'),
-(1, 'Ingeniería en Sistemas Computacionales');
+(47, 'Bachilleratos'),
+(1, 'Ingeniería Ambiental'),
+(2, 'Ingeniería Civil'),
+(3, 'Ingeniería de Software'),
+(8, 'Ingeniería en Agrotecnología'),
+(31, 'Ingeniería en Alimentos'),
+(10, 'Ingeniería en Computación'),
+(11, 'Ingeniería en Comunicaciones y Electrónica'),
+(22, 'Ingeniería en Diseño Industrial'),
+(13, 'Ingeniería en Electromecánica'),
+(12, 'Ingeniería en Electrónica'),
+(14, 'Ingeniería en Energía'),
+(15, 'Ingeniería en Energía Renovables'),
+(16, 'Ingeniería en Industrias Alimentarias'),
+(17, 'Ingeniería en Informática'),
+(7, 'Ingeniería en Innovación Agrícola Sustentable'),
+(5, 'Ingeniería en Materiales'),
+(18, 'Ingeniería en Mecatrónica'),
+(27, 'Ingeniería en Minería'),
+(26, 'Ingeniería en Robótica y Mecatrónica'),
+(19, 'Ingeniería en Sistemas Computacionales'),
+(20, 'Ingeniería en Tecnologías de la Información y la Comunicación'),
+(21, 'Ingeniería Industrial'),
+(23, 'Ingeniería Mecánico'),
+(9, 'Ingeniería Metalúrgica'),
+(32, 'Ingeniero Agrónomo'),
+(4, 'Ingeniero Electricista'),
+(28, 'Ingeniero en Biotecnología'),
+(29, 'Ingeniero Geólogo'),
+(6, 'Ingeniero Minero Metalurgista'),
+(24, 'Ingeniero Químico'),
+(30, 'Ingeniero Topógrafo e Hidrógrafo'),
+(35, 'Licenciatura de Física'),
+(34, 'Licenciatura en Biología'),
+(33, 'Licenciatura en Ciencias Ambientales'),
+(36, 'Licenciatura en Desarrollo Regional Sustentable'),
+(37, 'Licenciatura en Matemáticas'),
+(38, 'Licenciatura en Química en Alimentos'),
+(39, 'Licenciatura en Químico Farmacobiólogo'),
+(48, 'Otra'),
+(25, 'Procesos y operaciones industriales'),
+(46, 'TSU Agricultura Sustentable y Protegida'),
+(43, 'TSU en Energías Renovables'),
+(45, 'TSU en Mantenimiento Industrial'),
+(41, 'TSU en Mecatrónica'),
+(42, 'TSU en Minería'),
+(44, 'TSU Procesos Industriales'),
+(40, 'TSU Tecnologías de la Información y la Comunicación');
 
 -- --------------------------------------------------------
 
@@ -49,36 +95,22 @@ INSERT INTO `carrera` (`id`, `Carrera`) VALUES
 
 CREATE TABLE `comunidad` (
   `id` int(11) NOT NULL,
-  `Nombre` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `Apellidos` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `E-mail` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `psw` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `Celular` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+  `Nombre` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Apellidos` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `E-mail` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `psw` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Celular` varchar(13) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Talla_Playera_idTalla_Playera` int(11) NOT NULL,
   `Carrera_id` int(11) NOT NULL,
   `Institucion_id` int(11) NOT NULL,
-  `Facebook` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
-  `Twitter` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `Facebook` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Twitter` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `FechaNacimiento` date NOT NULL,
-  `Habilidades` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Hobbies` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Habilidades` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Hobbies` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Rol_idRol` int(11) NOT NULL,
   `Genero_idSexo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `comunidad`
---
-
-INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`, `Talla_Playera_idTalla_Playera`, `Carrera_id`, `Institucion_id`, `Facebook`, `Twitter`, `FechaNacimiento`, `Habilidades`, `Hobbies`, `Rol_idRol`, `Genero_idSexo`) VALUES
-(14, 'Isaax', 'Hernandez', 'lopezq@gmail.com', 'q', '99999999999', 4, 1, 2, 'dfdsfsdfsdfdsf', 'sdfdsfsfsdfsdfsdfs', '1111-01-01', '', '', 1, 1),
-(15, 'Ian', 'Hernandez', 'lq@gmail.com', 'a', '339955555443', 3, 2, 3, 'asasasasasas', 'sdfdfdsfsdfdfds', '2222-02-02', '', '', 1, 1),
-(16, 'Jovanny', 'Leobardo Salas', 'gmail@h.com.mx', 'x', '3343232345555', 2, 2, 3, 'sdsdfdsfdsf', 'sdfdsfdsfdsf', '1029-02-02', '', '', 1, 1),
-(17, 'Ian Alejandro', 'Leobardo Hernandez', 'i@gmail.com', 'w', '333245778', 4, 1, 2, 'dsdfsdfdsfdsfdsfsdfsd', 'sdfsdfsdfdsfsdfdsfds', '2222-02-02', '', '', 1, 2),
-(18, 'Juan', 'Leobardo', 'h@gmail.com', 'q', '3343443445775', 4, 2, 1, 'wwweeeee', 'dfdfdfdf', '2222-02-02', '', '', 1, 1),
-(22, 'Juan', 'Leobardo', 'hew@gmail.com', 'q', '4577543', 4, 2, 1, 'wwweeeee', 'dfdfdfdf', '2222-02-02', '', '', 1, 1),
-(23, 'Juan', 'Leobardo', 'hew2@gmail.com', 'q', '3457099999', 4, 2, 1, 'wwweeeee', 'dfdfdfdf', '2222-02-02', '', '', 1, 1),
-(25, 'Sdfsdfsfsdfsd', 'Sdfdfsfsfsdf', 'labsol@gmail.com', 'q', '3333333333', 2, 2, 1, 'sdfdsfdsfsdfdsf', 'dfsdfdsfdsfdsfdsfsdf', '2222-02-02', '', '', 1, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -88,9 +120,9 @@ INSERT INTO `comunidad` (`id`, `Nombre`, `Apellidos`, `E-mail`, `psw`, `Celular`
 
 CREATE TABLE `equipo` (
   `idNombre` int(11) NOT NULL,
-  `NombreEquipo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `NombreEquipo` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Proyecto_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -100,8 +132,8 @@ CREATE TABLE `equipo` (
 
 CREATE TABLE `estatus` (
   `idEstatus` int(11) NOT NULL,
-  `Estado` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Estado` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -116,7 +148,7 @@ CREATE TABLE `evaluacion` (
   `Fases_idFases` int(11) NOT NULL,
   `Rubricas_idPreguntas` int(11) NOT NULL,
   `calif` decimal(10,0) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -126,8 +158,8 @@ CREATE TABLE `evaluacion` (
 
 CREATE TABLE `fases` (
   `idFases` int(11) NOT NULL,
-  `pitch` varchar(14) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `pitch` varchar(14) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -137,16 +169,16 @@ CREATE TABLE `fases` (
 
 CREATE TABLE `genero` (
   `idSexo` int(11) NOT NULL,
-  `Sexo` varchar(15) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Sexo` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `genero`
 --
 
 INSERT INTO `genero` (`idSexo`, `Sexo`) VALUES
-(1, 'Hombre'),
-(2, 'Mujer');
+(1, 'Mujer'),
+(2, 'Hombre');
 
 -- --------------------------------------------------------
 
@@ -156,12 +188,26 @@ INSERT INTO `genero` (`idSexo`, `Sexo`) VALUES
 
 CREATE TABLE `hackatonedicion` (
   `id` int(11) NOT NULL,
-  `Edicion` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `Edicion` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `InicioHackaton` date DEFAULT NULL,
   `FechLimiteRegProy` date DEFAULT NULL,
   `TerminoHack` date DEFAULT NULL,
-  `Imagen` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Imagen` blob,
+  `estado` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `hackatonedicion`
+--
+
+INSERT INTO `hackatonedicion` (`id`, `Edicion`, `InicioHackaton`, `FechLimiteRegProy`, `TerminoHack`, `Imagen`, `estado`) VALUES
+(16, 'Edicion 1', '2018-09-13', '2018-09-02', '2018-09-14', NULL, NULL),
+(17, 'Edicion 2', '2018-09-14', '2018-09-13', '2018-09-15', NULL, NULL),
+(18, 'Edicion 3', '2018-09-05', '2018-09-05', '2018-09-04', NULL, NULL),
+(19, 'Edicion 4', '2018-09-02', '2018-09-07', '2018-09-17', NULL, NULL),
+(22, 'Edicion 5', '2018-09-20', '2018-09-20', '2018-09-20', NULL, 0),
+(24, 'Edicion 7', '2019-09-09', '2019-09-04', '2019-09-14', NULL, 0),
+(25, 'ian', '2018-09-05', '2018-08-27', '2018-09-05', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -175,7 +221,7 @@ CREATE TABLE `infconfiguracion` (
   `Fases_idFases` int(11) NOT NULL,
   `EquiposLimite` int(11) NOT NULL,
   `Estatus_idEstatus` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -185,17 +231,31 @@ CREATE TABLE `infconfiguracion` (
 
 CREATE TABLE `institucion` (
   `id` int(11) NOT NULL,
-  `Institucion` varchar(80) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Institucion` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `institucion`
 --
 
 INSERT INTO `institucion` (`id`, `Institucion`) VALUES
-(2, 'Ingeniería civil'),
-(3, 'Ingeniería Electromecánica'),
-(1, 'Ingeniería en Sistemas Computacionales');
+(24, 'Bachillerato'),
+(9, 'Instituto Politécnico Nacional Campus Zacatecas'),
+(10, 'Instituto Tecnológico de Zacatecas'),
+(13, 'Instituto Tecnológico Superior de Fresnillo'),
+(11, 'Instituto Tecnológico Superior de Jerez'),
+(12, 'Instituto Tecnológico Superior de Loreto'),
+(14, 'Instituto Tecnológico Superior de Nochistlán'),
+(16, 'Instituto Tecnológico Superior Zacatecas Norte'),
+(15, 'Instituto Tecnológico Superior Zacatecas Occidente'),
+(17, 'Instituto Tecnológico Superior Zacatecas Sur'),
+(25, 'Otra'),
+(18, 'Universidad Autónoma de Zacatecas'),
+(19, 'Universidad Autónoma de Zacatecas campus Jalpa'),
+(20, 'Universidad Politécnica de Zacatecas'),
+(21, 'Universidad Politécnica del Sur de Zacatecas'),
+(22, 'Universidad Tecnológica del Estado de Zacatecas'),
+(23, 'Universidad Tecnológica del Estado de Zacatecas campus Pinos');
 
 -- --------------------------------------------------------
 
@@ -205,22 +265,22 @@ INSERT INTO `institucion` (`id`, `Institucion`) VALUES
 
 CREATE TABLE `jueztemporal` (
   `id` int(11) NOT NULL,
-  `Nombre` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `Apellidos` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `E-mail` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `Celular` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
-  `psw` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Carrera_id` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Institucion_id` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Facebook` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
-  `Twitter` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `Nombre` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Apellidos` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `E-mail` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Celular` varchar(13) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `psw` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Carrera_id` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Institucion_id` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Facebook` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Twitter` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `FechaNacimiento` date NOT NULL,
-  `Sexo` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
-  `Talla_Playera_idTalla_Playera` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Habilidades` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `Hobbies` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Sexo` varchar(9) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Talla_Playera_idTalla_Playera` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Habilidades` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Hobbies` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Status` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -230,11 +290,11 @@ CREATE TABLE `jueztemporal` (
 
 CREATE TABLE `proyecto` (
   `id` int(11) NOT NULL,
-  `NombreProyecto` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
-  `Descripcion` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `NombreProyecto` varchar(80) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Descripcion` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `FechaRegistro` date DEFAULT NULL,
   `Vertical_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -244,8 +304,8 @@ CREATE TABLE `proyecto` (
 
 CREATE TABLE `rol` (
   `idRol` int(11) NOT NULL,
-  `Rol` varchar(13) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Rol` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `rol`
@@ -253,7 +313,8 @@ CREATE TABLE `rol` (
 
 INSERT INTO `rol` (`idRol`, `Rol`) VALUES
 (1, 'Hacker'),
-(2, 'Juez');
+(2, 'Juez'),
+(6, 'Lider del proyecto');
 
 -- --------------------------------------------------------
 
@@ -263,9 +324,9 @@ INSERT INTO `rol` (`idRol`, `Rol`) VALUES
 
 CREATE TABLE `rubricas` (
   `idPreguntas` int(11) NOT NULL,
-  `Pregunta` varchar(145) COLLATE utf8_unicode_ci NOT NULL,
+  `Pregunta` varchar(145) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Vertical_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -275,8 +336,8 @@ CREATE TABLE `rubricas` (
 
 CREATE TABLE `talla_playera` (
   `idTalla_Playera` int(11) NOT NULL,
-  `Talla_Playeracol` varchar(3) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `Talla_Playeracol` varchar(3) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `talla_playera`
@@ -286,7 +347,9 @@ INSERT INTO `talla_playera` (`idTalla_Playera`, `Talla_Playeracol`) VALUES
 (2, 'CH'),
 (4, 'G'),
 (3, 'M'),
-(1, 'XCH');
+(1, 'XCH'),
+(5, 'XG'),
+(6, 'XXG');
 
 -- --------------------------------------------------------
 
@@ -297,7 +360,7 @@ INSERT INTO `talla_playera` (`idTalla_Playera`, `Talla_Playeracol`) VALUES
 CREATE TABLE `team` (
   `comunidad_id` int(11) NOT NULL,
   `Equipo_idNombre` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -307,11 +370,21 @@ CREATE TABLE `team` (
 
 CREATE TABLE `vertical` (
   `id` int(11) NOT NULL,
-  `Nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `Descripcion` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
-  `InfAsesoria` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `Nombre` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Descripcion` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `InfAsesoria` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `HackatonEdicion_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `vertical`
+--
+
+INSERT INTO `vertical` (`id`, `Nombre`, `Descripcion`, `InfAsesoria`, `HackatonEdicion_id`) VALUES
+(24, 'Aplicación para comercialización y posicionamiento de productos zacatecanos(Agroneg)', 'Prueba 1', 'Información y asesoría: Subsecretaria de agronegocios de SECAMPO', 16),
+(25, 'Herramienta de análisis y monitoreo producción agrícola(Agricultura)', 'Prueba 2', 'Información y asesoría: Subsecretaria de Agricultura de SECAMPO', 16),
+(26, 'Impulso y posicionamiento Pecuario (Ganadería)\r\n', 'Prueba 3', 'Información y asesoría: Subsecretaria de Ganadería de SECAMPO', 16),
+(27, 'Monitoreo de Proyectos Rurales ( Desarrollo Rural)\r\n', 'Prueba 4', 'Información y Asesoría: Subsecretaría de Desarrollo Rural', 16);
 
 --
 -- Índices para tablas volcadas
@@ -463,13 +536,13 @@ ALTER TABLE `vertical`
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `comunidad`
 --
 ALTER TABLE `comunidad`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `equipo`
@@ -505,7 +578,7 @@ ALTER TABLE `genero`
 -- AUTO_INCREMENT de la tabla `hackatonedicion`
 --
 ALTER TABLE `hackatonedicion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `infconfiguracion`
@@ -517,7 +590,7 @@ ALTER TABLE `infconfiguracion`
 -- AUTO_INCREMENT de la tabla `institucion`
 --
 ALTER TABLE `institucion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `jueztemporal`
@@ -535,7 +608,7 @@ ALTER TABLE `proyecto`
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `rubricas`
@@ -547,13 +620,13 @@ ALTER TABLE `rubricas`
 -- AUTO_INCREMENT de la tabla `talla_playera`
 --
 ALTER TABLE `talla_playera`
-  MODIFY `idTalla_Playera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idTalla_Playera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `vertical`
 --
 ALTER TABLE `vertical`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Restricciones para tablas volcadas
