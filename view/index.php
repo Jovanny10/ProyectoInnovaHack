@@ -1,4 +1,4 @@
-<?php include_once("../../Backend/iniciosesion/seguridad.php");   ?>
+<?php include_once("/../Backend/iniciosesion/seguridad.php");   ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,25 +11,25 @@
     <link rel="shortcut icon" href="../img/favicon.apple-icon.png">
 
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
           
     <!-- Custom Scrollbar-->
-    <link rel="stylesheet" type="text/css" href="../../js/malihu/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../js/malihu/jquery.mCustomScrollbar.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="../../css/style.default.css" id="theme-stylesheet">  
+    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">  
 
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="../../css/fontawesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="../../css/fontawesome/css/brands.css" rel=stylesheet"> 
-    <link rel="stylesheet" href="../../css/fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../css/fontawesome/css/brands.css" rel=stylesheet"> 
+    <link rel="stylesheet" href="../css/fontawesome/css/solid.css" rel="stylesheet">
 
     <!-- Popper js--> 
-    <script type="text/javascript" src="../../js/popper/popper.min.js" crossorigin="anonymous"></script>   
+    <script type="text/javascript" src="../js/popper/popper.min.js" crossorigin="anonymous"></script>   
     <!-- Fontastic Custom icon font-->
 
-    <link rel="stylesheet" href="../../css/fontastic.css">
-    <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/fontastic.css">
+    <script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
   </head>
   <body>
     <!-- Side Navbar -->
@@ -99,12 +99,12 @@
                   <i class="fas fa-bars"></i>
                 </a>
                  
-                  <img src="../../imagenes/isaac.png" height="20" width="100" align="center">
+                  <img src="../imagenes/isaac.png" height="20" width="100" align="center">
                 
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../../Backend/iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="../Backend/iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>
@@ -135,12 +135,12 @@
 
 
 
-    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Main File-->
 
-    <script type="text/javascript" src="../../js/front.js"></script>
-    <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../js/front.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
 
   </body>
 </html>

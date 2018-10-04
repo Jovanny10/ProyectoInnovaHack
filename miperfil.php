@@ -130,7 +130,7 @@ session_start();
             },
             success: function(respuesta) {
              if(respuesta == 1){
-             location.href='Backend/principal/index.php';
+             location.href='view/index.php';
              }else{
               $("#info").html(respuesta);
              }
