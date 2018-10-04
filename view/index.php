@@ -1,4 +1,9 @@
-<?php include_once("/../Backend/iniciosesion/seguridad.php");   ?>
+<?php include_once("/../Backend/iniciosesion/seguridad.php");
+include_once("../Backend/enrutador.php");
+if(!isset($_GET['cargar'])){
+  $_GET['cargar'] = "";
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -51,11 +56,11 @@
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
           
             <li><a href="../view/index.php?cargar=10" aria-expanded="false"> 
-                <i class="fas fa-tachometer-alt"></i>Estado del Concurso </a>
+                <i class="fas fa-user-cog"></i> Mi perfil </a>
             </li>                  
             <li>
                 <a href="../view/index.php?cargar=11" aria-expanded="false"> 
-                  <i class="fas fa-chalkboard-teacher"></i>Panel de control</a>
+                  <i class="fas fa-chalkboard-teacher"></i>Proyectos</a>
             </li>
 
            <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
@@ -114,6 +119,15 @@
       <section class="dashboard-counts section-padding">
         <div class="container-fluid">
          <div class="right_col" role="main" >
+          <div>
+            <?php 
+            $enrutador = new enrutador();
+            if($enrutador->validarGet($_GET['cargar'])){
+              $enrutador->Vista($_GET['cargar']);
+            }
+
+            ?>
+          </div>
         </div>
       </section>
       <footer class="main-footer ">
