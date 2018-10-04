@@ -1,3 +1,4 @@
+<?php include_once("../../Backend/iniciosesion/seguridad.php");   ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,10 +28,8 @@
     <script type="text/javascript" src="../../js/popper/popper.min.js" crossorigin="anonymous"></script>   
     <!-- Fontastic Custom icon font-->
 
-    <link rel="stylesheet" href="../css/fontastic.css">
+    <link rel="stylesheet" href="../../css/fontastic.css">
     <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
-    <!-- Data tables-->
-    <link rel="stylesheet" type="text/css" href="../js/DataTables/datatables.min.css">
   </head>
   <body>
     <!-- Side Navbar -->
@@ -40,7 +39,7 @@
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
           <div class="sidenav-header-inner text-center"><div class="fas fa-user-circle fa-3x"></div>
-            <h3 class="h3">Ian Alejandro</h2><span class="text-danger">Lider del proyecto</span>
+            <h3 class="h3"><?php echo $_SESSION['nombre'];?></h2><span class="text-danger">Lider del proyecto</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>I</strong><strong class="text-primary">H</strong></a></div>
@@ -105,7 +104,7 @@
               </div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center"> 
                 <!-- Log out-->
-                <li class="nav-item"><a href="../modulos/login/SesionClose.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
+                <li class="nav-item"><a href="../../Backend/iniciosesion/cerrarsesion.php" class="nav-link logout"> <span class="fas fa-power-off text-danger"></span> Salir</a></li>
               </ul>
             </div>
           </div>
@@ -140,6 +139,7 @@
     <script type="text/javascript" src="../../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/alertifyjs/alertify.js"></script> 
     <!-- Main File-->
+
     <script src="../js/front.js"></script>
     <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
 

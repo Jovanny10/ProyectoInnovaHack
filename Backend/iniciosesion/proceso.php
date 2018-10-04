@@ -39,7 +39,6 @@
     		$usuario = $_POST['usuario'];
     		$contra = $_POST['contra'];
     		$this->busqueda($usuario,$contra);
-
     	}
    }
 
@@ -48,7 +47,14 @@
     	require_once '../../conexion/abrirconexion.php';
     	$con = new Conexion();
     	$contenido = $con->query("SELECT `Nombre`,`Apellidos`,`E-mail` FROM `comunidad` WHERE `E-mail`='$u' and `psw` = '$c'");
+
+      while($row = mysqli_fetch_array($contenido)) { 
+        $nombre = $row['Nombre'];
+      }
     	if($contenido->num_rows > 0){
+        session_start();
+        $_SESSION['activo'] =true;
+        $_SESSION['nombre'] =$nombre;
     		echo 1;
     	}else{
     		?>
