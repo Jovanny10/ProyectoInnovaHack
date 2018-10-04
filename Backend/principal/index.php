@@ -12,7 +12,7 @@
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-         
+          
     <!-- Custom Scrollbar-->
     <link rel="stylesheet" type="text/css" href="../../js/malihu/jquery.mCustomScrollbar.css">
     <!-- theme stylesheet-->
@@ -29,7 +29,7 @@
     <!-- Fontastic Custom icon font-->
 
     <link rel="stylesheet" href="../../css/fontastic.css">
-    <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
   </head>
   <body>
     <!-- Side Navbar -->
@@ -42,7 +42,7 @@
             <h3 class="h3"><?php echo $_SESSION['nombre'];?></h2><span class="text-danger">Lider del proyecto</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
-          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>I</strong><strong class="text-primary">H</strong></a></div>
+          <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong><i class="fas fa-home"></i></strong></a></div>
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
@@ -137,10 +137,9 @@
 
     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../js/alertifyjs/alertify.js"></script> 
     <!-- Main File-->
 
-    <script src="../js/front.js"></script>
+    <script type="text/javascript" src="../../js/front.js"></script>
     <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
 
   </body>
