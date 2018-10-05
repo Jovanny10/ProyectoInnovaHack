@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <div class="row col-lg-12">
                         <a class="navbar-brand" href="index.php">
-                            <img class="img-responsive" src="imagenes/isaac.png" width="30%"/>
+                            <img class="img-responsive" src="imagenes/logoinnovahack.png" width="30%"/>
                         </a>
                     </div>
                 </div>
