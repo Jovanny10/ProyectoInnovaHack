@@ -86,11 +86,11 @@
                                 </img>
                             </div>
                             <div class="carousel-item">
-                                <img alt="Second slide" class="d-block w-100" src="imagenes/Principal.png">
+                                <img alt="Second slide" class="d-block w-100" src="imagenes/Principal1.png">
                                 </img>
                             </div>
                             <div class="carousel-item">
-                                <img alt="Third slide" class="d-block w-100" src="imagenes/Principal.png">
+                                <img alt="Third slide" class="d-block w-100" src="imagenes/Principal1.png">
                                 </img>
                             </div>
                         </div>
