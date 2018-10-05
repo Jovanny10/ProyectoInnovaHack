@@ -4,6 +4,11 @@
 }
 nav.navbar{
 	border-bottom: 5px solid #1293d4;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	position: fixed;
 }
 nav.navbar div.collapse{
 	float: right;

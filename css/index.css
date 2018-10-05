@@ -41,6 +41,11 @@ div.contenedor-vertical div.caja-vertical p{
 /*Menu desplegable*/
 nav.navbar{
 	border-bottom: 4px solid #1293d4;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	position: fixed;
 }
 
 nav.navbar div.collapse{
@@ -443,15 +448,17 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 
 	
 	div.verticales div.textoImagen img{
+		margin-top: 90px;
 		height: 200px;
 1
 	}
 	div.contenedor #DatosImagen h1.left{
 		font-size: 25px;
 		left: 10px;
-		top: 15px;
+		top: 20px;
 	}
 	div.contenedor #DatosImagen h2.left{
+	 
 		font-size: 20px;
 		left: 10px;
 		top: 40px;
@@ -459,6 +466,7 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 
 	div.textoImagen h1.textoencima1{
 		position: absolute;
+		margin-top: 90px;
 	    top: 15%;
 	    color: #fff;
 	    left: 3%;
@@ -471,7 +479,7 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 	    color: #fff;
 	    left: 3%;
 	    font-size: 70%;
-	    margin-top: 7px;
+	    margin-top: 90px;
 	}
 
 	div.textoImagen h3.textoencima2 a{
