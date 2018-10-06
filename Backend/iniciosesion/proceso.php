@@ -46,16 +46,33 @@
     function busqueda($u,$c){
     	require_once '../../conexion/abrirconexion.php';
     	$con = new Conexion();
-    	$contenido = $con->query("SELECT `Nombre`,`Apellidos`,`E-mail` FROM `comunidad` WHERE `E-mail`='$u' and `psw` = '$c'");
+    	$contenido = $con->query("SELECT `Nombre`,`Apellidos`,`E-mail`,`Rol_idRol` FROM `comunidad` WHERE `E-mail`='$u' and `psw` = '$c'");
 
       while($row = mysqli_fetch_array($contenido)) { 
         $nombre = $row['Nombre'];
+        $Rol = $row['Rol_idRol'];
       }
     	if($contenido->num_rows > 0){
-        session_start();
-        $_SESSION['activo'] =true;
-        $_SESSION['nombre'] =$nombre;
-    		echo 1;
+        if($Rol == 5){
+            session_start();
+            $_SESSION['activo'] =true;
+            $_SESSION['nombre'] =$nombre;
+            echo 5;
+        }else
+        if($Rol == 3){
+            session_start();
+            $_SESSION['activo'] =true;
+            $_SESSION['nombre'] =$nombre;
+            echo 3;
+        }else if($Rol == 6){
+            session_start();
+            $_SESSION['activo'] =true;
+            $_SESSION['nombre'] =$nombre;
+            echo 6;
+
+        }
+        
+    	 
     	}else{
     		?>
         
@@ -66,8 +83,10 @@
               </button>
           </div>
           <?php
-    	}
-    }
+    	}//CIERRE DE ELSE
+    }//CIERRE DE BUSQUEDA
+
+
 
   }/*Cierre de la clase*/
   $proce = new proceso();

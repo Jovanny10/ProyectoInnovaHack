@@ -129,8 +129,14 @@ session_start();
              $("#info").html('<div class="alert alert-success alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i><strong> Procesando..... !</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
             },
             success: function(respuesta) {
-             if(respuesta == 1){
+             if(respuesta == 5){
              location.href='Backend/LiderProyecto/index.php';
+             } 
+             if(respuesta == 3){
+              location.href = 'Backend/Juez/index.php';
+             }
+             if(respuesta == 6){
+              location.href = 'Backend/Hacker/index.php';
              }else{
               $("#info").html(respuesta);
              }
