@@ -68,7 +68,7 @@ if(!isset($_GET['cargar'])){
                 <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
             </li>
             <li>
-                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes  <h5 style="display: inline"><span class="badge badge-pill badge-success">8</span></h5></a>
+                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <h5 style="display: inline;"><span class="badge badge-pill badge-success">8</span></h5></a>
             </li>
           </ul>
         </div>
