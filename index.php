@@ -168,43 +168,43 @@
                     <div class="container-fluid">
                         <div class="container-fluid row">
                             <div class="imagen1 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo1.png">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/Logo PTLC_V2.jpg">
                                 </img>
                             </div>
                             <div class="imagen2 col-lg-3 p-2 text-center">
-                                <img alt="20" class="img-responsive" src="imagenes/intel.jpg">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/nuevo.png">
                                 </img>
                             </div>
                             <div class="imagen3 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo3.png">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/Logo_SF2018_2.png">
                                 </img>
                             </div>
                             <div class="imagen4 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo4.jpg">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/LABSOL1/Innovation Labs Network Logo.png">
                                 </img>
                             </div>
                         </div>
                         <div class="container-fluid row">
                             <div class="imagen1 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo1.png">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/LABSOL1/Logo COZCYT Trabajemosunidos.png">
                                 </img>
                             </div>
                             <div class="imagen2 col-lg-3 p-2 text-center">
-                                <img alt="20" class="img-responsive" src="imagenes/labsol.png">
+                                <img alt="20" class="img-responsive" src="imagenes/labsol/LABSOL1/LogoLabsol.png">
                                 </img>
                             </div>
                             <div class="imagen3 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo3.png">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/LABSOL1/LogoUAZ.jpg">
                                 </img>
                             </div>
                             <div class="imagen4 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo4.jpg">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/LABSOL1/Template_Banner03_AGREGARLOGO.png">
                                 </img>
                             </div>
                         </div>
                         <div class="container-fluid row">
                             <div class="imagen1 col-lg-3 p-2 text-center">
-                                <img alt="" class="img-responsive" src="imagenes/logo1.png">
+                                <img alt="" class="img-responsive" src="imagenes/labsol/LABSOL1/Template_Poster02_AGREGARLOGO.png">
                                 </img>
                             </div>
                             <div class="imagen2 col-lg-3 p-2 text-center">
