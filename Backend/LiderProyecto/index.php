@@ -68,7 +68,8 @@ if(!isset($_GET['cargar'])){
                 <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
             </li>
             <li>
-                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <span class="badge badge-primary">9</span></a>
+                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <button type="button" class="btn btn-primary"><span class="badge badge-light">4</span>
+</button></a>
             </li>
           </ul>
         </div>
