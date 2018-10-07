@@ -1,5 +1,5 @@
 <?php include_once("../iniciosesion/seguridad.php");
-include_once("../../Backend/enrutador.php");
+include_once("../../Backend/enrutador_lider.php");
 if(!isset($_GET['cargar'])){
   $_GET['cargar'] = "";
 }
@@ -13,6 +13,7 @@ if(!isset($_GET['cargar'])){
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+     <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="../../img/favicon.apple-icon.png">
 
     <!-- Bootstrap CSS-->
@@ -51,43 +52,22 @@ if(!isset($_GET['cargar'])){
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">
-          <h5 class="sidenav-heading text-center">MENÚ</h5>
+          <h5 class="sidenav-heading">MENÚ</h5>
 
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
           
-            <li><a href="../view/index.php?cargar=10" aria-expanded="false"> 
+            <li><a href="index.php?cargar=1" aria-expanded="false"> 
                 <i class="fas fa-user-cog"></i> Mi perfil </a>
-            </li>                  
+            </li>
+            <h5 class="sidenav-heading">PROYECTOS</h5>                  
             <li>
-                <a href="../view/index.php?cargar=11" aria-expanded="false"> 
-                  <i class="fas fa-chalkboard-teacher"></i>Proyectos</a>
+                <a href="index.php?cargar=2" aria-expanded="false"> 
+                  <i class="fas fa-chalkboard-teacher"></i>Registro</a>
             </li>
-
-           <li><a href="#Monitoreo" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-laptop"></i>Consultas </a>
-              <ul id="Monitoreo" class="collapse list-unstyled ">                
-                  <li><a href="../view/index.php?cargar=6">Proyectos</a></li>   
-                  <li><a href="../view/index.php?cargar=7">Hackers</a></li>
-                  <li><a href="../view/index.php?cargar=8">Jueces</a></li>
-                  <li><a href="../view/index.php?cargar=9">Calificaciones</a></li>
-              </ul>
-            </li> 
-
-            <li><a href="#Registros" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-plus"></i>Registros </a>
-              <ul id="Registros" class="collapse list-unstyled ">
-                <li><a href="../view/index.php?cargar=1">Hackaton</a></li>
-                <li><a href="../view/index.php?cargar=2">Vertical</a></li>
-                <li><a href="../view/index.php?cargar=3">Configuraciones</a></li>
-                <li><a href="../view/index.php?cargar=4">Rubricas</a></li> 
-              </ul>
-            </li>
-
-
             <li>
-              <a href="../view/index.php?cargar=5" aria-expanded="false"> 
-                <i class="fa fa-bell"></i>Solicitudes 5 </a>
+                <a href="index.php?cargar=3" aria-expanded="false"> 
+                  <i class="fas fa-chalkboard-teacher"></i>Estado del proyecto</a>
             </li>
-            
-
           </ul>
         </div>
          
@@ -119,6 +99,17 @@ if(!isset($_GET['cargar'])){
       <section class="dashboard-counts section-padding">
         <div class="container-fluid">
          <div class="right_col" role="main" >
+          <div class="row justify-content-center" id="bienvenido">
+            <div class="col-md-10">
+              <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4 text-center">Bienvenid@ <?php echo $_SESSION['nombre'];?></h1>
+                  <p class="lead">Esta es tu portada principal, en donde podrás visualizar tu perfil, registro de proyecto, estado del proyecto donde podrás ver los integrantes de tu equipo </p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
           <div>
             <?php 
             $enrutador = new enrutador();
@@ -149,7 +140,7 @@ if(!isset($_GET['cargar'])){
 
 
 
-    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  
     <script type="text/javascript" src="../../js/malihu/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Main File-->
 
