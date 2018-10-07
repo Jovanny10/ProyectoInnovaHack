@@ -65,8 +65,10 @@ if(!isset($_GET['cargar'])){
                   <i class="fas fa-chalkboard-teacher"></i>Registro</a>
             </li>
             <li>
-                <a href="index.php?cargar=3" aria-expanded="false"> 
-                  <i class="fas fa-chalkboard-teacher"></i>Estado del proyecto</a>
+                <a href="index.php?cargar=3" aria-expanded="false"><i class="fas fa-folder-open"></i>Estado del proyecto</a>
+            </li>
+            <li>
+                <a href="index.php?cargar=4" aria-expanded="false"><i class="fas fa-bell"></i> Solicitudes <span class="badge badge-primary">9</span></a>
             </li>
           </ul>
         </div>

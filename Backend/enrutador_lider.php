@@ -11,7 +11,8 @@
    			case "3":
                include_once("LiderProyecto/estado_proyecto.php");
    				break;
-   			case "10":
+   			case "4":
+               include_once("LiderProyecto/solicitudes.php");
    				break;
    			
    			default:

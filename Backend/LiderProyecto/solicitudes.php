@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Estado Proyecto</title>
+	<title>Solicitudes</title>
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../fontawesome-free-5.3.1-web/css/all.min.css">
 </head>
@@ -18,7 +18,7 @@
 
 	<div class="row justify-content-center">
 		<div class="col-md-10">
-			<h3>Colaboradores</h3>
+			<h3>Participantes</h3>
 			<table class="table">
 			<thead>
 				<tr>
@@ -27,6 +27,7 @@
 					<th scope="col">Apellidos</th>
 					<th scope="col">Email</th>
 					<th scope="col">Detalles</th>
+					<th scope="col">Estado</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -36,6 +37,10 @@
 					<td>Leobardo Hernández</td>
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
+					<td scope="col">
+						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
+						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+					</td>
 					
 				</tr>
 				<tr>
@@ -44,6 +49,10 @@
 					<td>Leobardo Hernández</td>
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
+					<td scope="col">
+						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
+						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+					</td>
 					
 				</tr>
 				<tr>
@@ -52,6 +61,10 @@
 					<td>Leobardo Hernández</td>
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
+					<td scope="col">
+						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
+						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+					</td>
 					
 				</tr>
 				<tr>
@@ -60,6 +73,10 @@
 					<td>Leobardo Hernández</td>
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
+					<td scope="col">
+						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
+						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+					</td>
 					
 				</tr>
 				<tr>
@@ -68,6 +85,10 @@
 					<td>Leobardo Hernández</td>
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
+					<td scope="col">
+						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
+						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+					</td>
 					
 				</tr>
 			</tbody>
