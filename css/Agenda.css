@@ -147,6 +147,10 @@ div.datosempresa div.col-lg-4 div.imagen1 img.imagen{
 	}
 
 	/*Imagen Agenda*/
+	div.container-portada{
+		margin-top: 117px;
+		background-color: green;
+	}
 
 	div.container-portada div.row div.img-portada{
 		width: 100%;

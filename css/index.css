@@ -258,14 +258,14 @@ div.verticales div.form-group div.col-lg-5 div.contenedor span i{
  	margin: 3px;
  	height: 230px;
  	text-align: center;
- 	max-height: 300px;
+ 	max-height: 230px;
  	display: inline-grid;
 	word-wrap: break-word;
 	margin-bottom: 4px;
  }
  div.container-cuadro div.contenedor img{
  	width: 80%;
- 	max-height: 250px;
+ 	max-height: 200px;
  	margin: 2px;
  	margin: auto;
  }
@@ -282,6 +282,8 @@ div.InfoJueces{
 div.InfoJueces div.row div.Imagen{
   background-color: black;
   color: #fff;
+  margin-top: 15px;
+  margin-bottom: 12px;
 }
 
 div.InfoJueces div.texto{
@@ -373,7 +375,7 @@ section article div.Frases{
 	width: 100%;
 	background-color: #fff;
 	color: black;
-	height: 500%;
+	height: 300px;
 	margin-bottom: 15PX;
 	margin-top: 18	px;
 }
@@ -423,7 +425,7 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 @media(max-width: 768px) {
 	/*INFORMACION DE VERTICAL*/
 	div.verticales{
-		margin-top: 26px;
+		margin-top: 25px;
 	}
 	div.contenedor-vertical{
 	width: 100%;
@@ -509,6 +511,7 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 		margin: auto;
 		background-color: black;
 		border-top: 12px;
+		margin-top: 80px;
 	}
 
 	div.InfoJueces div.texto div.cajaboton{
@@ -516,6 +519,10 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 		width: 150px;
 		text-align: center;
 		margin-bottom: 12px;
+	}
+
+	section article div.Frases{
+		margin-bottom: 320px;
 	}
 
 

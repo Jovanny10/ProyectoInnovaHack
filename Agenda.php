@@ -2,7 +2,7 @@
   <html lang="en">
   <head>
   	<meta charset="UTF-8">
-  	<title>Líderes</title>
+  	<title>Agenda</title>
   	<meta name="viewport" content="width=device-width, user-scalable=si, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   	<link rel="stylesheet" href="css/bootstrap.min.css">
   	<link rel="stylesheet" href="css/Agenda.css">
@@ -97,10 +97,10 @@
                     <h2>Quick Links</h2>
                     <div class="form-group">
                       <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Agenda</a></li>
-                        <li><a href="#">Invitados</a></li>
-                        <li><a href="#">Taller de emprendimiento</a></li>
+                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="Agenda.php">Agenda</a></li>
+                        <li><a href="index.php">Invitados</a></li>
+                        <li><a href="index.php">Taller de emprendimiento</a></li>
                       </ul>
                     </div>
                   </div>

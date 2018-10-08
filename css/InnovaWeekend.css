@@ -148,6 +148,9 @@ div.titulo h2{
 
 
 @media only screen and (max-width: 600px) {
+	div.contenedor{
+		margin-top: 102px;
+	}
 	nav.navbar button.boton{
 		background-color: red;
 		color: white;

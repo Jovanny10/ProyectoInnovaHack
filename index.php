@@ -6,6 +6,7 @@
                 Menu principal
             </title>
             <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+            <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
                 <link href="css/index.css" rel="stylesheet">
                     <link href="css/bootstrap.min.css" rel="stylesheet">
                         <script src="js/jquery-3.3.1.min.js">
@@ -204,7 +205,7 @@
             <div class="InfoJueces">
                 <div class="row">
                     <div class="Imagen col-lg-5">
-                        <img src="imagenes/InnovaHack.png" width="100%">
+                        <img src="imagenes/labsol/banner1b.jpeg" width="100%">
                         </img>
                     </div>
                     <div class="Informacion col-lg-7">
@@ -222,13 +223,13 @@
                                 <p>
                                     Seras asesorado por mentores con gran experiencia en las diferentes areas...
                                 </p>
-                                <div class="cajaboton">
+                               <!-- <div class="cajaboton">
                                     <div class="boton">
                                         <a href="#">
                                             CONOCE MÁS...
                                         </a>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                             <div class="col-lg-6">
                                 <h5 class="titulo">
@@ -237,13 +238,13 @@
                                 <p>
                                     Contaremos con pláticas de nuestros invitados especiales
                                 </p>
-                                <div class="cajaboton">
+                              <!--  <div class="cajaboton">
                                     <div class="boton">
                                         <a href="#">
                                             CONOCE MÁS...
                                         </a>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -444,22 +445,22 @@
                         <div class="form-group">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="index.php">
                                         Inicio
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="Agenda.php">
                                         Agenda
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="Lideres.html">
                                         Invitados
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="index.php">
                                         Taller de emprendimiento
                                     </a>
                                 </li>
