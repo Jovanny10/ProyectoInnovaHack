@@ -8,6 +8,7 @@
   	<link rel="stylesheet" href="css/Agenda.css">
     <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
     <meta name="viewport" content="width=device-width, user-scalable=si, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
   </head>
   <body>
 

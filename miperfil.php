@@ -10,6 +10,7 @@ session_start();
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/miperfil.css">
   <link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.min.css">
+  <link rel="shortcut icon" href="imagenes/labsol/banner1b.jpeg" type="image/x-icon">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
