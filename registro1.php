@@ -467,61 +467,6 @@
           }
       });
   });
-  /*
-  $(function() {
-      $("#institucion").click(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('institucion').value;
-          if (capturado>0) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  }); 
-  */
-  /*
-  $(function() {
-      $("#institucion").click(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('div4').value;
-          if (capturado == "div4") {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  }); 
-
-  */
-  /*
-  $(function() {
-      $("#otro").keyup(function() {
-          var nuevoCSS = {
-              "border": '1px solid #66ff33'
-          };
-          var error = {
-              "border": '1px solid red'
-          };
-          var capturado = document.getElementById('otro').value;
-          if (capturado.length > 2) {
-              $(this).css(nuevoCSS);
-          } else {
-              $(this).css(error);
-          }
-      });
-  });
-  */
 
   $(function() {
       $("#carrera").click(function() {
