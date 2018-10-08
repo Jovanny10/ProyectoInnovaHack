@@ -49,8 +49,8 @@
             <div class="col-lg-3 text-center">
               <h1 class="text-dark text-center shadow-none p-3 mb-5 bg-light rounded">AGENDA</h1>
             </div>
-            <div class="img-portada col-xs-12 col-lg-8">
-              <img src="imagenes/labsol.png" alt="">
+            <div class="img-portada col-xs-12 col-lg-8 bg-dark">
+              <img src="imagenes/labsol/banner1b.jpeg" alt="">
             </div>
           </div>
          </div>

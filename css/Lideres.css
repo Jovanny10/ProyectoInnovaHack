@@ -31,6 +31,28 @@ a.nav-link:hover{
 }
 
 /*PANTALLA DE LIDERES*/
+div.container-cuadro{
+ 	width: 60%;
+	margin: auto;
+ }
+
+ div.container-cuadro div.contenedor{
+ 	width: 300px;
+ 	margin: 3px;
+ 	height: 230px;
+ 	text-align: center;
+ 	max-height: 300px;
+ 	display: inline-grid;
+	word-wrap: break-word;
+	margin-bottom: 4px;
+ }
+ div.container-cuadro div.contenedor img{
+ 	width: 80%;
+ 	max-height: 200px;
+ 	margin: 2px;
+ 	margin: auto;
+ }
+
 div.container-lideres{
 	width: 100%;
 	max-height: 4000px;
@@ -41,13 +63,6 @@ div.container-lideres{
 div.container-lideres div.row{
 	margin-bottom: 15px;
 	padding-top: 25px;
-}
-
-div.container-lideres div.container-cuadro div.row img{
-	width: 200px;
-	height: 200px;
-	background-size: 100%;
-	animation: movimiento 10s infinite;
 }
 
 @keyframes movimiento{
