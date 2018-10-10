@@ -20,7 +20,7 @@
 	           $this->nombre =utf8_decode(ucwords( $_POST['nombre']));
 		       $this->apellidos =utf8_decode(ucwords( $_POST['apellidos']));
 		       $this->correo = $_POST['correo'];
-		       $this->contraseña = $_POST['contraseña'];
+		       $this->contraseña =md5($_POST['contraseña']);
 		       $this->cel = $_POST['cel'];
 		       $this->talla = $_POST['talla'];
 		       $this->carrera =utf8_decode(ucwords( $_POST['carrera']));
@@ -52,7 +52,7 @@
 		    			}else {
 		    				?>
 		    				<div class="alert alert-danger alert-dismissible fade show text-center" role="alert"><i class="fas fa-times"></i>
-	                             <strong> Favor de verificar los campos requeridos !</strong>
+	                             <strong> Verificar los campos, datos duplicados...:(!</strong>
 	                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 	                             <span aria-hidden="true">&times;</span>
 	                             </button>

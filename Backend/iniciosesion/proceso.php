@@ -37,7 +37,7 @@
     	}else
     	if(isset($_POST['usuario']) && isset($_POST['contra'])){
     		$usuario = $_POST['usuario'];
-    		$contra = $_POST['contra'];
+    		$contra = md5($_POST['contra']);
     		$this->busqueda($usuario,$contra);
     	}
    }

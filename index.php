@@ -83,15 +83,15 @@
                     <div class="carousel slide" data-ride="carousel" id="carouselExampleSlidesOnly">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img alt="First slide" class="img-responsive d-block w-100" src="imagenes/labsol/banner1b.jpeg">
+                                <img alt="First slide" class="img-responsive d-block w-100" src="imagenes/labsol/banner33.png">
                                 </img>
                             </div>
                             <div class="carousel-item">
-                                <img alt="Second slide" class="d-block w-100" src="imagenes/labsol/banner1b.jpeg">
+                                <img alt="Second slide" class="d-block w-100" src="imagenes/labsol/banner33.png">
                                 </img>
                             </div>
                             <div class="carousel-item">
-                                <img alt="Third slide" class="d-block w-100" src="imagenes/labsol/banner1b.jpeg">
+                                <img alt="Third slide" class="d-block w-100" src="imagenes/labsol/banner33.png">
                                 </img>
                             </div>
                         </div>
@@ -205,7 +205,7 @@
             <div class="InfoJueces">
                 <div class="row">
                     <div class="Imagen col-lg-5">
-                        <img src="imagenes/labsol/banner1b.jpeg" width="100%">
+                        <img src="imagenes/labsol/banner.png" width="100%">
                         </img>
                     </div>
                     <div class="Informacion col-lg-7">

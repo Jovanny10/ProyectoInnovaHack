@@ -286,6 +286,10 @@ div.InfoJueces div.row div.Imagen{
   margin-bottom: 12px;
 }
 
+div.InfoJueces div.row div.Imagen img{
+	height: 270px;
+}
+
 div.InfoJueces div.texto{
 	margin-top: 35px;
 }

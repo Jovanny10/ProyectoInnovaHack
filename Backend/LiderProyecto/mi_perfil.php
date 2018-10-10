@@ -1,6 +1,5 @@
 <?php 
 include_once("../iniciosesion/seguridad.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +26,7 @@ include_once("../iniciosesion/seguridad.php");
 					<div class="form-group">
 						<h3 class="text-center">Jovanny Leobardo</h3>
 					</div>
-					<div class="row">
+					<div class="row">	
 						<button class="form-control btn btn-primary"><i class="far fa-edit"></i> Editar</button>
 					</div>
 				</div>
