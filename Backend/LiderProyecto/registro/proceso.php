@@ -44,7 +44,7 @@
      	}
      	else
      	if(isset($_POST['equipo']) && isset($_POST['eslogan']) && isset($_POST['proyecto']) && isset($_POST['descripcion'])){
-     		echo "Proyecto registrado";
+     		//Conexion , registro al base de datos
  
      	}
      }
