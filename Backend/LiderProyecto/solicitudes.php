@@ -38,8 +38,8 @@
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
 					<td scope="col">
-						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
-						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+						<button class="btn btn-success">Aceptar</button>
+						<button class="btn btn-danger">Rechazar</button>
 					</td>
 					
 				</tr>
@@ -50,8 +50,8 @@
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
 					<td scope="col">
-						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
-						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+						<button class="btn btn-success">Aceptar</i></button>
+						<button class="btn btn-danger">Rechazar</button>
 					</td>
 					
 				</tr>
@@ -62,8 +62,8 @@
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
 					<td scope="col">
-						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
-						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+						<button class="btn btn-success">Aceptar</button>
+						<button class="btn btn-danger">Rechazar</button>
 					</td>
 					
 				</tr>
@@ -74,8 +74,8 @@
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
 					<td scope="col">
-						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
-						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+						<button class="btn btn-success">Aceptar</button>
+						<button class="btn btn-danger">Rechazar</button>
 					</td>
 					
 				</tr>
@@ -86,8 +86,8 @@
 					<td>ian@gmail.com</td>
 					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
 					<td scope="col">
-						<button class="btn btn-success"><i class="fas fa-check-circle"></i></button>
-						<button class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+						<button class="btn btn-success">Aceptar</button>
+						<button class="btn btn-danger">Rechazar</button>
 					</td>
 					
 				</tr>

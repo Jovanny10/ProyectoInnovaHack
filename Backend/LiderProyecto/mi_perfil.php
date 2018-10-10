@@ -24,10 +24,10 @@ include_once("../iniciosesion/seguridad.php");
 					</div>
 
 					<div class="form-group">
-						<h3 class="text-center">Jovanny Leobardo</h3>
+						<h3 class="text-center"><?php echo $_SESSION['nombre']; ?></h3>
 					</div>
 					<div class="row">	
-						<button class="form-control btn btn-primary"><i class="far fa-edit"></i> Editar</button>
+						<button class="form-control btn btn-primary">Bienvenid@</button>
 					</div>
 				</div>
 			</div>
@@ -42,27 +42,26 @@ include_once("../iniciosesion/seguridad.php");
 				<div class="col-md-10">
 					<form id="formulario_perfil">
 					<div class="form-group">
+						<h2>Datos personales</h2>
+					</div>
+					<div class="form-group">
 						<label for="#" class="label-control">Nombre</label>
-						<input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
+						<input type="text" class="form-control bg-white" name="nombre" id="nombre" value="<?php echo $_SESSION['nombre']; ?>" readonly>
 					</div>
 
 					<div class="form-group">
 						<label for="#" class="label-control">Apellidos</label>
-						<input type="text" class="form-control" value="Leobardo Salas">
+						<input type="text" class="form-control bg-white" value="<?php echo $_SESSION['Apellidos']; ?>" readonly>
 					</div>
 
 					<div class="form-group">
 						<label for="#" class="label-control">E-mail</label>
-						<input type="text" class="form-control" value="jovannyleobardo10@gmail.com">
+						<input type="text" class="form-control bg-white" value="<?php echo $_SESSION['correo']; ?>" readonly>
 					</div>
 
 					<div class="form-group">
 						<label for="#" class="label-control">Cel</label>
-						<input type="text" class="form-control" value="9531883794">
-					</div>
-
-					<div class="form-group text-right">
-					    <button class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Actualizar</button>	 
+						<input type="text" class="form-control bg-white" value="<?php echo $_SESSION['cel']; ?>" readonly>
 					</div>
 				</form>
 				</div>
