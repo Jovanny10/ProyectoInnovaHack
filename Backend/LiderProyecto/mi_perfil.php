@@ -1,3 +1,7 @@
+<?php 
+include_once("../iniciosesion/seguridad.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +9,7 @@
 	<title>Mi perfil</title>
 	<link rel="stylesheet" href="../../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../fontawesome-free-5.3.1-web/css/all.min.css">
+	<script type="text/javascript" src="perfil/perfil.js"></script>
 </head>
 <body>
 	<script type="text/javascript">
@@ -36,9 +41,10 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-10">
+					<form id="formulario_perfil">
 					<div class="form-group">
 						<label for="#" class="label-control">Nombre</label>
-						<input type="text" class="form-control" value="Jovanny">
+						<input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $_SESSION['nombre']; ?>">
 					</div>
 
 					<div class="form-group">
@@ -59,6 +65,7 @@
 					<div class="form-group text-right">
 					    <button class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Actualizar</button>	 
 					</div>
+				</form>
 				</div>
 			</div>
 		</div>
