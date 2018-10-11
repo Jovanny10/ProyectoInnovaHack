@@ -90,12 +90,6 @@ session_start();
                      
                     </div>
                   </div>
-
-                  <div class="form-group text-center">
-                    <span><a href="#">Olvidate tu contraseña?</a></span>
-                  </div>
-
-                  
               </form>
             </div>
           </div>
@@ -138,8 +132,6 @@ session_start();
              }
              if(respuesta == 6){
               location.href = 'Backend/Hacker/index.php';
-             }else{
-              $("#info").html(respuesta);
              }
             }
         });

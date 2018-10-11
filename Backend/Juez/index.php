@@ -1,5 +1,5 @@
 <?php include_once("../iniciosesion/seguridad.php");
-include_once("../../Backend/enrutador.php");
+include_once("../../Backend/enrutador_juez.php");
 if(!isset($_GET['cargar'])){
   $_GET['cargar'] = "";
 }

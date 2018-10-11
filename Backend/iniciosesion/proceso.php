@@ -40,7 +40,7 @@
     		$contra = md5($_POST['contra']);
     		$this->busqueda($usuario,$contra);
     	}
-   }
+     }
 
     }/*Cierre del metodo validacion*/
     function busqueda($u,$c){
@@ -49,8 +49,8 @@
     	$contenido = $con->query("SELECT `Nombre`,`Apellidos`,`E-mail`,`Celular`,`Rol_idRol` FROM `comunidad` WHERE `E-mail`='$u' and `psw` = '$c'");
 
       while($row = mysqli_fetch_array($contenido)) { 
-        $nombre = $row['Nombre'];
-        $apellidos = $row['Apellidos'];
+        $nombre = utf8_encode($row['Nombre']);
+        $apellidos = utf8_encode($row['Apellidos']);
         $correo = $row['E-mail'];
         $cel = $row['Celular'];
         $Rol = $row['Rol_idRol'];
@@ -81,10 +81,7 @@
             $_SESSION['correo'] = $correo;
             $_SESSION['cel'] = $cel;
             echo 6;
-
         }
-        
-    	 
     	}else{
     		?>
         
