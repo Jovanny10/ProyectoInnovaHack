@@ -24,8 +24,8 @@ div.contenedor-vertical div.caja-vertical{
 	vertical-align: top;
 
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 div.contenedor-vertical div.caja-vertical:hover{
@@ -229,6 +229,9 @@ div.verticales{
 div.verticales div.form-group div.titulo{
 	margin-bottom: 22px;
   
+}
+div.verticales div.form-group div.carousel img{
+	height: 500px;
 }
 div.verticales div.marco{
 	width: 100%;
@@ -444,6 +447,10 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 	margin-top: 5px;
 	margin: 2px;
     }
+
+    div.verticales div.form-group div.carousel img{
+	height: 240px;
+	}
 	/*FIN DE VERTICAL*/
 	nav.navbar button.boton{
 		background-color: red;
@@ -519,26 +526,4 @@ div.datosempresa div.col-lg-2 div.form-group ul li a:hover{
 	}
 
 	div.InfoJueces div.texto div.cajaboton{
-		font-size: 70%;
-		width: 150px;
-		text-align: center;
-		margin-bottom: 12px;
-	}
-
-	section article div.Frases{
-		margin-bottom: 320px;
-	}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
+		font-size: 70%
