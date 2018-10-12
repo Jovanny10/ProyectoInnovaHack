@@ -55,8 +55,8 @@ div.container-cuadro{
 
 div.container-lideres{
 	width: 100%;
+	margin-top: 100px;
 	max-height: 4000px;
-	background-image: url(../imagenes/fondo.jpg);
 	background-size: 200%;
 	animation: movimiento 10s infinite;
 }

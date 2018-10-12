@@ -36,7 +36,7 @@
 					<td>Ian Alejandro</td>
 					<td>Leobardo Hernández</td>
 					<td>ian@gmail.com</td>
-					<td scope="col"><button class="btn btn-primary"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
+					<td scope="col"><button class="btn btn-info"><i class="fas fa-ellipsis-h"></i> Detalles</button></td>
 					<td scope="col">
 						<button class="btn btn-success">Aceptar</button>
 						<button class="btn btn-danger">Rechazar</button>

@@ -27,13 +27,6 @@ div.contenedor-vertical div.caja-vertical{
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
-
-div.contenedor-vertical div.caja-vertical:hover{
-    background-color: orange ;
-    color: white;
-    border:3px solid white;
-}
-
 div.contenedor-vertical div.caja-vertical p{
 	text-align: justify;
 }
@@ -80,11 +73,7 @@ div.contenedor #DatosImagen h2.left{
 	left: 100px;
 }
 
-a.nav-link:hover{
-	color: #ccc;
-	font-weight: bold;
  
-}
 
 /*TEXTO EN UNA IMAGEN*/
 div.textoImagen
@@ -189,15 +178,11 @@ div.textoImagen h3.textoencima2 a{
 	text-shadow: 0 0 30px #fff;
     box-shadow: 7 0 70px #fff;
     text-align: left; 
-font-family: Arial Black; 
-font-weight: bold; 
-font-size: 30px; 
-color: red; 
-text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
-}
-
-div.textoImagen h3.textoencima2 a:hover{
-	font-size: 25px;
+	font-family: Arial Black; 
+	font-weight: bold; 
+	font-size: 30px; 
+	color: red; 
+	text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
 }
 /*////////////////////////////////FIN///////////////////////////////////////*/
 /*EFECTOS EN EL TEXTO DE UNA IMAGEN*/
@@ -251,6 +236,9 @@ div.verticales div.form-group div.col-lg-5 div.contenedor span i{
 
 /*----------FIN CATEGORIAS--------------*/
 /*CONTENIDO DE ALIADOS ESTRATEGICOS*/
+ div.container-aliados h1.aliado{
+ 	text-shadow: 2px 3px #999;
+ }
  div.container-cuadro{
  	width: 60%;
 	margin: auto;

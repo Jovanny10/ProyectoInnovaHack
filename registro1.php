@@ -22,6 +22,24 @@
     <div class="boton text-right">
       <a href="miperfil.php" class="btn btn-danger" role="button" value="registrar"><i class="fas fa-arrow-circle-left"></i>  Ir a Mi perfil</a>
     </div>
+    <div class="contenedor-img">
+      <div class="caja-img">
+        <img src="imagenes/labsol/Logo PTLC_V1.jpg">
+      </div>
+      <div class="caja-img">
+        <img src="imagenes/labsol/santa.png" width="100%">
+      </div>
+      <div class="caja-img">
+        <img src="imagenes/labsol/nuevo.png">
+      </div>
+      <div class="caja-img">
+        <img src="imagenes/labsol/LABSOL1/Logo COZCYT Trabajemosunidos.png">
+      </div>
+
+      <div class="caja-img">
+        <img src="imagenes/labsol/LABSOL1/LogoLabsol.png">
+      </div>
+    </div>
     <form class="formulario" name="formulario" id="formulario" method="post">
       
       <div class="container">

@@ -107,60 +107,10 @@
                     </h3>
                 </div>
             </div>
-            <div class="form-group">
-                    <div class="row">
-                        <div class="titulo col-lg-12 col-xs-12 text-center">
-                            <h1>
-                                Verticales Estratéticas
-                            </h1>
-                        </div>
-                    </div>
-                            <?php 
-                                require_once "conexion/abrirconexion.php";
-                                $con = new Conexion();
-                                $sql = "SELECT id,Nombre,Descripcion,InfAsesoria FROM vertical";
-                                $resultado = $con->query($sql);
-                                $i = 1;
-                                ?>
-                                <div class="contenedor-vertical">
-                                <?php
-                                if($resultado->num_rows > 0){
-                                    while ($row = mysqli_fetch_array($resultado)) {?>
-                                
-                                        <div class="caja-vertical">
-                                        <div class="text-center">
-                                           <i class="far fa-address-book fa-3x">
-                                           </i>  
-                                        </div>
-                                        <h2 class="text-center">Vertical <?php echo $i; ?></h2>
-                                        <p><i class="fas fa-check text-danger"> </i> <?php echo utf8_encode($row['Nombre']) ?></p>
-                                        <p><i class="fas fa-check text-danger"> </i> <?php echo utf8_encode($row['InfAsesoria']) ?></p>
-
-                                    </div>
-                                    <?php
-                                    $i++;     
-                                    }
-                                }else{
-                                    ?>
-                                <div class="contenedor-vertical" style="width: 100%">
-                                <div class="caja-vertical">
-                                        <div class="text-center">
-                                           <i class="far fa-address-book fa-3x">
-                                           </i>  
-                                        </div>
-                                        <h2 class="text-center">No hay vertical</h2>
-                                        <p class="text-danger text-center">Favor de contactar al Administrador</p>
-                                    </div> 
-                                </div> 
-                                <?php 
-                                }
-                                ?>
-                                </div>
-            </div>
             <div class="container-aliados">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="text-center text-dark">
+                        <h1 class="aliado text-center text-dark">
                             Aliados estratégicos
                         </h1>
                     </div>
@@ -174,7 +124,7 @@
                            <img src="imagenes/labsol/nuevo.png">
                         </div>
                         <div class="contenedor">
-                           <img src="imagenes/labsol/Logo_SF2018_2.png">
+                           <img src="imagenes/labsol/Logo_SF2018_2(1).png">
                         </div>
                     </div>
                     <div class="row">
@@ -192,12 +142,6 @@
                     <div class="row">
                         <div class="contenedor">
                            <img src="imagenes/labsol/LABSOL1/LogoUAZ.jpg">
-                        </div>
-                        <div class="contenedor">
-                           <img src="imagenes/labsol/LABSOL1/Template_Banner03_AGREGARLOGO.png">
-                        </div>
-                        <div class="contenedor">
-                           <img src="imagenes/labsol/LABSOL1/Template_Poster02_AGREGARLOGO.png">
                         </div>
                     </div>
                 </div>

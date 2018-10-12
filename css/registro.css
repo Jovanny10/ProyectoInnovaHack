@@ -13,10 +13,26 @@ body {
 }
 .boton {
     position: fixed;
-    z-index: 100;
+    z-index: 140;
     float: right;
-    margin-top: 4px;
+    margin-top: 70px;
 }
+/*LOGOTIPO DE LABSOL*/
+div.contenedor-img{
+    text-align: center;
+    background-color: #fff;
+}
+div.contenedor-img div.caja-img{
+    width: 150px;
+    display: inline-block;
+    margin: 1%;
+}
+div.contenedor-img div.caja-img img{
+    width:100%;
+    max-height: 30px;
+    background-size: cover;
+}
+/*FIN LOGOTIPO LABSOL*/
 .container {
     padding-top: 50px;
 }

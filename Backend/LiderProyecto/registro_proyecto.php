@@ -1,3 +1,6 @@
+<?php 
+include_once("../iniciosesion/seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@
 		<form method="POST" id="proyecto">
 			<div class="row">
 				<div class="col-md-6">
-					<label for="#" class="label-control">Equipo</label>
+					<label for="#" class="label-control"><?php echo $_SESSION['nombre']; ?></label>
 				    <input type="text" class="form-control" name="equipo" id="equipo">
 				</div>
 				<div class="col-md-6">
@@ -59,7 +62,6 @@
 			<div class="form-group">
 				<div class="row col-md-12">
 					<div id="mensaje">
-					
 		            </div>
 				</div>
 			</div>
@@ -69,6 +71,9 @@
 		</form>			 
 		</div>
 	    </div>
+	    </div>
+	    <div>
+	    	<?php echo $_SESSION['nombre']; ?>
 	    </div>
 	 </div>
 
